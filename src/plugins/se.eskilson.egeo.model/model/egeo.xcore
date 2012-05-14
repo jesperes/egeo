@@ -1,5 +1,6 @@
 
-@GenModel(codeFormatting="true")
+@GenModel(codeFormatting="true", editDirectory="/se.eskilson.egeo.model.edit/src", 
+	editorDirectory="/se.eskilson.egeo.model.editor/src")
 package se.eskilson.egeo
 
 import java.text.SimpleDateFormat
