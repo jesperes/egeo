@@ -66,9 +66,9 @@ public class EgeoSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case EgeoPackage.DATABASE: {
-			Database database = (Database) theEObject;
-			T result = caseDatabase(database);
+		case EgeoPackage.CACHE_DB: {
+			CacheDB cacheDB = (CacheDB) theEObject;
+			T result = caseCacheDB(cacheDB);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -121,17 +121,17 @@ public class EgeoSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Database</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Cache DB</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Database</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Cache DB</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDatabase(Database object) {
+	public T caseCacheDB(CacheDB object) {
 		return null;
 	}
 

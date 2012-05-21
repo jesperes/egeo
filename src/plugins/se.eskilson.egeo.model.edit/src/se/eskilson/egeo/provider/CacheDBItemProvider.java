@@ -21,17 +21,17 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import se.eskilson.egeo.Database;
+import se.eskilson.egeo.CacheDB;
 import se.eskilson.egeo.EgeoFactory;
 import se.eskilson.egeo.EgeoPackage;
 
 /**
- * This is the item provider adapter for a {@link se.eskilson.egeo.Database} object.
+ * This is the item provider adapter for a {@link se.eskilson.egeo.CacheDB} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class DatabaseItemProvider extends ItemProviderAdapter implements
+public class CacheDBItemProvider extends ItemProviderAdapter implements
 		IEditingDomainItemProvider, IStructuredItemContentProvider,
 		ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
@@ -40,7 +40,7 @@ public class DatabaseItemProvider extends ItemProviderAdapter implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DatabaseItemProvider(AdapterFactory adapterFactory) {
+	public CacheDBItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -72,9 +72,9 @@ public class DatabaseItemProvider extends ItemProviderAdapter implements
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EgeoPackage.Literals.DATABASE__CACHES);
-			childrenFeatures.add(EgeoPackage.Literals.DATABASE__ATTRIBUTES);
-			childrenFeatures.add(EgeoPackage.Literals.DATABASE__USERS);
+			childrenFeatures.add(EgeoPackage.Literals.CACHE_DB__CACHES);
+			childrenFeatures.add(EgeoPackage.Literals.CACHE_DB__ATTRIBUTES);
+			childrenFeatures.add(EgeoPackage.Literals.CACHE_DB__USERS);
 		}
 		return childrenFeatures;
 	}
@@ -93,7 +93,7 @@ public class DatabaseItemProvider extends ItemProviderAdapter implements
 	}
 
 	/**
-	 * This returns Database.gif.
+	 * This returns CacheDB.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -101,7 +101,7 @@ public class DatabaseItemProvider extends ItemProviderAdapter implements
 	@Override
 	public Object getImage(Object object) {
 		return overlayImage(object,
-				getResourceLocator().getImage("full/obj16/Database"));
+				getResourceLocator().getImage("full/obj16/CacheDB"));
 	}
 
 	/**
@@ -112,7 +112,7 @@ public class DatabaseItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Database_type");
+		return getString("_UI_CacheDB_type");
 	}
 
 	/**
@@ -126,10 +126,10 @@ public class DatabaseItemProvider extends ItemProviderAdapter implements
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Database.class)) {
-		case EgeoPackage.DATABASE__CACHES:
-		case EgeoPackage.DATABASE__ATTRIBUTES:
-		case EgeoPackage.DATABASE__USERS:
+		switch (notification.getFeatureID(CacheDB.class)) {
+		case EgeoPackage.CACHE_DB__CACHES:
+		case EgeoPackage.CACHE_DB__ATTRIBUTES:
+		case EgeoPackage.CACHE_DB__USERS:
 			fireNotifyChanged(new ViewerNotification(notification,
 					notification.getNotifier(), true, false));
 			return;
@@ -150,15 +150,15 @@ public class DatabaseItemProvider extends ItemProviderAdapter implements
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(
-				EgeoPackage.Literals.DATABASE__CACHES,
+				EgeoPackage.Literals.CACHE_DB__CACHES,
 				EgeoFactory.eINSTANCE.createCache()));
 
 		newChildDescriptors.add(createChildParameter(
-				EgeoPackage.Literals.DATABASE__ATTRIBUTES,
+				EgeoPackage.Literals.CACHE_DB__ATTRIBUTES,
 				EgeoFactory.eINSTANCE.createAttribute()));
 
 		newChildDescriptors.add(createChildParameter(
-				EgeoPackage.Literals.DATABASE__USERS,
+				EgeoPackage.Literals.CACHE_DB__USERS,
 				EgeoFactory.eINSTANCE.createUser()));
 	}
 

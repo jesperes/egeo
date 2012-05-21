@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import se.eskilson.egeo.Attribute;
 import se.eskilson.egeo.Cache;
+import se.eskilson.egeo.CacheDB;
 import se.eskilson.egeo.CacheType;
 import se.eskilson.egeo.Coordinate;
-import se.eskilson.egeo.Database;
 import se.eskilson.egeo.Description;
 import se.eskilson.egeo.EgeoFactory;
 import se.eskilson.egeo.EgeoPackage;
@@ -38,7 +38,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass databaseEClass = null;
+	private EClass cacheDBEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,8 +182,9 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDatabase() {
-		return databaseEClass;
+	@Override
+	public EClass getCacheDB() {
+		return cacheDBEClass;
 	}
 
 	/**
@@ -191,8 +192,9 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDatabase_Caches() {
-		return (EReference) databaseEClass.getEStructuralFeatures().get(0);
+	@Override
+	public EReference getCacheDB_Caches() {
+		return (EReference) cacheDBEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -200,8 +202,9 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDatabase_Attributes() {
-		return (EReference) databaseEClass.getEStructuralFeatures().get(1);
+	@Override
+	public EReference getCacheDB_Attributes() {
+		return (EReference) cacheDBEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -209,8 +212,9 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDatabase_Users() {
-		return (EReference) databaseEClass.getEStructuralFeatures().get(2);
+	@Override
+	public EReference getCacheDB_Users() {
+		return (EReference) cacheDBEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -218,6 +222,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAttribute() {
 		return attributeEClass;
 	}
@@ -227,6 +232,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_AttrId() {
 		return (EAttribute) attributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -236,6 +242,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Name() {
 		return (EAttribute) attributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -245,6 +252,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDescription() {
 		return descriptionEClass;
 	}
@@ -254,6 +262,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDescription_Text() {
 		return (EAttribute) descriptionEClass.getEStructuralFeatures().get(0);
 	}
@@ -263,6 +272,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDescription_Html() {
 		return (EAttribute) descriptionEClass.getEStructuralFeatures().get(1);
 	}
@@ -272,6 +282,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCoordinate() {
 		return coordinateEClass;
 	}
@@ -281,6 +292,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCoordinate_Latitude() {
 		return (EAttribute) coordinateEClass.getEStructuralFeatures().get(0);
 	}
@@ -290,6 +302,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCoordinate_Longitude() {
 		return (EAttribute) coordinateEClass.getEStructuralFeatures().get(1);
 	}
@@ -299,6 +312,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUser() {
 		return userEClass;
 	}
@@ -308,6 +322,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUser_UserId() {
 		return (EAttribute) userEClass.getEStructuralFeatures().get(0);
 	}
@@ -317,6 +332,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUser_Name() {
 		return (EAttribute) userEClass.getEStructuralFeatures().get(1);
 	}
@@ -326,6 +342,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCache() {
 		return cacheEClass;
 	}
@@ -335,6 +352,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_Code() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(0);
 	}
@@ -344,6 +362,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_Name() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(1);
 	}
@@ -353,6 +372,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_Description() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(2);
 	}
@@ -362,6 +382,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_Time() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(3);
 	}
@@ -371,6 +392,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_CacheType() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(4);
 	}
@@ -380,6 +402,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_PlacedBy() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(5);
 	}
@@ -389,6 +412,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCache_OwnedBy() {
 		return (EReference) cacheEClass.getEStructuralFeatures().get(6);
 	}
@@ -398,6 +422,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_Cont() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(7);
 	}
@@ -407,6 +432,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCache_Attributes() {
 		return (EReference) cacheEClass.getEStructuralFeatures().get(8);
 	}
@@ -416,6 +442,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_Difficulty() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(9);
 	}
@@ -425,6 +452,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_Terrain() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(10);
 	}
@@ -434,6 +462,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_Country() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(11);
 	}
@@ -443,6 +472,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_State() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(12);
 	}
@@ -452,6 +482,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCache_ShortDescription() {
 		return (EReference) cacheEClass.getEStructuralFeatures().get(13);
 	}
@@ -461,6 +492,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCache_LongDescription() {
 		return (EReference) cacheEClass.getEStructuralFeatures().get(14);
 	}
@@ -470,6 +502,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCache_Coordinate() {
 		return (EReference) cacheEClass.getEStructuralFeatures().get(15);
 	}
@@ -479,6 +512,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCache_Logs() {
 		return (EReference) cacheEClass.getEStructuralFeatures().get(16);
 	}
@@ -488,6 +522,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCache_Hint() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(17);
 	}
@@ -497,6 +532,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLog() {
 		return logEClass;
 	}
@@ -506,6 +542,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLog_Text() {
 		return (EAttribute) logEClass.getEStructuralFeatures().get(0);
 	}
@@ -515,6 +552,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getLog_User() {
 		return (EReference) logEClass.getEStructuralFeatures().get(1);
 	}
@@ -524,6 +562,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLog_Encoded() {
 		return (EAttribute) logEClass.getEStructuralFeatures().get(2);
 	}
@@ -533,6 +572,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLog_LogId() {
 		return (EAttribute) logEClass.getEStructuralFeatures().get(3);
 	}
@@ -542,6 +582,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLog_Date() {
 		return (EAttribute) logEClass.getEStructuralFeatures().get(4);
 	}
@@ -551,6 +592,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLog_LogType() {
 		return (EAttribute) logEClass.getEStructuralFeatures().get(5);
 	}
@@ -560,6 +602,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getContainer() {
 		return containerEEnum;
 	}
@@ -569,6 +612,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getCacheType() {
 		return cacheTypeEEnum;
 	}
@@ -578,6 +622,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getLogType() {
 		return logTypeEEnum;
 	}
@@ -587,6 +632,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getDate() {
 		return dateEDataType;
 	}
@@ -596,6 +642,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EgeoFactory getEgeoFactory() {
 		return (EgeoFactory) getEFactoryInstance();
 	}
@@ -620,10 +667,10 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		databaseEClass = createEClass(DATABASE);
-		createEReference(databaseEClass, DATABASE__CACHES);
-		createEReference(databaseEClass, DATABASE__ATTRIBUTES);
-		createEReference(databaseEClass, DATABASE__USERS);
+		cacheDBEClass = createEClass(CACHE_DB);
+		createEReference(cacheDBEClass, CACHE_DB__CACHES);
+		createEReference(cacheDBEClass, CACHE_DB__ATTRIBUTES);
+		createEReference(cacheDBEClass, CACHE_DB__USERS);
 
 		attributeEClass = createEClass(ATTRIBUTE);
 		createEAttribute(attributeEClass, ATTRIBUTE__ATTR_ID);
@@ -713,18 +760,18 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(databaseEClass, Database.class, "Database", !IS_ABSTRACT,
+		initEClass(cacheDBEClass, CacheDB.class, "CacheDB", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDatabase_Caches(), this.getCache(), null, "caches",
-				null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getCacheDB_Caches(), this.getCache(), null, "caches",
+				null, 0, -1, CacheDB.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDatabase_Attributes(), this.getAttribute(), null,
-				"attributes", null, 0, -1, Database.class, !IS_TRANSIENT,
+		initEReference(getCacheDB_Attributes(), this.getAttribute(), null,
+				"attributes", null, 0, -1, CacheDB.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDatabase_Users(), this.getUser(), null, "users",
-				null, 0, -1, Database.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getCacheDB_Users(), this.getUser(), null, "users", null,
+				0, -1, CacheDB.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

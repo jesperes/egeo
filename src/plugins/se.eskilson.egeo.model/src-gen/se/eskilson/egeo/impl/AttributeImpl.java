@@ -92,6 +92,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getAttrId() {
 		return attrId;
 	}
@@ -101,6 +102,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAttrId(int newAttrId) {
 		int oldAttrId = attrId;
 		attrId = newAttrId;
@@ -114,6 +116,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -123,6 +126,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;

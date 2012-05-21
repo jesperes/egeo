@@ -170,6 +170,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getText() {
 		return text;
 	}
@@ -179,6 +180,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(String newText) {
 		String oldText = text;
 		text = newText;
@@ -192,6 +194,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public User getUser() {
 		if (user != null && user.eIsProxy()) {
 			InternalEObject oldUser = (InternalEObject) user;
@@ -219,6 +222,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUser(User newUser) {
 		User oldUser = user;
 		user = newUser;
@@ -232,6 +236,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isEncoded() {
 		return encoded;
 	}
@@ -241,6 +246,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEncoded(boolean newEncoded) {
 		boolean oldEncoded = encoded;
 		encoded = newEncoded;
@@ -254,6 +260,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getLogId() {
 		return logId;
 	}
@@ -263,6 +270,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLogId(int newLogId) {
 		int oldLogId = logId;
 		logId = newLogId;
@@ -276,6 +284,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getDate() {
 		return date;
 	}
@@ -285,6 +294,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDate(Date newDate) {
 		Date oldDate = date;
 		date = newDate;
@@ -298,6 +308,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LogType getLogType() {
 		return logType;
 	}
@@ -307,6 +318,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLogType(LogType newLogType) {
 		LogType oldLogType = logType;
 		logType = newLogType == null ? LOG_TYPE_EDEFAULT : newLogType;

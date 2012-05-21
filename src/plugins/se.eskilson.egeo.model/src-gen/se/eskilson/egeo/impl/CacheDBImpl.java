@@ -18,27 +18,27 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import se.eskilson.egeo.Attribute;
 import se.eskilson.egeo.Cache;
-import se.eskilson.egeo.Database;
+import se.eskilson.egeo.CacheDB;
 import se.eskilson.egeo.EgeoPackage;
 import se.eskilson.egeo.User;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Database</b></em>'.
+ * An implementation of the model object '<em><b>Cache DB</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link se.eskilson.egeo.impl.DatabaseImpl#getCaches <em>Caches</em>}</li>
- *   <li>{@link se.eskilson.egeo.impl.DatabaseImpl#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link se.eskilson.egeo.impl.DatabaseImpl#getUsers <em>Users</em>}</li>
+ *   <li>{@link se.eskilson.egeo.impl.CacheDBImpl#getCaches <em>Caches</em>}</li>
+ *   <li>{@link se.eskilson.egeo.impl.CacheDBImpl#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link se.eskilson.egeo.impl.CacheDBImpl#getUsers <em>Users</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DatabaseImpl extends MinimalEObjectImpl.Container implements
-		Database {
+public class CacheDBImpl extends MinimalEObjectImpl.Container implements
+		CacheDB {
 	/**
 	 * The cached value of the '{@link #getCaches() <em>Caches</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -74,7 +74,7 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DatabaseImpl() {
+	protected CacheDBImpl() {
 		super();
 	}
 
@@ -85,7 +85,7 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EgeoPackage.Literals.DATABASE;
+		return EgeoPackage.Literals.CACHE_DB;
 	}
 
 	/**
@@ -93,10 +93,11 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Cache> getCaches() {
 		if (caches == null) {
 			caches = new EObjectContainmentEList<Cache>(Cache.class, this,
-					EgeoPackage.DATABASE__CACHES);
+					EgeoPackage.CACHE_DB__CACHES);
 		}
 		return caches;
 	}
@@ -106,10 +107,11 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attribute> getAttributes() {
 		if (attributes == null) {
 			attributes = new EObjectContainmentEList<Attribute>(
-					Attribute.class, this, EgeoPackage.DATABASE__ATTRIBUTES);
+					Attribute.class, this, EgeoPackage.CACHE_DB__ATTRIBUTES);
 		}
 		return attributes;
 	}
@@ -119,10 +121,11 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<User> getUsers() {
 		if (users == null) {
 			users = new EObjectContainmentEList<User>(User.class, this,
-					EgeoPackage.DATABASE__USERS);
+					EgeoPackage.CACHE_DB__USERS);
 		}
 		return users;
 	}
@@ -136,12 +139,12 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case EgeoPackage.DATABASE__CACHES:
+		case EgeoPackage.CACHE_DB__CACHES:
 			return ((InternalEList<?>) getCaches()).basicRemove(otherEnd, msgs);
-		case EgeoPackage.DATABASE__ATTRIBUTES:
+		case EgeoPackage.CACHE_DB__ATTRIBUTES:
 			return ((InternalEList<?>) getAttributes()).basicRemove(otherEnd,
 					msgs);
-		case EgeoPackage.DATABASE__USERS:
+		case EgeoPackage.CACHE_DB__USERS:
 			return ((InternalEList<?>) getUsers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -155,11 +158,11 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case EgeoPackage.DATABASE__CACHES:
+		case EgeoPackage.CACHE_DB__CACHES:
 			return getCaches();
-		case EgeoPackage.DATABASE__ATTRIBUTES:
+		case EgeoPackage.CACHE_DB__ATTRIBUTES:
 			return getAttributes();
-		case EgeoPackage.DATABASE__USERS:
+		case EgeoPackage.CACHE_DB__USERS:
 			return getUsers();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -174,15 +177,15 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case EgeoPackage.DATABASE__CACHES:
+		case EgeoPackage.CACHE_DB__CACHES:
 			getCaches().clear();
 			getCaches().addAll((Collection<? extends Cache>) newValue);
 			return;
-		case EgeoPackage.DATABASE__ATTRIBUTES:
+		case EgeoPackage.CACHE_DB__ATTRIBUTES:
 			getAttributes().clear();
 			getAttributes().addAll((Collection<? extends Attribute>) newValue);
 			return;
-		case EgeoPackage.DATABASE__USERS:
+		case EgeoPackage.CACHE_DB__USERS:
 			getUsers().clear();
 			getUsers().addAll((Collection<? extends User>) newValue);
 			return;
@@ -198,13 +201,13 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case EgeoPackage.DATABASE__CACHES:
+		case EgeoPackage.CACHE_DB__CACHES:
 			getCaches().clear();
 			return;
-		case EgeoPackage.DATABASE__ATTRIBUTES:
+		case EgeoPackage.CACHE_DB__ATTRIBUTES:
 			getAttributes().clear();
 			return;
-		case EgeoPackage.DATABASE__USERS:
+		case EgeoPackage.CACHE_DB__USERS:
 			getUsers().clear();
 			return;
 		}
@@ -219,14 +222,14 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case EgeoPackage.DATABASE__CACHES:
+		case EgeoPackage.CACHE_DB__CACHES:
 			return caches != null && !caches.isEmpty();
-		case EgeoPackage.DATABASE__ATTRIBUTES:
+		case EgeoPackage.CACHE_DB__ATTRIBUTES:
 			return attributes != null && !attributes.isEmpty();
-		case EgeoPackage.DATABASE__USERS:
+		case EgeoPackage.CACHE_DB__USERS:
 			return users != null && !users.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //DatabaseImpl
+} //CacheDBImpl

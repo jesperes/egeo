@@ -67,8 +67,8 @@ public class EgeoAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected EgeoSwitch<Adapter> modelSwitch = new EgeoSwitch<Adapter>() {
 		@Override
-		public Adapter caseDatabase(Database object) {
-			return createDatabaseAdapter();
+		public Adapter caseCacheDB(CacheDB object) {
+			return createCacheDBAdapter();
 		}
 
 		@Override
@@ -121,16 +121,16 @@ public class EgeoAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link se.eskilson.egeo.Database <em>Database</em>}'.
+	 * Creates a new adapter for an object of class '{@link se.eskilson.egeo.CacheDB <em>Cache DB</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see se.eskilson.egeo.Database
+	 * @see se.eskilson.egeo.CacheDB
 	 * @generated
 	 */
-	public Adapter createDatabaseAdapter() {
+	public Adapter createCacheDBAdapter() {
 		return null;
 	}
 

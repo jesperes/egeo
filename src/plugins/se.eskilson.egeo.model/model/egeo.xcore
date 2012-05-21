@@ -6,7 +6,7 @@ package se.eskilson.egeo
 import java.text.SimpleDateFormat
 import java.text.ParseException
 
-class Database
+class CacheDB
 {
 	contains Cache[] caches
 	contains Attribute[] attributes

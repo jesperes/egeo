@@ -92,6 +92,7 @@ public class CoordinateImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getLatitude() {
 		return latitude;
 	}
@@ -101,6 +102,7 @@ public class CoordinateImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLatitude(double newLatitude) {
 		double oldLatitude = latitude;
 		latitude = newLatitude;
@@ -114,6 +116,7 @@ public class CoordinateImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getLongitude() {
 		return longitude;
 	}
@@ -123,6 +126,7 @@ public class CoordinateImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLongitude(double newLongitude) {
 		double oldLongitude = longitude;
 		longitude = newLongitude;

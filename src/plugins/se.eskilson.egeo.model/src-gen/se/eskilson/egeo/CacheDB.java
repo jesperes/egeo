@@ -8,23 +8,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Database</b></em>'.
+ * A representation of the model object '<em><b>Cache DB</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link se.eskilson.egeo.Database#getCaches <em>Caches</em>}</li>
- *   <li>{@link se.eskilson.egeo.Database#getAttributes <em>Attributes</em>}</li>
- *   <li>{@link se.eskilson.egeo.Database#getUsers <em>Users</em>}</li>
+ *   <li>{@link se.eskilson.egeo.CacheDB#getCaches <em>Caches</em>}</li>
+ *   <li>{@link se.eskilson.egeo.CacheDB#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link se.eskilson.egeo.CacheDB#getUsers <em>Users</em>}</li>
  * </ul>
  * </p>
  *
- * @see se.eskilson.egeo.EgeoPackage#getDatabase()
+ * @see se.eskilson.egeo.EgeoPackage#getCacheDB()
  * @model
  * @generated
  */
-public interface Database extends EObject {
+public interface CacheDB extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Caches</b></em>' containment reference list.
 	 * The list contents are of type {@link se.eskilson.egeo.Cache}.
@@ -35,7 +35,7 @@ public interface Database extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Caches</em>' containment reference list.
-	 * @see se.eskilson.egeo.EgeoPackage#getDatabase_Caches()
+	 * @see se.eskilson.egeo.EgeoPackage#getCacheDB_Caches()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -51,7 +51,7 @@ public interface Database extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attributes</em>' containment reference list.
-	 * @see se.eskilson.egeo.EgeoPackage#getDatabase_Attributes()
+	 * @see se.eskilson.egeo.EgeoPackage#getCacheDB_Attributes()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -67,10 +67,10 @@ public interface Database extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Users</em>' containment reference list.
-	 * @see se.eskilson.egeo.EgeoPackage#getDatabase_Users()
+	 * @see se.eskilson.egeo.EgeoPackage#getCacheDB_Users()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<User> getUsers();
 
-} // Database
+} // CacheDB

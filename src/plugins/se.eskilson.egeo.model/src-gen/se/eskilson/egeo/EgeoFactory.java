@@ -22,13 +22,13 @@ public interface EgeoFactory extends EFactory {
 	EgeoFactory eINSTANCE = se.eskilson.egeo.impl.EgeoFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Database</em>'.
+	 * Returns a new object of class '<em>Cache DB</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Database</em>'.
+	 * @return a new object of class '<em>Cache DB</em>'.
 	 * @generated
 	 */
-	Database createDatabase();
+	CacheDB createCacheDB();
 
 	/**
 	 * Returns a new object of class '<em>Attribute</em>'.

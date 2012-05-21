@@ -384,6 +384,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCode() {
 		return code;
 	}
@@ -393,6 +394,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCode(String newCode) {
 		String oldCode = code;
 		code = newCode;
@@ -406,6 +408,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -415,6 +418,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -428,6 +432,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -437,6 +442,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -450,6 +456,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Date getTime() {
 		return time;
 	}
@@ -459,6 +466,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTime(Date newTime) {
 		Date oldTime = time;
 		time = newTime;
@@ -472,6 +480,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CacheType getCacheType() {
 		return cacheType;
 	}
@@ -481,6 +490,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCacheType(CacheType newCacheType) {
 		CacheType oldCacheType = cacheType;
 		cacheType = newCacheType == null ? CACHE_TYPE_EDEFAULT : newCacheType;
@@ -494,6 +504,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPlacedBy() {
 		return placedBy;
 	}
@@ -503,6 +514,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPlacedBy(String newPlacedBy) {
 		String oldPlacedBy = placedBy;
 		placedBy = newPlacedBy;
@@ -516,6 +528,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public User getOwnedBy() {
 		if (ownedBy != null && ownedBy.eIsProxy()) {
 			InternalEObject oldOwnedBy = (InternalEObject) ownedBy;
@@ -543,6 +556,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwnedBy(User newOwnedBy) {
 		User oldOwnedBy = ownedBy;
 		ownedBy = newOwnedBy;
@@ -556,6 +570,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public se.eskilson.egeo.Container getCont() {
 		return cont;
 	}
@@ -565,6 +580,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCont(se.eskilson.egeo.Container newCont) {
 		se.eskilson.egeo.Container oldCont = cont;
 		cont = newCont == null ? CONT_EDEFAULT : newCont;
@@ -578,6 +594,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attribute> getAttributes() {
 		if (attributes == null) {
 			attributes = new EObjectResolvingEList<Attribute>(Attribute.class,
@@ -591,6 +608,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getDifficulty() {
 		return difficulty;
 	}
@@ -600,6 +618,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDifficulty(int newDifficulty) {
 		int oldDifficulty = difficulty;
 		difficulty = newDifficulty;
@@ -613,6 +632,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getTerrain() {
 		return terrain;
 	}
@@ -622,6 +642,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTerrain(int newTerrain) {
 		int oldTerrain = terrain;
 		terrain = newTerrain;
@@ -635,6 +656,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCountry() {
 		return country;
 	}
@@ -644,6 +666,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCountry(String newCountry) {
 		String oldCountry = country;
 		country = newCountry;
@@ -657,6 +680,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getState() {
 		return state;
 	}
@@ -666,6 +690,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setState(String newState) {
 		String oldState = state;
 		state = newState;
@@ -679,6 +704,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Description getShortDescription() {
 		return shortDescription;
 	}
@@ -709,6 +735,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setShortDescription(Description newShortDescription) {
 		if (newShortDescription != shortDescription) {
 			NotificationChain msgs = null;
@@ -736,6 +763,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Description getLongDescription() {
 		return longDescription;
 	}
@@ -766,6 +794,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLongDescription(Description newLongDescription) {
 		if (newLongDescription != longDescription) {
 			NotificationChain msgs = null;
@@ -793,6 +822,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coordinate getCoordinate() {
 		return coordinate;
 	}
@@ -823,6 +853,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCoordinate(Coordinate newCoordinate) {
 		if (newCoordinate != coordinate) {
 			NotificationChain msgs = null;
@@ -847,6 +878,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Log> getLogs() {
 		if (logs == null) {
 			logs = new EObjectContainmentEList<Log>(Log.class, this,
@@ -860,6 +892,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getHint() {
 		return hint;
 	}
@@ -869,6 +902,7 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHint(String newHint) {
 		String oldHint = hint;
 		hint = newHint;

@@ -60,14 +60,14 @@ public interface EgeoPackage extends EPackage {
 	EgeoPackage eINSTANCE = se.eskilson.egeo.impl.EgeoPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link se.eskilson.egeo.impl.DatabaseImpl <em>Database</em>}' class.
+	 * The meta object id for the '{@link se.eskilson.egeo.impl.CacheDBImpl <em>Cache DB</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see se.eskilson.egeo.impl.DatabaseImpl
-	 * @see se.eskilson.egeo.impl.EgeoPackageImpl#getDatabase()
+	 * @see se.eskilson.egeo.impl.CacheDBImpl
+	 * @see se.eskilson.egeo.impl.EgeoPackageImpl#getCacheDB()
 	 * @generated
 	 */
-	int DATABASE = 0;
+	int CACHE_DB = 0;
 
 	/**
 	 * The feature id for the '<em><b>Caches</b></em>' containment reference list.
@@ -76,7 +76,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__CACHES = 0;
+	int CACHE_DB__CACHES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -85,7 +85,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__ATTRIBUTES = 1;
+	int CACHE_DB__ATTRIBUTES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Users</b></em>' containment reference list.
@@ -94,25 +94,25 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__USERS = 2;
+	int CACHE_DB__USERS = 2;
 
 	/**
-	 * The number of structural features of the '<em>Database</em>' class.
+	 * The number of structural features of the '<em>Cache DB</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE_FEATURE_COUNT = 3;
+	int CACHE_DB_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Database</em>' class.
+	 * The number of operations of the '<em>Cache DB</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE_OPERATION_COUNT = 0;
+	int CACHE_DB_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link se.eskilson.egeo.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -611,47 +611,47 @@ public interface EgeoPackage extends EPackage {
 	int DATE = 10;
 
 	/**
-	 * Returns the meta object for class '{@link se.eskilson.egeo.Database <em>Database</em>}'.
+	 * Returns the meta object for class '{@link se.eskilson.egeo.CacheDB <em>Cache DB</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Database</em>'.
-	 * @see se.eskilson.egeo.Database
+	 * @return the meta object for class '<em>Cache DB</em>'.
+	 * @see se.eskilson.egeo.CacheDB
 	 * @generated
 	 */
-	EClass getDatabase();
+	EClass getCacheDB();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link se.eskilson.egeo.Database#getCaches <em>Caches</em>}'.
+	 * Returns the meta object for the containment reference list '{@link se.eskilson.egeo.CacheDB#getCaches <em>Caches</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Caches</em>'.
-	 * @see se.eskilson.egeo.Database#getCaches()
-	 * @see #getDatabase()
+	 * @see se.eskilson.egeo.CacheDB#getCaches()
+	 * @see #getCacheDB()
 	 * @generated
 	 */
-	EReference getDatabase_Caches();
+	EReference getCacheDB_Caches();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link se.eskilson.egeo.Database#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link se.eskilson.egeo.CacheDB#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
-	 * @see se.eskilson.egeo.Database#getAttributes()
-	 * @see #getDatabase()
+	 * @see se.eskilson.egeo.CacheDB#getAttributes()
+	 * @see #getCacheDB()
 	 * @generated
 	 */
-	EReference getDatabase_Attributes();
+	EReference getCacheDB_Attributes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link se.eskilson.egeo.Database#getUsers <em>Users</em>}'.
+	 * Returns the meta object for the containment reference list '{@link se.eskilson.egeo.CacheDB#getUsers <em>Users</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Users</em>'.
-	 * @see se.eskilson.egeo.Database#getUsers()
-	 * @see #getDatabase()
+	 * @see se.eskilson.egeo.CacheDB#getUsers()
+	 * @see #getCacheDB()
 	 * @generated
 	 */
-	EReference getDatabase_Users();
+	EReference getCacheDB_Users();
 
 	/**
 	 * Returns the meta object for class '{@link se.eskilson.egeo.Attribute <em>Attribute</em>}'.
@@ -1131,14 +1131,14 @@ public interface EgeoPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link se.eskilson.egeo.impl.DatabaseImpl <em>Database</em>}' class.
+		 * The meta object literal for the '{@link se.eskilson.egeo.impl.CacheDBImpl <em>Cache DB</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see se.eskilson.egeo.impl.DatabaseImpl
-		 * @see se.eskilson.egeo.impl.EgeoPackageImpl#getDatabase()
+		 * @see se.eskilson.egeo.impl.CacheDBImpl
+		 * @see se.eskilson.egeo.impl.EgeoPackageImpl#getCacheDB()
 		 * @generated
 		 */
-		EClass DATABASE = eINSTANCE.getDatabase();
+		EClass CACHE_DB = eINSTANCE.getCacheDB();
 
 		/**
 		 * The meta object literal for the '<em><b>Caches</b></em>' containment reference list feature.
@@ -1146,7 +1146,7 @@ public interface EgeoPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATABASE__CACHES = eINSTANCE.getDatabase_Caches();
+		EReference CACHE_DB__CACHES = eINSTANCE.getCacheDB_Caches();
 
 		/**
 		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
@@ -1154,7 +1154,7 @@ public interface EgeoPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATABASE__ATTRIBUTES = eINSTANCE.getDatabase_Attributes();
+		EReference CACHE_DB__ATTRIBUTES = eINSTANCE.getCacheDB_Attributes();
 
 		/**
 		 * The meta object literal for the '<em><b>Users</b></em>' containment reference list feature.
@@ -1162,7 +1162,7 @@ public interface EgeoPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATABASE__USERS = eINSTANCE.getDatabase_Users();
+		EReference CACHE_DB__USERS = eINSTANCE.getCacheDB_Users();
 
 		/**
 		 * The meta object literal for the '{@link se.eskilson.egeo.impl.AttributeImpl <em>Attribute</em>}' class.

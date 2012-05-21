@@ -73,26 +73,26 @@ public class EgeoItemProviderAdapterFactory extends EgeoAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link se.eskilson.egeo.Database} instances.
+	 * This keeps track of the one adapter used for all {@link se.eskilson.egeo.CacheDB} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DatabaseItemProvider databaseItemProvider;
+	protected CacheDBItemProvider cacheDBItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link se.eskilson.egeo.Database}.
+	 * This creates an adapter for a {@link se.eskilson.egeo.CacheDB}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDatabaseAdapter() {
-		if (databaseItemProvider == null) {
-			databaseItemProvider = new DatabaseItemProvider(this);
+	public Adapter createCacheDBAdapter() {
+		if (cacheDBItemProvider == null) {
+			cacheDBItemProvider = new CacheDBItemProvider(this);
 		}
 
-		return databaseItemProvider;
+		return cacheDBItemProvider;
 	}
 
 	/**
@@ -335,8 +335,8 @@ public class EgeoItemProviderAdapterFactory extends EgeoAdapterFactory
 	 * @generated
 	 */
 	public void dispose() {
-		if (databaseItemProvider != null)
-			databaseItemProvider.dispose();
+		if (cacheDBItemProvider != null)
+			cacheDBItemProvider.dispose();
 		if (attributeItemProvider != null)
 			attributeItemProvider.dispose();
 		if (descriptionItemProvider != null)

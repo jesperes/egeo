@@ -66,8 +66,8 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case EgeoPackage.DATABASE:
-			return createDatabase();
+		case EgeoPackage.CACHE_DB:
+			return createCacheDB();
 		case EgeoPackage.ATTRIBUTE:
 			return createAttribute();
 		case EgeoPackage.DESCRIPTION:
@@ -135,9 +135,10 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Database createDatabase() {
-		DatabaseImpl database = new DatabaseImpl();
-		return database;
+	@Override
+	public CacheDB createCacheDB() {
+		CacheDBImpl cacheDB = new CacheDBImpl();
+		return cacheDB;
 	}
 
 	/**
@@ -145,6 +146,7 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attribute createAttribute() {
 		AttributeImpl attribute = new AttributeImpl();
 		return attribute;
@@ -155,6 +157,7 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Description createDescription() {
 		DescriptionImpl description = new DescriptionImpl();
 		return description;
@@ -165,6 +168,7 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Coordinate createCoordinate() {
 		CoordinateImpl coordinate = new CoordinateImpl();
 		return coordinate;
@@ -175,6 +179,7 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public User createUser() {
 		UserImpl user = new UserImpl();
 		return user;
@@ -185,6 +190,7 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Cache createCache() {
 		CacheImpl cache = new CacheImpl();
 		return cache;
@@ -195,6 +201,7 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Log createLog() {
 		LogImpl log = new LogImpl();
 		return log;
@@ -345,6 +352,7 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EgeoPackage getEgeoPackage() {
 		return (EgeoPackage) getEPackage();
 	}
