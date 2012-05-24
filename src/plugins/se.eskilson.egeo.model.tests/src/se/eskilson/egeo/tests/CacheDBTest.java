@@ -15,22 +15,20 @@ import se.eskilson.egeo.gpx.GpxParser;
 /**
  * <!-- begin-user-doc --> A test case for the model object '
  * <em><b>Cache DB</b></em>'. <!-- end-user-doc -->
- * 
  * @generated
  */
 public class CacheDBTest extends TestCase {
 
 	/**
-	 * The fixture for this Cache DB test case. <!-- begin-user-doc --> <!--
+	 * The fixture for this Cache DB test case.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected CacheDB fixture = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static void main(String[] args) {
@@ -48,9 +46,9 @@ public class CacheDBTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Cache DB test case. <!-- begin-user-doc -->
+	 * Sets the fixture for this Cache DB test case.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected void setFixture(CacheDB fixture) {
@@ -58,9 +56,9 @@ public class CacheDBTest extends TestCase {
 	}
 
 	/**
-	 * Returns the fixture for this Cache DB test case. <!-- begin-user-doc -->
+	 * Returns the fixture for this Cache DB test case.
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected CacheDB getFixture() {
@@ -69,7 +67,6 @@ public class CacheDBTest extends TestCase {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#setUp()
 	 * @generated
 	 */
@@ -80,7 +77,6 @@ public class CacheDBTest extends TestCase {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @see junit.framework.TestCase#tearDown()
 	 * @generated
 	 */

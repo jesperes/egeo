@@ -83,14 +83,19 @@ class User
 	String name
 }
 
+@GenModel(labelFeature="description")
 class Cache
 {
 	String code
+	int ident
+	boolean available
+	boolean archived
 	String name
 	String description
 	Date time
 	CacheType cacheType
 	String placedBy
+	String url
 	refers User ownedBy
 	Container cont
 	refers Attribute[] attributes

@@ -58,11 +58,15 @@ public class CacheItemProvider extends ItemProviderAdapter implements
 			super.getPropertyDescriptors(object);
 
 			addCodePropertyDescriptor(object);
+			addIdentPropertyDescriptor(object);
+			addAvailablePropertyDescriptor(object);
+			addArchivedPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addTimePropertyDescriptor(object);
 			addCacheTypePropertyDescriptor(object);
 			addPlacedByPropertyDescriptor(object);
+			addUrlPropertyDescriptor(object);
 			addOwnedByPropertyDescriptor(object);
 			addContPropertyDescriptor(object);
 			addAttributesPropertyDescriptor(object);
@@ -91,6 +95,60 @@ public class CacheItemProvider extends ItemProviderAdapter implements
 						"_UI_Cache_code_feature", "_UI_Cache_type"),
 				EgeoPackage.Literals.CACHE__CODE, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Ident feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory)
+						.getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Cache_ident_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_Cache_ident_feature", "_UI_Cache_type"),
+				EgeoPackage.Literals.CACHE__IDENT, true, false, false,
+				ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Available feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAvailablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory)
+						.getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Cache_available_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_Cache_available_feature", "_UI_Cache_type"),
+				EgeoPackage.Literals.CACHE__AVAILABLE, true, false, false,
+				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Archived feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addArchivedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory)
+						.getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Cache_archived_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_Cache_archived_feature", "_UI_Cache_type"),
+				EgeoPackage.Literals.CACHE__ARCHIVED, true, false, false,
+				ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -180,6 +238,24 @@ public class CacheItemProvider extends ItemProviderAdapter implements
 				getString("_UI_PropertyDescriptor_description",
 						"_UI_Cache_placedBy_feature", "_UI_Cache_type"),
 				EgeoPackage.Literals.CACHE__PLACED_BY, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory)
+						.getRootAdapterFactory(),
+				getResourceLocator(),
+				getString("_UI_Cache_url_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_Cache_url_feature", "_UI_Cache_type"),
+				EgeoPackage.Literals.CACHE__URL, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -399,11 +475,15 @@ public class CacheItemProvider extends ItemProviderAdapter implements
 
 		switch (notification.getFeatureID(Cache.class)) {
 		case EgeoPackage.CACHE__CODE:
+		case EgeoPackage.CACHE__IDENT:
+		case EgeoPackage.CACHE__AVAILABLE:
+		case EgeoPackage.CACHE__ARCHIVED:
 		case EgeoPackage.CACHE__NAME:
 		case EgeoPackage.CACHE__DESCRIPTION:
 		case EgeoPackage.CACHE__TIME:
 		case EgeoPackage.CACHE__CACHE_TYPE:
 		case EgeoPackage.CACHE__PLACED_BY:
+		case EgeoPackage.CACHE__URL:
 		case EgeoPackage.CACHE__CONT:
 		case EgeoPackage.CACHE__DIFFICULTY:
 		case EgeoPackage.CACHE__TERRAIN:

@@ -362,8 +362,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EAttribute getCache_Name() {
+	public EAttribute getCache_Ident() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -372,8 +371,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EAttribute getCache_Description() {
+	public EAttribute getCache_Available() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -382,8 +380,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EAttribute getCache_Time() {
+	public EAttribute getCache_Archived() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -393,7 +390,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCache_CacheType() {
+	public EAttribute getCache_Name() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -402,8 +399,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EAttribute getCache_PlacedBy() {
+	public EAttribute getCache_Description() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -413,8 +409,8 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCache_OwnedBy() {
-		return (EReference) cacheEClass.getEStructuralFeatures().get(6);
+	public EAttribute getCache_Time() {
+		return (EAttribute) cacheEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -423,7 +419,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCache_Cont() {
+	public EAttribute getCache_CacheType() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -433,8 +429,8 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCache_Attributes() {
-		return (EReference) cacheEClass.getEStructuralFeatures().get(8);
+	public EAttribute getCache_PlacedBy() {
+		return (EAttribute) cacheEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -442,8 +438,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EAttribute getCache_Difficulty() {
+	public EAttribute getCache_Url() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -453,8 +448,8 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCache_Terrain() {
-		return (EAttribute) cacheEClass.getEStructuralFeatures().get(10);
+	public EReference getCache_OwnedBy() {
+		return (EReference) cacheEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -463,7 +458,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCache_Country() {
+	public EAttribute getCache_Cont() {
 		return (EAttribute) cacheEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -473,8 +468,48 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getCache_Attributes() {
+		return (EReference) cacheEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCache_Difficulty() {
+		return (EAttribute) cacheEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCache_Terrain() {
+		return (EAttribute) cacheEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCache_Country() {
+		return (EAttribute) cacheEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getCache_State() {
-		return (EAttribute) cacheEClass.getEStructuralFeatures().get(12);
+		return (EAttribute) cacheEClass.getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -484,7 +519,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 */
 	@Override
 	public EReference getCache_ShortDescription() {
-		return (EReference) cacheEClass.getEStructuralFeatures().get(13);
+		return (EReference) cacheEClass.getEStructuralFeatures().get(17);
 	}
 
 	/**
@@ -494,7 +529,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 */
 	@Override
 	public EReference getCache_LongDescription() {
-		return (EReference) cacheEClass.getEStructuralFeatures().get(14);
+		return (EReference) cacheEClass.getEStructuralFeatures().get(18);
 	}
 
 	/**
@@ -504,7 +539,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 */
 	@Override
 	public EReference getCache_Coordinate() {
-		return (EReference) cacheEClass.getEStructuralFeatures().get(15);
+		return (EReference) cacheEClass.getEStructuralFeatures().get(19);
 	}
 
 	/**
@@ -514,7 +549,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 */
 	@Override
 	public EReference getCache_Logs() {
-		return (EReference) cacheEClass.getEStructuralFeatures().get(16);
+		return (EReference) cacheEClass.getEStructuralFeatures().get(20);
 	}
 
 	/**
@@ -524,7 +559,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 	 */
 	@Override
 	public EAttribute getCache_Hint() {
-		return (EAttribute) cacheEClass.getEStructuralFeatures().get(17);
+		return (EAttribute) cacheEClass.getEStructuralFeatures().get(21);
 	}
 
 	/**
@@ -690,11 +725,15 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 
 		cacheEClass = createEClass(CACHE);
 		createEAttribute(cacheEClass, CACHE__CODE);
+		createEAttribute(cacheEClass, CACHE__IDENT);
+		createEAttribute(cacheEClass, CACHE__AVAILABLE);
+		createEAttribute(cacheEClass, CACHE__ARCHIVED);
 		createEAttribute(cacheEClass, CACHE__NAME);
 		createEAttribute(cacheEClass, CACHE__DESCRIPTION);
 		createEAttribute(cacheEClass, CACHE__TIME);
 		createEAttribute(cacheEClass, CACHE__CACHE_TYPE);
 		createEAttribute(cacheEClass, CACHE__PLACED_BY);
+		createEAttribute(cacheEClass, CACHE__URL);
 		createEReference(cacheEClass, CACHE__OWNED_BY);
 		createEAttribute(cacheEClass, CACHE__CONT);
 		createEReference(cacheEClass, CACHE__ATTRIBUTES);
@@ -825,6 +864,18 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 				null, 0, 1, Cache.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getCache_Ident(), theEcorePackage.getEInt(), "ident",
+				null, 0, 1, Cache.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getCache_Available(), theEcorePackage.getEBoolean(),
+				"available", null, 0, 1, Cache.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				!IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCache_Archived(), theEcorePackage.getEBoolean(),
+				"archived", null, 0, 1, Cache.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				!IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCache_Name(), theEcorePackage.getEString(), "name",
 				null, 0, 1, Cache.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
@@ -844,6 +895,10 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage {
 				"placedBy", null, 0, 1, Cache.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				!IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCache_Url(), theEcorePackage.getEString(), "url",
+				null, 0, 1, Cache.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 		initEReference(getCache_OwnedBy(), this.getUser(), null, "ownedBy",
 				null, 0, 1, Cache.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,

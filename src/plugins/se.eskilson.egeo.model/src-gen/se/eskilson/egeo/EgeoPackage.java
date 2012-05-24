@@ -318,13 +318,40 @@ public interface EgeoPackage extends EPackage {
 	int CACHE__CODE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Ident</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CACHE__IDENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CACHE__AVAILABLE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CACHE__ARCHIVED = 3;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__NAME = 1;
+	int CACHE__NAME = 4;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -333,7 +360,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__DESCRIPTION = 2;
+	int CACHE__DESCRIPTION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -342,7 +369,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__TIME = 3;
+	int CACHE__TIME = 6;
 
 	/**
 	 * The feature id for the '<em><b>Cache Type</b></em>' attribute.
@@ -351,7 +378,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__CACHE_TYPE = 4;
+	int CACHE__CACHE_TYPE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Placed By</b></em>' attribute.
@@ -360,7 +387,16 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__PLACED_BY = 5;
+	int CACHE__PLACED_BY = 8;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CACHE__URL = 9;
 
 	/**
 	 * The feature id for the '<em><b>Owned By</b></em>' reference.
@@ -369,7 +405,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__OWNED_BY = 6;
+	int CACHE__OWNED_BY = 10;
 
 	/**
 	 * The feature id for the '<em><b>Cont</b></em>' attribute.
@@ -378,7 +414,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__CONT = 7;
+	int CACHE__CONT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' reference list.
@@ -387,7 +423,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__ATTRIBUTES = 8;
+	int CACHE__ATTRIBUTES = 12;
 
 	/**
 	 * The feature id for the '<em><b>Difficulty</b></em>' attribute.
@@ -396,7 +432,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__DIFFICULTY = 9;
+	int CACHE__DIFFICULTY = 13;
 
 	/**
 	 * The feature id for the '<em><b>Terrain</b></em>' attribute.
@@ -405,7 +441,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__TERRAIN = 10;
+	int CACHE__TERRAIN = 14;
 
 	/**
 	 * The feature id for the '<em><b>Country</b></em>' attribute.
@@ -414,7 +450,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__COUNTRY = 11;
+	int CACHE__COUNTRY = 15;
 
 	/**
 	 * The feature id for the '<em><b>State</b></em>' attribute.
@@ -423,7 +459,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__STATE = 12;
+	int CACHE__STATE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Short Description</b></em>' containment reference.
@@ -432,7 +468,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__SHORT_DESCRIPTION = 13;
+	int CACHE__SHORT_DESCRIPTION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Long Description</b></em>' containment reference.
@@ -441,7 +477,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__LONG_DESCRIPTION = 14;
+	int CACHE__LONG_DESCRIPTION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Coordinate</b></em>' containment reference.
@@ -450,7 +486,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__COORDINATE = 15;
+	int CACHE__COORDINATE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Logs</b></em>' containment reference list.
@@ -459,7 +495,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__LOGS = 16;
+	int CACHE__LOGS = 20;
 
 	/**
 	 * The feature id for the '<em><b>Hint</b></em>' attribute.
@@ -468,7 +504,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE__HINT = 17;
+	int CACHE__HINT = 21;
 
 	/**
 	 * The number of structural features of the '<em>Cache</em>' class.
@@ -477,7 +513,7 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CACHE_FEATURE_COUNT = 18;
+	int CACHE_FEATURE_COUNT = 22;
 
 	/**
 	 * The number of operations of the '<em>Cache</em>' class.
@@ -803,6 +839,39 @@ public interface EgeoPackage extends EPackage {
 	EAttribute getCache_Code();
 
 	/**
+	 * Returns the meta object for the attribute '{@link se.eskilson.egeo.Cache#getIdent <em>Ident</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ident</em>'.
+	 * @see se.eskilson.egeo.Cache#getIdent()
+	 * @see #getCache()
+	 * @generated
+	 */
+	EAttribute getCache_Ident();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.eskilson.egeo.Cache#isAvailable <em>Available</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Available</em>'.
+	 * @see se.eskilson.egeo.Cache#isAvailable()
+	 * @see #getCache()
+	 * @generated
+	 */
+	EAttribute getCache_Available();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.eskilson.egeo.Cache#isArchived <em>Archived</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Archived</em>'.
+	 * @see se.eskilson.egeo.Cache#isArchived()
+	 * @see #getCache()
+	 * @generated
+	 */
+	EAttribute getCache_Archived();
+
+	/**
 	 * Returns the meta object for the attribute '{@link se.eskilson.egeo.Cache#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -856,6 +925,17 @@ public interface EgeoPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCache_PlacedBy();
+
+	/**
+	 * Returns the meta object for the attribute '{@link se.eskilson.egeo.Cache#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see se.eskilson.egeo.Cache#getUrl()
+	 * @see #getCache()
+	 * @generated
+	 */
+	EAttribute getCache_Url();
 
 	/**
 	 * Returns the meta object for the reference '{@link se.eskilson.egeo.Cache#getOwnedBy <em>Owned By</em>}'.
@@ -1287,6 +1367,30 @@ public interface EgeoPackage extends EPackage {
 		EAttribute CACHE__CODE = eINSTANCE.getCache_Code();
 
 		/**
+		 * The meta object literal for the '<em><b>Ident</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CACHE__IDENT = eINSTANCE.getCache_Ident();
+
+		/**
+		 * The meta object literal for the '<em><b>Available</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CACHE__AVAILABLE = eINSTANCE.getCache_Available();
+
+		/**
+		 * The meta object literal for the '<em><b>Archived</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CACHE__ARCHIVED = eINSTANCE.getCache_Archived();
+
+		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1325,6 +1429,14 @@ public interface EgeoPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CACHE__PLACED_BY = eINSTANCE.getCache_PlacedBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CACHE__URL = eINSTANCE.getCache_Url();
 
 		/**
 		 * The meta object literal for the '<em><b>Owned By</b></em>' reference feature.

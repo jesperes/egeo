@@ -17,11 +17,15 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link se.eskilson.egeo.Cache#getCode <em>Code</em>}</li>
+ *   <li>{@link se.eskilson.egeo.Cache#getIdent <em>Ident</em>}</li>
+ *   <li>{@link se.eskilson.egeo.Cache#isAvailable <em>Available</em>}</li>
+ *   <li>{@link se.eskilson.egeo.Cache#isArchived <em>Archived</em>}</li>
  *   <li>{@link se.eskilson.egeo.Cache#getName <em>Name</em>}</li>
  *   <li>{@link se.eskilson.egeo.Cache#getDescription <em>Description</em>}</li>
  *   <li>{@link se.eskilson.egeo.Cache#getTime <em>Time</em>}</li>
  *   <li>{@link se.eskilson.egeo.Cache#getCacheType <em>Cache Type</em>}</li>
  *   <li>{@link se.eskilson.egeo.Cache#getPlacedBy <em>Placed By</em>}</li>
+ *   <li>{@link se.eskilson.egeo.Cache#getUrl <em>Url</em>}</li>
  *   <li>{@link se.eskilson.egeo.Cache#getOwnedBy <em>Owned By</em>}</li>
  *   <li>{@link se.eskilson.egeo.Cache#getCont <em>Cont</em>}</li>
  *   <li>{@link se.eskilson.egeo.Cache#getAttributes <em>Attributes</em>}</li>
@@ -38,7 +42,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see se.eskilson.egeo.EgeoPackage#getCache()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/GenModel labelFeature='description'"
  * @generated
  */
 public interface Cache extends EObject {
@@ -67,6 +71,84 @@ public interface Cache extends EObject {
 	 * @generated
 	 */
 	void setCode(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Ident</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ident</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ident</em>' attribute.
+	 * @see #setIdent(int)
+	 * @see se.eskilson.egeo.EgeoPackage#getCache_Ident()
+	 * @model unique="false"
+	 * @generated
+	 */
+	int getIdent();
+
+	/**
+	 * Sets the value of the '{@link se.eskilson.egeo.Cache#getIdent <em>Ident</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ident</em>' attribute.
+	 * @see #getIdent()
+	 * @generated
+	 */
+	void setIdent(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Available</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Available</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Available</em>' attribute.
+	 * @see #setAvailable(boolean)
+	 * @see se.eskilson.egeo.EgeoPackage#getCache_Available()
+	 * @model unique="false"
+	 * @generated
+	 */
+	boolean isAvailable();
+
+	/**
+	 * Sets the value of the '{@link se.eskilson.egeo.Cache#isAvailable <em>Available</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Available</em>' attribute.
+	 * @see #isAvailable()
+	 * @generated
+	 */
+	void setAvailable(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Archived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Archived</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Archived</em>' attribute.
+	 * @see #setArchived(boolean)
+	 * @see se.eskilson.egeo.EgeoPackage#getCache_Archived()
+	 * @model unique="false"
+	 * @generated
+	 */
+	boolean isArchived();
+
+	/**
+	 * Sets the value of the '{@link se.eskilson.egeo.Cache#isArchived <em>Archived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Archived</em>' attribute.
+	 * @see #isArchived()
+	 * @generated
+	 */
+	void setArchived(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -200,6 +282,32 @@ public interface Cache extends EObject {
 	 * @generated
 	 */
 	void setPlacedBy(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Url</em>' attribute.
+	 * @see #setUrl(String)
+	 * @see se.eskilson.egeo.EgeoPackage#getCache_Url()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getUrl();
+
+	/**
+	 * Sets the value of the '{@link se.eskilson.egeo.Cache#getUrl <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Url</em>' attribute.
+	 * @see #getUrl()
+	 * @generated
+	 */
+	void setUrl(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Owned By</b></em>' reference.

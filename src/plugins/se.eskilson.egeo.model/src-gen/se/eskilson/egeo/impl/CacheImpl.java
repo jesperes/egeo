@@ -37,11 +37,15 @@ import se.eskilson.egeo.User;
  * The following features are implemented:
  * <ul>
  *   <li>{@link se.eskilson.egeo.impl.CacheImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link se.eskilson.egeo.impl.CacheImpl#getIdent <em>Ident</em>}</li>
+ *   <li>{@link se.eskilson.egeo.impl.CacheImpl#isAvailable <em>Available</em>}</li>
+ *   <li>{@link se.eskilson.egeo.impl.CacheImpl#isArchived <em>Archived</em>}</li>
  *   <li>{@link se.eskilson.egeo.impl.CacheImpl#getName <em>Name</em>}</li>
  *   <li>{@link se.eskilson.egeo.impl.CacheImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link se.eskilson.egeo.impl.CacheImpl#getTime <em>Time</em>}</li>
  *   <li>{@link se.eskilson.egeo.impl.CacheImpl#getCacheType <em>Cache Type</em>}</li>
  *   <li>{@link se.eskilson.egeo.impl.CacheImpl#getPlacedBy <em>Placed By</em>}</li>
+ *   <li>{@link se.eskilson.egeo.impl.CacheImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link se.eskilson.egeo.impl.CacheImpl#getOwnedBy <em>Owned By</em>}</li>
  *   <li>{@link se.eskilson.egeo.impl.CacheImpl#getCont <em>Cont</em>}</li>
  *   <li>{@link se.eskilson.egeo.impl.CacheImpl#getAttributes <em>Attributes</em>}</li>
@@ -79,6 +83,66 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * @ordered
 	 */
 	protected String code = CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIdent() <em>Ident</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int IDENT_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getIdent() <em>Ident</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdent()
+	 * @generated
+	 * @ordered
+	 */
+	protected int ident = IDENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isAvailable() <em>Available</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAvailable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean AVAILABLE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isAvailable() <em>Available</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAvailable()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean available = AVAILABLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isArchived() <em>Archived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isArchived()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ARCHIVED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isArchived() <em>Archived</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isArchived()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean archived = ARCHIVED_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -179,6 +243,26 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * @ordered
 	 */
 	protected String placedBy = PLACED_BY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String URL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String url = URL_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getOwnedBy() <em>Owned By</em>}' reference.
@@ -408,6 +492,72 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getIdent() {
+		return ident;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIdent(int newIdent) {
+		int oldIdent = ident;
+		ident = newIdent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					EgeoPackage.CACHE__IDENT, oldIdent, ident));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isAvailable() {
+		return available;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAvailable(boolean newAvailable) {
+		boolean oldAvailable = available;
+		available = newAvailable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					EgeoPackage.CACHE__AVAILABLE, oldAvailable, available));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isArchived() {
+		return archived;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setArchived(boolean newArchived) {
+		boolean oldArchived = archived;
+		archived = newArchived;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					EgeoPackage.CACHE__ARCHIVED, oldArchived, archived));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public String getName() {
 		return name;
@@ -432,7 +582,6 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getDescription() {
 		return description;
 	}
@@ -442,7 +591,6 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
 		description = newDescription;
@@ -521,6 +669,28 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					EgeoPackage.CACHE__PLACED_BY, oldPlacedBy, placedBy));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUrl(String newUrl) {
+		String oldUrl = url;
+		url = newUrl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					EgeoPackage.CACHE__URL, oldUrl, url));
 	}
 
 	/**
@@ -942,6 +1112,12 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 		switch (featureID) {
 		case EgeoPackage.CACHE__CODE:
 			return getCode();
+		case EgeoPackage.CACHE__IDENT:
+			return getIdent();
+		case EgeoPackage.CACHE__AVAILABLE:
+			return isAvailable();
+		case EgeoPackage.CACHE__ARCHIVED:
+			return isArchived();
 		case EgeoPackage.CACHE__NAME:
 			return getName();
 		case EgeoPackage.CACHE__DESCRIPTION:
@@ -952,6 +1128,8 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 			return getCacheType();
 		case EgeoPackage.CACHE__PLACED_BY:
 			return getPlacedBy();
+		case EgeoPackage.CACHE__URL:
+			return getUrl();
 		case EgeoPackage.CACHE__OWNED_BY:
 			if (resolve)
 				return getOwnedBy();
@@ -994,6 +1172,15 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 		case EgeoPackage.CACHE__CODE:
 			setCode((String) newValue);
 			return;
+		case EgeoPackage.CACHE__IDENT:
+			setIdent((Integer) newValue);
+			return;
+		case EgeoPackage.CACHE__AVAILABLE:
+			setAvailable((Boolean) newValue);
+			return;
+		case EgeoPackage.CACHE__ARCHIVED:
+			setArchived((Boolean) newValue);
+			return;
 		case EgeoPackage.CACHE__NAME:
 			setName((String) newValue);
 			return;
@@ -1008,6 +1195,9 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 			return;
 		case EgeoPackage.CACHE__PLACED_BY:
 			setPlacedBy((String) newValue);
+			return;
+		case EgeoPackage.CACHE__URL:
+			setUrl((String) newValue);
 			return;
 		case EgeoPackage.CACHE__OWNED_BY:
 			setOwnedBy((User) newValue);
@@ -1062,6 +1252,15 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 		case EgeoPackage.CACHE__CODE:
 			setCode(CODE_EDEFAULT);
 			return;
+		case EgeoPackage.CACHE__IDENT:
+			setIdent(IDENT_EDEFAULT);
+			return;
+		case EgeoPackage.CACHE__AVAILABLE:
+			setAvailable(AVAILABLE_EDEFAULT);
+			return;
+		case EgeoPackage.CACHE__ARCHIVED:
+			setArchived(ARCHIVED_EDEFAULT);
+			return;
 		case EgeoPackage.CACHE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
@@ -1076,6 +1275,9 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 			return;
 		case EgeoPackage.CACHE__PLACED_BY:
 			setPlacedBy(PLACED_BY_EDEFAULT);
+			return;
+		case EgeoPackage.CACHE__URL:
+			setUrl(URL_EDEFAULT);
 			return;
 		case EgeoPackage.CACHE__OWNED_BY:
 			setOwnedBy((User) null);
@@ -1128,6 +1330,12 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 		case EgeoPackage.CACHE__CODE:
 			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT
 					.equals(code);
+		case EgeoPackage.CACHE__IDENT:
+			return ident != IDENT_EDEFAULT;
+		case EgeoPackage.CACHE__AVAILABLE:
+			return available != AVAILABLE_EDEFAULT;
+		case EgeoPackage.CACHE__ARCHIVED:
+			return archived != ARCHIVED_EDEFAULT;
 		case EgeoPackage.CACHE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT
 					.equals(name);
@@ -1142,6 +1350,9 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 		case EgeoPackage.CACHE__PLACED_BY:
 			return PLACED_BY_EDEFAULT == null ? placedBy != null
 					: !PLACED_BY_EDEFAULT.equals(placedBy);
+		case EgeoPackage.CACHE__URL:
+			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT
+					.equals(url);
 		case EgeoPackage.CACHE__OWNED_BY:
 			return ownedBy != null;
 		case EgeoPackage.CACHE__CONT:
@@ -1186,6 +1397,12 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (code: ");
 		result.append(code);
+		result.append(", ident: ");
+		result.append(ident);
+		result.append(", available: ");
+		result.append(available);
+		result.append(", archived: ");
+		result.append(archived);
 		result.append(", name: ");
 		result.append(name);
 		result.append(", description: ");
@@ -1196,6 +1413,8 @@ public class CacheImpl extends MinimalEObjectImpl.Container implements Cache {
 		result.append(cacheType);
 		result.append(", placedBy: ");
 		result.append(placedBy);
+		result.append(", url: ");
+		result.append(url);
 		result.append(", cont: ");
 		result.append(cont);
 		result.append(", difficulty: ");
