@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see se.eskilson.egeo.EgeoFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel basePackage='se.eskilson' codeFormatting='true' editDirectory='/se.eskilson.egeo.model.edit/src' editorDirectory='/se.eskilson.egeo.model.editor/src'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel basePackage='se.eskilson' codeFormatting='true' editDirectory='/se.eskilson.egeo.model.edit/src' editorDirectory='/se.eskilson.egeo.model.editor/src' testsDirectory='/se.eskilson.egeo.model.tests/src'"
  * @generated
  */
 public interface EgeoPackage extends EPackage {

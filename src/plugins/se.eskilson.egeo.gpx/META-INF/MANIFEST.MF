@@ -13,3 +13,4 @@ Require-Bundle: org.eclipse.ui,
  se.eskilson.egeo;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: se.eskilson.egeo.gpx

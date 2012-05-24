@@ -1,6 +1,11 @@
 
-@GenModel(codeFormatting="true", editDirectory="/se.eskilson.egeo.model.edit/src", 
-	editorDirectory="/se.eskilson.egeo.model.editor/src")
+@GenModel(
+	codeFormatting="true", 
+	editDirectory="/se.eskilson.egeo.model.edit/src", 
+	editorDirectory="/se.eskilson.egeo.model.editor/src",
+	testsDirectory="/se.eskilson.egeo.model.tests/src"
+	)
+	
 package se.eskilson.egeo
 
 import java.text.SimpleDateFormat
