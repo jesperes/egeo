@@ -457,7 +457,7 @@ public class CacheItemProvider extends ItemProviderAdapter implements
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Cache) object).getName();
+		String label = ((Cache) object).getDescription();
 		return label == null || label.length() == 0 ? getString("_UI_Cache_type")
 				: getString("_UI_Cache_type") + " " + label;
 	}

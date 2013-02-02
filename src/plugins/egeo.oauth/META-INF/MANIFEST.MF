@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Oauth
+Bundle-SymbolicName: egeo.oauth
+Bundle-Version: 1.0.0
+Bundle-ClassPath: oauth-20100601.jar,
+ oauth-20100601-sources.jar
+Export-Package: net.oauth,
+ net.oauth.signature,
+ net.oauth.signature.pem
+Require-Bundle: org.eclipse.birt.chart.engine
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Live
+Bundle-SymbolicName: egeo.live
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: egeo.live.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ egeo.api;bundle-version="1.5.8"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: egeo.live

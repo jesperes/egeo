@@ -40,7 +40,7 @@ public final class EgeoEditorPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	public EgeoEditorPlugin() {
-		super(new ResourceLocator[] { EcoreEditPlugin.INSTANCE, });
+		super(new ResourceLocator[] {});
 	}
 
 	/**
