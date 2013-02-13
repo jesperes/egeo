@@ -2,9 +2,7 @@
  */
 package egeo.gpx.impl;
 
-import egeo.gpx.ExtensionsType;
 import egeo.gpx.GpxPackage;
-import egeo.gpx.LinkType;
 import egeo.gpx.TrkType;
 import egeo.gpx.TrksegType;
 
@@ -23,7 +21,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -37,10 +37,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link egeo.gpx.impl.TrkTypeImpl#getCmt <em>Cmt</em>}</li>
  *   <li>{@link egeo.gpx.impl.TrkTypeImpl#getDesc <em>Desc</em>}</li>
  *   <li>{@link egeo.gpx.impl.TrkTypeImpl#getSrc <em>Src</em>}</li>
- *   <li>{@link egeo.gpx.impl.TrkTypeImpl#getLink <em>Link</em>}</li>
+ *   <li>{@link egeo.gpx.impl.TrkTypeImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link egeo.gpx.impl.TrkTypeImpl#getUrlname <em>Urlname</em>}</li>
  *   <li>{@link egeo.gpx.impl.TrkTypeImpl#getNumber <em>Number</em>}</li>
- *   <li>{@link egeo.gpx.impl.TrkTypeImpl#getType <em>Type</em>}</li>
- *   <li>{@link egeo.gpx.impl.TrkTypeImpl#getExtensions <em>Extensions</em>}</li>
+ *   <li>{@link egeo.gpx.impl.TrkTypeImpl#getAny <em>Any</em>}</li>
  *   <li>{@link egeo.gpx.impl.TrkTypeImpl#getTrkseg <em>Trkseg</em>}</li>
  * </ul>
  * </p>
@@ -129,14 +129,44 @@ public class TrkTypeImpl extends MinimalEObjectImpl.Container implements TrkType
 	protected String src = SRC_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLink() <em>Link</em>}' containment reference list.
+	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLink()
+	 * @see #getUrl()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<LinkType> link;
+	protected static final String URL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String url = URL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUrlname() <em>Urlname</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrlname()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String URLNAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUrlname() <em>Urlname</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrlname()
+	 * @generated
+	 * @ordered
+	 */
+	protected String urlname = URLNAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNumber() <em>Number</em>}' attribute.
@@ -159,34 +189,14 @@ public class TrkTypeImpl extends MinimalEObjectImpl.Container implements TrkType
 	protected BigInteger number = NUMBER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * The cached value of the '{@link #getAny() <em>Any</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getAny()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected String type = TYPE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getExtensions() <em>Extensions</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExtensions()
-	 * @generated
-	 * @ordered
-	 */
-	protected ExtensionsType extensions;
+	protected FeatureMap any;
 
 	/**
 	 * The cached value of the '{@link #getTrkseg() <em>Trkseg</em>}' containment reference list.
@@ -306,11 +316,41 @@ public class TrkTypeImpl extends MinimalEObjectImpl.Container implements TrkType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<LinkType> getLink() {
-		if (link == null) {
-			link = new EObjectContainmentEList<LinkType>(LinkType.class, this, GpxPackage.TRK_TYPE__LINK);
-		}
-		return link;
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUrl(String newUrl) {
+		String oldUrl = url;
+		url = newUrl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GpxPackage.TRK_TYPE__URL, oldUrl, url));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getUrlname() {
+		return urlname;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUrlname(String newUrlname) {
+		String oldUrlname = urlname;
+		urlname = newUrlname;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GpxPackage.TRK_TYPE__URLNAME, oldUrlname, urlname));
 	}
 
 	/**
@@ -339,63 +379,11 @@ public class TrkTypeImpl extends MinimalEObjectImpl.Container implements TrkType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GpxPackage.TRK_TYPE__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExtensionsType getExtensions() {
-		return extensions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetExtensions(ExtensionsType newExtensions, NotificationChain msgs) {
-		ExtensionsType oldExtensions = extensions;
-		extensions = newExtensions;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GpxPackage.TRK_TYPE__EXTENSIONS, oldExtensions, newExtensions);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public FeatureMap getAny() {
+		if (any == null) {
+			any = new BasicFeatureMap(this, GpxPackage.TRK_TYPE__ANY);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExtensions(ExtensionsType newExtensions) {
-		if (newExtensions != extensions) {
-			NotificationChain msgs = null;
-			if (extensions != null)
-				msgs = ((InternalEObject)extensions).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GpxPackage.TRK_TYPE__EXTENSIONS, null, msgs);
-			if (newExtensions != null)
-				msgs = ((InternalEObject)newExtensions).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GpxPackage.TRK_TYPE__EXTENSIONS, null, msgs);
-			msgs = basicSetExtensions(newExtensions, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GpxPackage.TRK_TYPE__EXTENSIONS, newExtensions, newExtensions));
+		return any;
 	}
 
 	/**
@@ -418,10 +406,8 @@ public class TrkTypeImpl extends MinimalEObjectImpl.Container implements TrkType
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GpxPackage.TRK_TYPE__LINK:
-				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case GpxPackage.TRK_TYPE__EXTENSIONS:
-				return basicSetExtensions(null, msgs);
+			case GpxPackage.TRK_TYPE__ANY:
+				return ((InternalEList<?>)getAny()).basicRemove(otherEnd, msgs);
 			case GpxPackage.TRK_TYPE__TRKSEG:
 				return ((InternalEList<?>)getTrkseg()).basicRemove(otherEnd, msgs);
 		}
@@ -444,14 +430,15 @@ public class TrkTypeImpl extends MinimalEObjectImpl.Container implements TrkType
 				return getDesc();
 			case GpxPackage.TRK_TYPE__SRC:
 				return getSrc();
-			case GpxPackage.TRK_TYPE__LINK:
-				return getLink();
+			case GpxPackage.TRK_TYPE__URL:
+				return getUrl();
+			case GpxPackage.TRK_TYPE__URLNAME:
+				return getUrlname();
 			case GpxPackage.TRK_TYPE__NUMBER:
 				return getNumber();
-			case GpxPackage.TRK_TYPE__TYPE:
-				return getType();
-			case GpxPackage.TRK_TYPE__EXTENSIONS:
-				return getExtensions();
+			case GpxPackage.TRK_TYPE__ANY:
+				if (coreType) return getAny();
+				return ((FeatureMap.Internal)getAny()).getWrapper();
 			case GpxPackage.TRK_TYPE__TRKSEG:
 				return getTrkseg();
 		}
@@ -479,18 +466,17 @@ public class TrkTypeImpl extends MinimalEObjectImpl.Container implements TrkType
 			case GpxPackage.TRK_TYPE__SRC:
 				setSrc((String)newValue);
 				return;
-			case GpxPackage.TRK_TYPE__LINK:
-				getLink().clear();
-				getLink().addAll((Collection<? extends LinkType>)newValue);
+			case GpxPackage.TRK_TYPE__URL:
+				setUrl((String)newValue);
+				return;
+			case GpxPackage.TRK_TYPE__URLNAME:
+				setUrlname((String)newValue);
 				return;
 			case GpxPackage.TRK_TYPE__NUMBER:
 				setNumber((BigInteger)newValue);
 				return;
-			case GpxPackage.TRK_TYPE__TYPE:
-				setType((String)newValue);
-				return;
-			case GpxPackage.TRK_TYPE__EXTENSIONS:
-				setExtensions((ExtensionsType)newValue);
+			case GpxPackage.TRK_TYPE__ANY:
+				((FeatureMap.Internal)getAny()).set(newValue);
 				return;
 			case GpxPackage.TRK_TYPE__TRKSEG:
 				getTrkseg().clear();
@@ -520,17 +506,17 @@ public class TrkTypeImpl extends MinimalEObjectImpl.Container implements TrkType
 			case GpxPackage.TRK_TYPE__SRC:
 				setSrc(SRC_EDEFAULT);
 				return;
-			case GpxPackage.TRK_TYPE__LINK:
-				getLink().clear();
+			case GpxPackage.TRK_TYPE__URL:
+				setUrl(URL_EDEFAULT);
+				return;
+			case GpxPackage.TRK_TYPE__URLNAME:
+				setUrlname(URLNAME_EDEFAULT);
 				return;
 			case GpxPackage.TRK_TYPE__NUMBER:
 				setNumber(NUMBER_EDEFAULT);
 				return;
-			case GpxPackage.TRK_TYPE__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
-			case GpxPackage.TRK_TYPE__EXTENSIONS:
-				setExtensions((ExtensionsType)null);
+			case GpxPackage.TRK_TYPE__ANY:
+				getAny().clear();
 				return;
 			case GpxPackage.TRK_TYPE__TRKSEG:
 				getTrkseg().clear();
@@ -555,14 +541,14 @@ public class TrkTypeImpl extends MinimalEObjectImpl.Container implements TrkType
 				return DESC_EDEFAULT == null ? desc != null : !DESC_EDEFAULT.equals(desc);
 			case GpxPackage.TRK_TYPE__SRC:
 				return SRC_EDEFAULT == null ? src != null : !SRC_EDEFAULT.equals(src);
-			case GpxPackage.TRK_TYPE__LINK:
-				return link != null && !link.isEmpty();
+			case GpxPackage.TRK_TYPE__URL:
+				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
+			case GpxPackage.TRK_TYPE__URLNAME:
+				return URLNAME_EDEFAULT == null ? urlname != null : !URLNAME_EDEFAULT.equals(urlname);
 			case GpxPackage.TRK_TYPE__NUMBER:
 				return NUMBER_EDEFAULT == null ? number != null : !NUMBER_EDEFAULT.equals(number);
-			case GpxPackage.TRK_TYPE__TYPE:
-				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-			case GpxPackage.TRK_TYPE__EXTENSIONS:
-				return extensions != null;
+			case GpxPackage.TRK_TYPE__ANY:
+				return any != null && !any.isEmpty();
 			case GpxPackage.TRK_TYPE__TRKSEG:
 				return trkseg != null && !trkseg.isEmpty();
 		}
@@ -587,10 +573,14 @@ public class TrkTypeImpl extends MinimalEObjectImpl.Container implements TrkType
 		result.append(desc);
 		result.append(", src: ");
 		result.append(src);
+		result.append(", url: ");
+		result.append(url);
+		result.append(", urlname: ");
+		result.append(urlname);
 		result.append(", number: ");
 		result.append(number);
-		result.append(", type: ");
-		result.append(type);
+		result.append(", any: ");
+		result.append(any);
 		result.append(')');
 		return result.toString();
 	}

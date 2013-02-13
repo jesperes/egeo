@@ -3,7 +3,6 @@
 package egeo.gpx.provider;
 
 
-import egeo.gpx.GpxFactory;
 import egeo.gpx.GpxPackage;
 import egeo.gpx.WptType;
 
@@ -71,6 +70,8 @@ public class WptTypeItemProvider
 			addCmtPropertyDescriptor(object);
 			addDescPropertyDescriptor(object);
 			addSrcPropertyDescriptor(object);
+			addUrlPropertyDescriptor(object);
+			addUrlnamePropertyDescriptor(object);
 			addSymPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 			addFixPropertyDescriptor(object);
@@ -254,6 +255,50 @@ public class WptTypeItemProvider
 				 getString("_UI_WptType_src_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WptType_src_feature", "_UI_WptType_type"),
 				 GpxPackage.Literals.WPT_TYPE__SRC,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WptType_url_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WptType_url_feature", "_UI_WptType_type"),
+				 GpxPackage.Literals.WPT_TYPE__URL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Urlname feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlnamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WptType_urlname_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WptType_urlname_feature", "_UI_WptType_type"),
+				 GpxPackage.Literals.WPT_TYPE__URLNAME,
 				 true,
 				 false,
 				 false,
@@ -516,8 +561,7 @@ public class WptTypeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GpxPackage.Literals.WPT_TYPE__LINK);
-			childrenFeatures.add(GpxPackage.Literals.WPT_TYPE__EXTENSIONS);
+			childrenFeatures.add(GpxPackage.Literals.WPT_TYPE__ANY);
 		}
 		return childrenFeatures;
 	}
@@ -580,6 +624,8 @@ public class WptTypeItemProvider
 			case GpxPackage.WPT_TYPE__CMT:
 			case GpxPackage.WPT_TYPE__DESC:
 			case GpxPackage.WPT_TYPE__SRC:
+			case GpxPackage.WPT_TYPE__URL:
+			case GpxPackage.WPT_TYPE__URLNAME:
 			case GpxPackage.WPT_TYPE__SYM:
 			case GpxPackage.WPT_TYPE__TYPE:
 			case GpxPackage.WPT_TYPE__FIX:
@@ -593,8 +639,7 @@ public class WptTypeItemProvider
 			case GpxPackage.WPT_TYPE__LON:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case GpxPackage.WPT_TYPE__LINK:
-			case GpxPackage.WPT_TYPE__EXTENSIONS:
+			case GpxPackage.WPT_TYPE__ANY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -611,16 +656,6 @@ public class WptTypeItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GpxPackage.Literals.WPT_TYPE__LINK,
-				 GpxFactory.eINSTANCE.createLinkType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GpxPackage.Literals.WPT_TYPE__EXTENSIONS,
-				 GpxFactory.eINSTANCE.createExtensionsType()));
 	}
 
 	/**

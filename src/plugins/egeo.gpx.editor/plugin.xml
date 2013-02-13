@@ -23,6 +23,18 @@
    </extension>
 
    <extension point="org.eclipse.ui.editors">
+      <!-- @generated groundspeak -->
+      <editor
+            id="egeo.gpx.groundspeak.presentation.GroundspeakEditorID"
+            name="%_UI_GroundspeakEditor_label"
+            icon="icons/full/obj16/GroundspeakModelFile.gif"
+            extensions="groundspeak"
+            class="egeo.gpx.groundspeak.presentation.GroundspeakEditor"
+            contributorClass="egeo.gpx.groundspeak.presentation.GroundspeakActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
       <!-- @generated gpx -->
       <editor
             id="egeo.gpx.presentation.GpxEditorID"

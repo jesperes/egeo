@@ -13,12 +13,6 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Fix Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * 
- * 				Type of GPS fix. none means GPS had no fix. To signify "the fix info is
- * 				unknown, leave out fixType entirely. pps = military signal used
- * 			
- * <!-- end-model-doc -->
  * @see egeo.gpx.GpxPackage#getFixType()
  * @model extendedMetaData="name='fixType'"
  * @generated

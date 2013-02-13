@@ -84,12 +84,11 @@ public interface DocumentRoot extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Gpx</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Gpx</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 				GPX is the root element in the XML file.
-	 * 			
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Gpx</em>' containment reference.
 	 * @see #setGpx(GpxType)
 	 * @see egeo.gpx.GpxPackage#getDocumentRoot_Gpx()

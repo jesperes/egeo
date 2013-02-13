@@ -8,7 +8,8 @@ Bundle-Activator: egeo.gpx.presentation.GpxEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: egeo.gpx.presentation
+Export-Package: egeo.gpx.presentation,
+ egeo.gpx.groundspeak.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  egeo.gpx.edit;visibility:=reexport,

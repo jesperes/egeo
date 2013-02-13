@@ -31,15 +31,6 @@ public interface GpxFactory extends EFactory {
 	BoundsType createBoundsType();
 
 	/**
-	 * Returns a new object of class '<em>Copyright Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Copyright Type</em>'.
-	 * @generated
-	 */
-	CopyrightType createCopyrightType();
-
-	/**
 	 * Returns a new object of class '<em>Document Root</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,24 +38,6 @@ public interface GpxFactory extends EFactory {
 	 * @generated
 	 */
 	DocumentRoot createDocumentRoot();
-
-	/**
-	 * Returns a new object of class '<em>Email Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Email Type</em>'.
-	 * @generated
-	 */
-	EmailType createEmailType();
-
-	/**
-	 * Returns a new object of class '<em>Extensions Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Extensions Type</em>'.
-	 * @generated
-	 */
-	ExtensionsType createExtensionsType();
 
 	/**
 	 * Returns a new object of class '<em>Type</em>'.
@@ -76,49 +49,13 @@ public interface GpxFactory extends EFactory {
 	GpxType createGpxType();
 
 	/**
-	 * Returns a new object of class '<em>Link Type</em>'.
+	 * Returns a new object of class '<em>Rtept Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Link Type</em>'.
+	 * @return a new object of class '<em>Rtept Type</em>'.
 	 * @generated
 	 */
-	LinkType createLinkType();
-
-	/**
-	 * Returns a new object of class '<em>Metadata Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Metadata Type</em>'.
-	 * @generated
-	 */
-	MetadataType createMetadataType();
-
-	/**
-	 * Returns a new object of class '<em>Person Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Person Type</em>'.
-	 * @generated
-	 */
-	PersonType createPersonType();
-
-	/**
-	 * Returns a new object of class '<em>Ptseg Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ptseg Type</em>'.
-	 * @generated
-	 */
-	PtsegType createPtsegType();
-
-	/**
-	 * Returns a new object of class '<em>Pt Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Pt Type</em>'.
-	 * @generated
-	 */
-	PtType createPtType();
+	RteptType createRteptType();
 
 	/**
 	 * Returns a new object of class '<em>Rte Type</em>'.
@@ -128,6 +65,15 @@ public interface GpxFactory extends EFactory {
 	 * @generated
 	 */
 	RteType createRteType();
+
+	/**
+	 * Returns a new object of class '<em>Trkpt Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Trkpt Type</em>'.
+	 * @generated
+	 */
+	TrkptType createTrkptType();
 
 	/**
 	 * Returns a new object of class '<em>Trkseg Type</em>'.

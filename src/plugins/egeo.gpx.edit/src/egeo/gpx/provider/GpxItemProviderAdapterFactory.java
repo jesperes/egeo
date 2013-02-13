@@ -95,29 +95,6 @@ public class GpxItemProviderAdapterFactory extends GpxAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link egeo.gpx.CopyrightType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CopyrightTypeItemProvider copyrightTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link egeo.gpx.CopyrightType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCopyrightTypeAdapter() {
-		if (copyrightTypeItemProvider == null) {
-			copyrightTypeItemProvider = new CopyrightTypeItemProvider(this);
-		}
-
-		return copyrightTypeItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link egeo.gpx.DocumentRoot} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,52 +115,6 @@ public class GpxItemProviderAdapterFactory extends GpxAdapterFactory implements 
 		}
 
 		return documentRootItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link egeo.gpx.EmailType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EmailTypeItemProvider emailTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link egeo.gpx.EmailType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEmailTypeAdapter() {
-		if (emailTypeItemProvider == null) {
-			emailTypeItemProvider = new EmailTypeItemProvider(this);
-		}
-
-		return emailTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link egeo.gpx.ExtensionsType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExtensionsTypeItemProvider extensionsTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link egeo.gpx.ExtensionsType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExtensionsTypeAdapter() {
-		if (extensionsTypeItemProvider == null) {
-			extensionsTypeItemProvider = new ExtensionsTypeItemProvider(this);
-		}
-
-		return extensionsTypeItemProvider;
 	}
 
 	/**
@@ -210,118 +141,26 @@ public class GpxItemProviderAdapterFactory extends GpxAdapterFactory implements 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link egeo.gpx.LinkType} instances.
+	 * This keeps track of the one adapter used for all {@link egeo.gpx.RteptType} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LinkTypeItemProvider linkTypeItemProvider;
+	protected RteptTypeItemProvider rteptTypeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link egeo.gpx.LinkType}.
+	 * This creates an adapter for a {@link egeo.gpx.RteptType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLinkTypeAdapter() {
-		if (linkTypeItemProvider == null) {
-			linkTypeItemProvider = new LinkTypeItemProvider(this);
+	public Adapter createRteptTypeAdapter() {
+		if (rteptTypeItemProvider == null) {
+			rteptTypeItemProvider = new RteptTypeItemProvider(this);
 		}
 
-		return linkTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link egeo.gpx.MetadataType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MetadataTypeItemProvider metadataTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link egeo.gpx.MetadataType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMetadataTypeAdapter() {
-		if (metadataTypeItemProvider == null) {
-			metadataTypeItemProvider = new MetadataTypeItemProvider(this);
-		}
-
-		return metadataTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link egeo.gpx.PersonType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PersonTypeItemProvider personTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link egeo.gpx.PersonType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPersonTypeAdapter() {
-		if (personTypeItemProvider == null) {
-			personTypeItemProvider = new PersonTypeItemProvider(this);
-		}
-
-		return personTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link egeo.gpx.PtsegType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PtsegTypeItemProvider ptsegTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link egeo.gpx.PtsegType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPtsegTypeAdapter() {
-		if (ptsegTypeItemProvider == null) {
-			ptsegTypeItemProvider = new PtsegTypeItemProvider(this);
-		}
-
-		return ptsegTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link egeo.gpx.PtType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PtTypeItemProvider ptTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link egeo.gpx.PtType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPtTypeAdapter() {
-		if (ptTypeItemProvider == null) {
-			ptTypeItemProvider = new PtTypeItemProvider(this);
-		}
-
-		return ptTypeItemProvider;
+		return rteptTypeItemProvider;
 	}
 
 	/**
@@ -345,6 +184,29 @@ public class GpxItemProviderAdapterFactory extends GpxAdapterFactory implements 
 		}
 
 		return rteTypeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link egeo.gpx.TrkptType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TrkptTypeItemProvider trkptTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link egeo.gpx.TrkptType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTrkptTypeAdapter() {
+		if (trkptTypeItemProvider == null) {
+			trkptTypeItemProvider = new TrkptTypeItemProvider(this);
+		}
+
+		return trkptTypeItemProvider;
 	}
 
 	/**
@@ -516,17 +378,11 @@ public class GpxItemProviderAdapterFactory extends GpxAdapterFactory implements 
 	 */
 	public void dispose() {
 		if (boundsTypeItemProvider != null) boundsTypeItemProvider.dispose();
-		if (copyrightTypeItemProvider != null) copyrightTypeItemProvider.dispose();
 		if (documentRootItemProvider != null) documentRootItemProvider.dispose();
-		if (emailTypeItemProvider != null) emailTypeItemProvider.dispose();
-		if (extensionsTypeItemProvider != null) extensionsTypeItemProvider.dispose();
 		if (gpxTypeItemProvider != null) gpxTypeItemProvider.dispose();
-		if (linkTypeItemProvider != null) linkTypeItemProvider.dispose();
-		if (metadataTypeItemProvider != null) metadataTypeItemProvider.dispose();
-		if (personTypeItemProvider != null) personTypeItemProvider.dispose();
-		if (ptsegTypeItemProvider != null) ptsegTypeItemProvider.dispose();
-		if (ptTypeItemProvider != null) ptTypeItemProvider.dispose();
+		if (rteptTypeItemProvider != null) rteptTypeItemProvider.dispose();
 		if (rteTypeItemProvider != null) rteTypeItemProvider.dispose();
+		if (trkptTypeItemProvider != null) trkptTypeItemProvider.dispose();
 		if (trksegTypeItemProvider != null) trksegTypeItemProvider.dispose();
 		if (trkTypeItemProvider != null) trkTypeItemProvider.dispose();
 		if (wptTypeItemProvider != null) wptTypeItemProvider.dispose();

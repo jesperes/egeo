@@ -14,5 +14,8 @@ Require-Bundle: org.eclipse.ui,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: egeo.gpx,
  egeo.gpx.impl,
- egeo.gpx.util
+ egeo.gpx.util,
+ egeo.gpx.groundspeak,
+ egeo.gpx.groundspeak.impl,
+ egeo.gpx.groundspeak.util
 Bundle-ActivationPolicy: lazy

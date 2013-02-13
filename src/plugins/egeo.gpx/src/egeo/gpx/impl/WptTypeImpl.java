@@ -2,23 +2,17 @@
  */
 package egeo.gpx.impl;
 
-import egeo.gpx.ExtensionsType;
 import egeo.gpx.FixType;
 import egeo.gpx.GpxPackage;
-import egeo.gpx.LinkType;
 import egeo.gpx.WptType;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import java.util.Collection;
-
 import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -26,7 +20,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.BasicFeatureMap;
+import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -44,7 +39,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link egeo.gpx.impl.WptTypeImpl#getCmt <em>Cmt</em>}</li>
  *   <li>{@link egeo.gpx.impl.WptTypeImpl#getDesc <em>Desc</em>}</li>
  *   <li>{@link egeo.gpx.impl.WptTypeImpl#getSrc <em>Src</em>}</li>
- *   <li>{@link egeo.gpx.impl.WptTypeImpl#getLink <em>Link</em>}</li>
+ *   <li>{@link egeo.gpx.impl.WptTypeImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link egeo.gpx.impl.WptTypeImpl#getUrlname <em>Urlname</em>}</li>
  *   <li>{@link egeo.gpx.impl.WptTypeImpl#getSym <em>Sym</em>}</li>
  *   <li>{@link egeo.gpx.impl.WptTypeImpl#getType <em>Type</em>}</li>
  *   <li>{@link egeo.gpx.impl.WptTypeImpl#getFix <em>Fix</em>}</li>
@@ -54,7 +50,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link egeo.gpx.impl.WptTypeImpl#getPdop <em>Pdop</em>}</li>
  *   <li>{@link egeo.gpx.impl.WptTypeImpl#getAgeofdgpsdata <em>Ageofdgpsdata</em>}</li>
  *   <li>{@link egeo.gpx.impl.WptTypeImpl#getDgpsid <em>Dgpsid</em>}</li>
- *   <li>{@link egeo.gpx.impl.WptTypeImpl#getExtensions <em>Extensions</em>}</li>
+ *   <li>{@link egeo.gpx.impl.WptTypeImpl#getAny <em>Any</em>}</li>
  *   <li>{@link egeo.gpx.impl.WptTypeImpl#getLat <em>Lat</em>}</li>
  *   <li>{@link egeo.gpx.impl.WptTypeImpl#getLon <em>Lon</em>}</li>
  * </ul>
@@ -224,14 +220,44 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 	protected String src = SRC_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLink() <em>Link</em>}' containment reference list.
+	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLink()
+	 * @see #getUrl()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<LinkType> link;
+	protected static final String URL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String url = URL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUrlname() <em>Urlname</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrlname()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String URLNAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUrlname() <em>Urlname</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrlname()
+	 * @generated
+	 * @ordered
+	 */
+	protected String urlname = URLNAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSym() <em>Sym</em>}' attribute.
@@ -423,14 +449,14 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 	protected BigInteger dgpsid = DGPSID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getExtensions() <em>Extensions</em>}' containment reference.
+	 * The cached value of the '{@link #getAny() <em>Any</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExtensions()
+	 * @see #getAny()
 	 * @generated
 	 * @ordered
 	 */
-	protected ExtensionsType extensions;
+	protected FeatureMap any;
 
 	/**
 	 * The default value of the '{@link #getLat() <em>Lat</em>}' attribute.
@@ -664,11 +690,41 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<LinkType> getLink() {
-		if (link == null) {
-			link = new EObjectContainmentEList<LinkType>(LinkType.class, this, GpxPackage.WPT_TYPE__LINK);
-		}
-		return link;
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUrl(String newUrl) {
+		String oldUrl = url;
+		url = newUrl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GpxPackage.WPT_TYPE__URL, oldUrl, url));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getUrlname() {
+		return urlname;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUrlname(String newUrlname) {
+		String oldUrlname = urlname;
+		urlname = newUrlname;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GpxPackage.WPT_TYPE__URLNAME, oldUrlname, urlname));
 	}
 
 	/**
@@ -890,42 +946,11 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExtensionsType getExtensions() {
-		return extensions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetExtensions(ExtensionsType newExtensions, NotificationChain msgs) {
-		ExtensionsType oldExtensions = extensions;
-		extensions = newExtensions;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GpxPackage.WPT_TYPE__EXTENSIONS, oldExtensions, newExtensions);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public FeatureMap getAny() {
+		if (any == null) {
+			any = new BasicFeatureMap(this, GpxPackage.WPT_TYPE__ANY);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExtensions(ExtensionsType newExtensions) {
-		if (newExtensions != extensions) {
-			NotificationChain msgs = null;
-			if (extensions != null)
-				msgs = ((InternalEObject)extensions).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GpxPackage.WPT_TYPE__EXTENSIONS, null, msgs);
-			if (newExtensions != null)
-				msgs = ((InternalEObject)newExtensions).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GpxPackage.WPT_TYPE__EXTENSIONS, null, msgs);
-			msgs = basicSetExtensions(newExtensions, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GpxPackage.WPT_TYPE__EXTENSIONS, newExtensions, newExtensions));
+		return any;
 	}
 
 	/**
@@ -978,10 +1003,8 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GpxPackage.WPT_TYPE__LINK:
-				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case GpxPackage.WPT_TYPE__EXTENSIONS:
-				return basicSetExtensions(null, msgs);
+			case GpxPackage.WPT_TYPE__ANY:
+				return ((InternalEList<?>)getAny()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -1010,8 +1033,10 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 				return getDesc();
 			case GpxPackage.WPT_TYPE__SRC:
 				return getSrc();
-			case GpxPackage.WPT_TYPE__LINK:
-				return getLink();
+			case GpxPackage.WPT_TYPE__URL:
+				return getUrl();
+			case GpxPackage.WPT_TYPE__URLNAME:
+				return getUrlname();
 			case GpxPackage.WPT_TYPE__SYM:
 				return getSym();
 			case GpxPackage.WPT_TYPE__TYPE:
@@ -1030,8 +1055,9 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 				return getAgeofdgpsdata();
 			case GpxPackage.WPT_TYPE__DGPSID:
 				return getDgpsid();
-			case GpxPackage.WPT_TYPE__EXTENSIONS:
-				return getExtensions();
+			case GpxPackage.WPT_TYPE__ANY:
+				if (coreType) return getAny();
+				return ((FeatureMap.Internal)getAny()).getWrapper();
 			case GpxPackage.WPT_TYPE__LAT:
 				return getLat();
 			case GpxPackage.WPT_TYPE__LON:
@@ -1045,7 +1071,6 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -1073,9 +1098,11 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 			case GpxPackage.WPT_TYPE__SRC:
 				setSrc((String)newValue);
 				return;
-			case GpxPackage.WPT_TYPE__LINK:
-				getLink().clear();
-				getLink().addAll((Collection<? extends LinkType>)newValue);
+			case GpxPackage.WPT_TYPE__URL:
+				setUrl((String)newValue);
+				return;
+			case GpxPackage.WPT_TYPE__URLNAME:
+				setUrlname((String)newValue);
 				return;
 			case GpxPackage.WPT_TYPE__SYM:
 				setSym((String)newValue);
@@ -1104,8 +1131,8 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 			case GpxPackage.WPT_TYPE__DGPSID:
 				setDgpsid((BigInteger)newValue);
 				return;
-			case GpxPackage.WPT_TYPE__EXTENSIONS:
-				setExtensions((ExtensionsType)newValue);
+			case GpxPackage.WPT_TYPE__ANY:
+				((FeatureMap.Internal)getAny()).set(newValue);
 				return;
 			case GpxPackage.WPT_TYPE__LAT:
 				setLat((BigDecimal)newValue);
@@ -1149,8 +1176,11 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 			case GpxPackage.WPT_TYPE__SRC:
 				setSrc(SRC_EDEFAULT);
 				return;
-			case GpxPackage.WPT_TYPE__LINK:
-				getLink().clear();
+			case GpxPackage.WPT_TYPE__URL:
+				setUrl(URL_EDEFAULT);
+				return;
+			case GpxPackage.WPT_TYPE__URLNAME:
+				setUrlname(URLNAME_EDEFAULT);
 				return;
 			case GpxPackage.WPT_TYPE__SYM:
 				setSym(SYM_EDEFAULT);
@@ -1179,8 +1209,8 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 			case GpxPackage.WPT_TYPE__DGPSID:
 				setDgpsid(DGPSID_EDEFAULT);
 				return;
-			case GpxPackage.WPT_TYPE__EXTENSIONS:
-				setExtensions((ExtensionsType)null);
+			case GpxPackage.WPT_TYPE__ANY:
+				getAny().clear();
 				return;
 			case GpxPackage.WPT_TYPE__LAT:
 				setLat(LAT_EDEFAULT);
@@ -1216,8 +1246,10 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 				return DESC_EDEFAULT == null ? desc != null : !DESC_EDEFAULT.equals(desc);
 			case GpxPackage.WPT_TYPE__SRC:
 				return SRC_EDEFAULT == null ? src != null : !SRC_EDEFAULT.equals(src);
-			case GpxPackage.WPT_TYPE__LINK:
-				return link != null && !link.isEmpty();
+			case GpxPackage.WPT_TYPE__URL:
+				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
+			case GpxPackage.WPT_TYPE__URLNAME:
+				return URLNAME_EDEFAULT == null ? urlname != null : !URLNAME_EDEFAULT.equals(urlname);
 			case GpxPackage.WPT_TYPE__SYM:
 				return SYM_EDEFAULT == null ? sym != null : !SYM_EDEFAULT.equals(sym);
 			case GpxPackage.WPT_TYPE__TYPE:
@@ -1236,8 +1268,8 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 				return AGEOFDGPSDATA_EDEFAULT == null ? ageofdgpsdata != null : !AGEOFDGPSDATA_EDEFAULT.equals(ageofdgpsdata);
 			case GpxPackage.WPT_TYPE__DGPSID:
 				return DGPSID_EDEFAULT == null ? dgpsid != null : !DGPSID_EDEFAULT.equals(dgpsid);
-			case GpxPackage.WPT_TYPE__EXTENSIONS:
-				return extensions != null;
+			case GpxPackage.WPT_TYPE__ANY:
+				return any != null && !any.isEmpty();
 			case GpxPackage.WPT_TYPE__LAT:
 				return LAT_EDEFAULT == null ? lat != null : !LAT_EDEFAULT.equals(lat);
 			case GpxPackage.WPT_TYPE__LON:
@@ -1272,6 +1304,10 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 		result.append(desc);
 		result.append(", src: ");
 		result.append(src);
+		result.append(", url: ");
+		result.append(url);
+		result.append(", urlname: ");
+		result.append(urlname);
 		result.append(", sym: ");
 		result.append(sym);
 		result.append(", type: ");
@@ -1290,6 +1326,8 @@ public class WptTypeImpl extends MinimalEObjectImpl.Container implements WptType
 		result.append(ageofdgpsdata);
 		result.append(", dgpsid: ");
 		result.append(dgpsid);
+		result.append(", any: ");
+		result.append(any);
 		result.append(", lat: ");
 		result.append(lat);
 		result.append(", lon: ");

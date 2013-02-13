@@ -72,27 +72,9 @@ public class GpxSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GpxPackage.COPYRIGHT_TYPE: {
-				CopyrightType copyrightType = (CopyrightType)theEObject;
-				T result = caseCopyrightType(copyrightType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case GpxPackage.DOCUMENT_ROOT: {
 				DocumentRoot documentRoot = (DocumentRoot)theEObject;
 				T result = caseDocumentRoot(documentRoot);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GpxPackage.EMAIL_TYPE: {
-				EmailType emailType = (EmailType)theEObject;
-				T result = caseEmailType(emailType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GpxPackage.EXTENSIONS_TYPE: {
-				ExtensionsType extensionsType = (ExtensionsType)theEObject;
-				T result = caseExtensionsType(extensionsType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -102,39 +84,21 @@ public class GpxSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GpxPackage.LINK_TYPE: {
-				LinkType linkType = (LinkType)theEObject;
-				T result = caseLinkType(linkType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GpxPackage.METADATA_TYPE: {
-				MetadataType metadataType = (MetadataType)theEObject;
-				T result = caseMetadataType(metadataType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GpxPackage.PERSON_TYPE: {
-				PersonType personType = (PersonType)theEObject;
-				T result = casePersonType(personType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GpxPackage.PTSEG_TYPE: {
-				PtsegType ptsegType = (PtsegType)theEObject;
-				T result = casePtsegType(ptsegType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GpxPackage.PT_TYPE: {
-				PtType ptType = (PtType)theEObject;
-				T result = casePtType(ptType);
+			case GpxPackage.RTEPT_TYPE: {
+				RteptType rteptType = (RteptType)theEObject;
+				T result = caseRteptType(rteptType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GpxPackage.RTE_TYPE: {
 				RteType rteType = (RteType)theEObject;
 				T result = caseRteType(rteType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GpxPackage.TRKPT_TYPE: {
+				TrkptType trkptType = (TrkptType)theEObject;
+				T result = caseTrkptType(trkptType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -176,21 +140,6 @@ public class GpxSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Copyright Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Copyright Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCopyrightType(CopyrightType object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Document Root</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -202,36 +151,6 @@ public class GpxSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDocumentRoot(DocumentRoot object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Email Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Email Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEmailType(EmailType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Extensions Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Extensions Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseExtensionsType(ExtensionsType object) {
 		return null;
 	}
 
@@ -251,77 +170,17 @@ public class GpxSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Link Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Rtept Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Link Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Rtept Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLinkType(LinkType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Metadata Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Metadata Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMetadataType(MetadataType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Person Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Person Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePersonType(PersonType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ptseg Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ptseg Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePtsegType(PtsegType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Pt Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Pt Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePtType(PtType object) {
+	public T caseRteptType(RteptType object) {
 		return null;
 	}
 
@@ -337,6 +196,21 @@ public class GpxSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRteType(RteType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Trkpt Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Trkpt Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrkptType(TrkptType object) {
 		return null;
 	}
 

@@ -7,21 +7,14 @@ import java.math.BigInteger;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
+
+import org.eclipse.emf.ecore.util.FeatureMap;
 
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Wpt Type</b></em>'.
  * <!-- end-user-doc -->
- *
- * <!-- begin-model-doc -->
- * 
- * 				wpt represents a waypoint, point of interest, or named feature on a
- * 				map.
- * 			
- * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
@@ -34,7 +27,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link egeo.gpx.WptType#getCmt <em>Cmt</em>}</li>
  *   <li>{@link egeo.gpx.WptType#getDesc <em>Desc</em>}</li>
  *   <li>{@link egeo.gpx.WptType#getSrc <em>Src</em>}</li>
- *   <li>{@link egeo.gpx.WptType#getLink <em>Link</em>}</li>
+ *   <li>{@link egeo.gpx.WptType#getUrl <em>Url</em>}</li>
+ *   <li>{@link egeo.gpx.WptType#getUrlname <em>Urlname</em>}</li>
  *   <li>{@link egeo.gpx.WptType#getSym <em>Sym</em>}</li>
  *   <li>{@link egeo.gpx.WptType#getType <em>Type</em>}</li>
  *   <li>{@link egeo.gpx.WptType#getFix <em>Fix</em>}</li>
@@ -44,31 +38,30 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link egeo.gpx.WptType#getPdop <em>Pdop</em>}</li>
  *   <li>{@link egeo.gpx.WptType#getAgeofdgpsdata <em>Ageofdgpsdata</em>}</li>
  *   <li>{@link egeo.gpx.WptType#getDgpsid <em>Dgpsid</em>}</li>
- *   <li>{@link egeo.gpx.WptType#getExtensions <em>Extensions</em>}</li>
+ *   <li>{@link egeo.gpx.WptType#getAny <em>Any</em>}</li>
  *   <li>{@link egeo.gpx.WptType#getLat <em>Lat</em>}</li>
  *   <li>{@link egeo.gpx.WptType#getLon <em>Lon</em>}</li>
  * </ul>
  * </p>
  *
  * @see egeo.gpx.GpxPackage#getWptType()
- * @model extendedMetaData="name='wptType' kind='elementOnly'"
+ * @model extendedMetaData="name='wpt_._type' kind='elementOnly'"
  * @generated
  */
 public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Ele</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ele</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Elevation (in meters) of the point.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ele</em>' attribute.
 	 * @see #setEle(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getWptType_Ele()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.Decimal"
-	 *        extendedMetaData="kind='element' name='ele'"
+	 *        extendedMetaData="kind='element' name='ele' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	BigDecimal getEle();
@@ -86,20 +79,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Time</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Creation/modification timestamp for element. Date and time in are in Univeral
-	 * 						Coordinated Time (UTC), not local time! Conforms to ISO 8601
-	 * 						specification for date/time representation. Fractional seconds are
-	 * 						allowed for millisecond timing in tracklogs.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time</em>' attribute.
 	 * @see #setTime(XMLGregorianCalendar)
 	 * @see egeo.gpx.GpxPackage#getWptType_Time()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.DateTime"
-	 *        extendedMetaData="kind='element' name='time'"
+	 *        extendedMetaData="kind='element' name='time' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	XMLGregorianCalendar getTime();
@@ -117,17 +106,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Magvar</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Magvar</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Magnetic variation (in degrees) at the point
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Magvar</em>' attribute.
 	 * @see #setMagvar(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getWptType_Magvar()
 	 * @model dataType="egeo.gpx.DegreesType"
-	 *        extendedMetaData="kind='element' name='magvar'"
+	 *        extendedMetaData="kind='element' name='magvar' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	BigDecimal getMagvar();
@@ -145,18 +133,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Geoidheight</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Geoidheight</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Height (in meters) of geoid (mean sea level) above WGS84 earth
-	 * 						ellipsoid. As defined in NMEA GGA message.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Geoidheight</em>' attribute.
 	 * @see #setGeoidheight(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getWptType_Geoidheight()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.Decimal"
-	 *        extendedMetaData="kind='element' name='geoidheight'"
+	 *        extendedMetaData="kind='element' name='geoidheight' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	BigDecimal getGeoidheight();
@@ -174,21 +160,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						The GPS name of the waypoint. This field will be transferred to and
-	 * 						from the GPS. GPX does not place restrictions on the length of
-	 * 						this field or the characters contained in it. It is up to the
-	 * 						receiving application to validate the field before sending it to
-	 * 						the GPS.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see egeo.gpx.GpxPackage#getWptType_Name()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='element' name='name'"
+	 *        extendedMetaData="kind='element' name='name' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getName();
@@ -206,17 +187,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Cmt</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cmt</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						GPS waypoint comment. Sent to GPS as comment.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Cmt</em>' attribute.
 	 * @see #setCmt(String)
 	 * @see egeo.gpx.GpxPackage#getWptType_Cmt()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='element' name='cmt'"
+	 *        extendedMetaData="kind='element' name='cmt' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getCmt();
@@ -234,18 +214,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Desc</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Desc</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						A text description of the element. Holds additional information
-	 * 						about the element intended for the user, not the GPS.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Desc</em>' attribute.
 	 * @see #setDesc(String)
 	 * @see egeo.gpx.GpxPackage#getWptType_Desc()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='element' name='desc'"
+	 *        extendedMetaData="kind='element' name='desc' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getDesc();
@@ -263,18 +241,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Src</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Src</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Source of data. Included to give user some idea of reliability and
-	 * 						accuracy of data. "Garmin eTrex", "USGS quad Boston North", e.g.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Src</em>' attribute.
 	 * @see #setSrc(String)
 	 * @see egeo.gpx.GpxPackage#getWptType_Src()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='element' name='src'"
+	 *        extendedMetaData="kind='element' name='src' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getSrc();
@@ -290,39 +266,72 @@ public interface WptType extends EObject {
 	void setSrc(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Link</b></em>' containment reference list.
-	 * The list contents are of type {@link egeo.gpx.LinkType}.
+	 * Returns the value of the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Link to additional information about the waypoint.
-	 * 					
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Link</em>' containment reference list.
-	 * @see egeo.gpx.GpxPackage#getWptType_Link()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='link'"
+	 * @return the value of the '<em>Url</em>' attribute.
+	 * @see #setUrl(String)
+	 * @see egeo.gpx.GpxPackage#getWptType_Url()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.AnyURI"
+	 *        extendedMetaData="kind='element' name='url' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	EList<LinkType> getLink();
+	String getUrl();
+
+	/**
+	 * Sets the value of the '{@link egeo.gpx.WptType#getUrl <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Url</em>' attribute.
+	 * @see #getUrl()
+	 * @generated
+	 */
+	void setUrl(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Urlname</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Urlname</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Urlname</em>' attribute.
+	 * @see #setUrlname(String)
+	 * @see egeo.gpx.GpxPackage#getWptType_Urlname()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='element' name='urlname' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	String getUrlname();
+
+	/**
+	 * Sets the value of the '{@link egeo.gpx.WptType#getUrlname <em>Urlname</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Urlname</em>' attribute.
+	 * @see #getUrlname()
+	 * @generated
+	 */
+	void setUrlname(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Sym</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sym</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Text of GPS symbol name. For interchange with other programs, use the
-	 * 						exact spelling of the symbol as displayed on the GPS. If the GPS
-	 * 						abbreviates words, spell them out.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Sym</em>' attribute.
 	 * @see #setSym(String)
 	 * @see egeo.gpx.GpxPackage#getWptType_Sym()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='element' name='sym'"
+	 *        extendedMetaData="kind='element' name='sym' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getSym();
@@ -340,17 +349,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Type (classification) of the waypoint.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
 	 * @see egeo.gpx.GpxPackage#getWptType_Type()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='element' name='type'"
+	 *        extendedMetaData="kind='element' name='type' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getType();
@@ -369,12 +377,11 @@ public interface WptType extends EObject {
 	 * Returns the value of the '<em><b>Fix</b></em>' attribute.
 	 * The literals are from the enumeration {@link egeo.gpx.FixType}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fix</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Type of GPX fix.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fix</em>' attribute.
 	 * @see egeo.gpx.FixType
 	 * @see #isSetFix()
@@ -382,7 +389,7 @@ public interface WptType extends EObject {
 	 * @see #setFix(FixType)
 	 * @see egeo.gpx.GpxPackage#getWptType_Fix()
 	 * @model unsettable="true"
-	 *        extendedMetaData="kind='element' name='fix'"
+	 *        extendedMetaData="kind='element' name='fix' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	FixType getFix();
@@ -426,17 +433,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Sat</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sat</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Number of satellites used to calculate the GPX fix.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Sat</em>' attribute.
 	 * @see #setSat(BigInteger)
 	 * @see egeo.gpx.GpxPackage#getWptType_Sat()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.NonNegativeInteger"
-	 *        extendedMetaData="kind='element' name='sat'"
+	 *        extendedMetaData="kind='element' name='sat' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	BigInteger getSat();
@@ -454,17 +460,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Hdop</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Hdop</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Horizontal dilution of precision.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Hdop</em>' attribute.
 	 * @see #setHdop(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getWptType_Hdop()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.Decimal"
-	 *        extendedMetaData="kind='element' name='hdop'"
+	 *        extendedMetaData="kind='element' name='hdop' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	BigDecimal getHdop();
@@ -482,17 +487,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Vdop</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Vdop</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Vertical dilution of precision.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vdop</em>' attribute.
 	 * @see #setVdop(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getWptType_Vdop()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.Decimal"
-	 *        extendedMetaData="kind='element' name='vdop'"
+	 *        extendedMetaData="kind='element' name='vdop' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	BigDecimal getVdop();
@@ -510,17 +514,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Pdop</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pdop</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Position dilution of precision.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Pdop</em>' attribute.
 	 * @see #setPdop(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getWptType_Pdop()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.Decimal"
-	 *        extendedMetaData="kind='element' name='pdop'"
+	 *        extendedMetaData="kind='element' name='pdop' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	BigDecimal getPdop();
@@ -538,17 +541,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Ageofdgpsdata</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ageofdgpsdata</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						Number of seconds since last DGPS update.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ageofdgpsdata</em>' attribute.
 	 * @see #setAgeofdgpsdata(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getWptType_Ageofdgpsdata()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.Decimal"
-	 *        extendedMetaData="kind='element' name='ageofdgpsdata'"
+	 *        extendedMetaData="kind='element' name='ageofdgpsdata' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	BigDecimal getAgeofdgpsdata();
@@ -566,17 +568,16 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Dgpsid</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Dgpsid</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						ID of DGPS station used in differential correction.
-	 * 					
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Dgpsid</em>' attribute.
 	 * @see #setDgpsid(BigInteger)
 	 * @see egeo.gpx.GpxPackage#getWptType_Dgpsid()
 	 * @model dataType="egeo.gpx.DgpsStationType"
-	 *        extendedMetaData="kind='element' name='dgpsid'"
+	 *        extendedMetaData="kind='element' name='dgpsid' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	BigInteger getDgpsid();
@@ -592,43 +593,30 @@ public interface WptType extends EObject {
 	void setDgpsid(BigInteger value);
 
 	/**
-	 * Returns the value of the '<em><b>Extensions</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Any</b></em>' attribute list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Any</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 						You can add extend GPX by adding your own elements from another
-	 * 						schema here.
-	 * 					
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Extensions</em>' containment reference.
-	 * @see #setExtensions(ExtensionsType)
-	 * @see egeo.gpx.GpxPackage#getWptType_Extensions()
-	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='extensions'"
+	 * @return the value of the '<em>Any</em>' attribute list.
+	 * @see egeo.gpx.GpxPackage#getWptType_Any()
+	 * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
+	 *        extendedMetaData="kind='elementWildcard' wildcards='##other' name=':19' processing='strict'"
 	 * @generated
 	 */
-	ExtensionsType getExtensions();
-
-	/**
-	 * Sets the value of the '{@link egeo.gpx.WptType#getExtensions <em>Extensions</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Extensions</em>' containment reference.
-	 * @see #getExtensions()
-	 * @generated
-	 */
-	void setExtensions(ExtensionsType value);
+	FeatureMap getAny();
 
 	/**
 	 * Returns the value of the '<em><b>Lat</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lat</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 					The latitude of the point. Decimal degrees, WGS84 datum.
-	 * 				
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Lat</em>' attribute.
 	 * @see #setLat(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getWptType_Lat()
@@ -651,12 +639,11 @@ public interface WptType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Lon</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lon</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 					The latitude of the point. Decimal degrees, WGS84 datum.
-	 * 				
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Lon</em>' attribute.
 	 * @see #setLon(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getWptType_Lon()

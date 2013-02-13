@@ -34,7 +34,7 @@ public class GpxFactoryImpl extends EFactoryImpl implements GpxFactory {
 	 */
 	public static GpxFactory init() {
 		try {
-			GpxFactory theGpxFactory = (GpxFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.topografix.com/GPX/1/1"); 
+			GpxFactory theGpxFactory = (GpxFactory)EPackage.Registry.INSTANCE.getEFactory(GpxPackage.eNS_URI);
 			if (theGpxFactory != null) {
 				return theGpxFactory;
 			}
@@ -64,17 +64,11 @@ public class GpxFactoryImpl extends EFactoryImpl implements GpxFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case GpxPackage.BOUNDS_TYPE: return createBoundsType();
-			case GpxPackage.COPYRIGHT_TYPE: return createCopyrightType();
 			case GpxPackage.DOCUMENT_ROOT: return createDocumentRoot();
-			case GpxPackage.EMAIL_TYPE: return createEmailType();
-			case GpxPackage.EXTENSIONS_TYPE: return createExtensionsType();
 			case GpxPackage.GPX_TYPE: return createGpxType();
-			case GpxPackage.LINK_TYPE: return createLinkType();
-			case GpxPackage.METADATA_TYPE: return createMetadataType();
-			case GpxPackage.PERSON_TYPE: return createPersonType();
-			case GpxPackage.PTSEG_TYPE: return createPtsegType();
-			case GpxPackage.PT_TYPE: return createPtType();
+			case GpxPackage.RTEPT_TYPE: return createRteptType();
 			case GpxPackage.RTE_TYPE: return createRteType();
+			case GpxPackage.TRKPT_TYPE: return createTrkptType();
 			case GpxPackage.TRKSEG_TYPE: return createTrksegType();
 			case GpxPackage.TRK_TYPE: return createTrkType();
 			case GpxPackage.WPT_TYPE: return createWptType();
@@ -97,6 +91,8 @@ public class GpxFactoryImpl extends EFactoryImpl implements GpxFactory {
 				return createDegreesTypeFromString(eDataType, initialValue);
 			case GpxPackage.DGPS_STATION_TYPE:
 				return createDgpsStationTypeFromString(eDataType, initialValue);
+			case GpxPackage.EMAIL_TYPE:
+				return createEmailTypeFromString(eDataType, initialValue);
 			case GpxPackage.FIX_TYPE_OBJECT:
 				return createFixTypeObjectFromString(eDataType, initialValue);
 			case GpxPackage.LATITUDE_TYPE:
@@ -122,6 +118,8 @@ public class GpxFactoryImpl extends EFactoryImpl implements GpxFactory {
 				return convertDegreesTypeToString(eDataType, instanceValue);
 			case GpxPackage.DGPS_STATION_TYPE:
 				return convertDgpsStationTypeToString(eDataType, instanceValue);
+			case GpxPackage.EMAIL_TYPE:
+				return convertEmailTypeToString(eDataType, instanceValue);
 			case GpxPackage.FIX_TYPE_OBJECT:
 				return convertFixTypeObjectToString(eDataType, instanceValue);
 			case GpxPackage.LATITUDE_TYPE:
@@ -148,39 +146,9 @@ public class GpxFactoryImpl extends EFactoryImpl implements GpxFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CopyrightType createCopyrightType() {
-		CopyrightTypeImpl copyrightType = new CopyrightTypeImpl();
-		return copyrightType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public DocumentRoot createDocumentRoot() {
 		DocumentRootImpl documentRoot = new DocumentRootImpl();
 		return documentRoot;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EmailType createEmailType() {
-		EmailTypeImpl emailType = new EmailTypeImpl();
-		return emailType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExtensionsType createExtensionsType() {
-		ExtensionsTypeImpl extensionsType = new ExtensionsTypeImpl();
-		return extensionsType;
 	}
 
 	/**
@@ -198,49 +166,9 @@ public class GpxFactoryImpl extends EFactoryImpl implements GpxFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LinkType createLinkType() {
-		LinkTypeImpl linkType = new LinkTypeImpl();
-		return linkType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MetadataType createMetadataType() {
-		MetadataTypeImpl metadataType = new MetadataTypeImpl();
-		return metadataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PersonType createPersonType() {
-		PersonTypeImpl personType = new PersonTypeImpl();
-		return personType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PtsegType createPtsegType() {
-		PtsegTypeImpl ptsegType = new PtsegTypeImpl();
-		return ptsegType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PtType createPtType() {
-		PtTypeImpl ptType = new PtTypeImpl();
-		return ptType;
+	public RteptType createRteptType() {
+		RteptTypeImpl rteptType = new RteptTypeImpl();
+		return rteptType;
 	}
 
 	/**
@@ -251,6 +179,16 @@ public class GpxFactoryImpl extends EFactoryImpl implements GpxFactory {
 	public RteType createRteType() {
 		RteTypeImpl rteType = new RteTypeImpl();
 		return rteType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TrkptType createTrkptType() {
+		TrkptTypeImpl trkptType = new TrkptTypeImpl();
+		return trkptType;
 	}
 
 	/**
@@ -337,6 +275,24 @@ public class GpxFactoryImpl extends EFactoryImpl implements GpxFactory {
 	 */
 	public String convertDgpsStationTypeToString(EDataType eDataType, Object instanceValue) {
 		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.INTEGER, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createEmailTypeFromString(EDataType eDataType, String initialValue) {
+		return (String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.STRING, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEmailTypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.STRING, instanceValue);
 	}
 
 	/**

@@ -11,12 +11,6 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Bounds Type</b></em>'.
  * <!-- end-user-doc -->
  *
- * <!-- begin-model-doc -->
- * 
- * 				Two lat/lon pairs defining the extent of an element.
- * 			
- * <!-- end-model-doc -->
- *
  * <p>
  * The following features are supported:
  * <ul>
@@ -35,12 +29,11 @@ public interface BoundsType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Maxlat</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Maxlat</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 					The maximum latitude.
-	 * 				
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maxlat</em>' attribute.
 	 * @see #setMaxlat(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getBoundsType_Maxlat()
@@ -63,12 +56,11 @@ public interface BoundsType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Maxlon</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Maxlon</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 					The maximum longitude.
-	 * 				
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maxlon</em>' attribute.
 	 * @see #setMaxlon(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getBoundsType_Maxlon()
@@ -91,12 +83,11 @@ public interface BoundsType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Minlat</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Minlat</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 					The minimum latitude.
-	 * 				
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minlat</em>' attribute.
 	 * @see #setMinlat(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getBoundsType_Minlat()
@@ -119,12 +110,11 @@ public interface BoundsType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Minlon</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Minlon</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * 
-	 * 					The minimum longitude.
-	 * 				
-	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minlon</em>' attribute.
 	 * @see #setMinlon(BigDecimal)
 	 * @see egeo.gpx.GpxPackage#getBoundsType_Minlon()

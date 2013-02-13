@@ -63,10 +63,194 @@ public class GpxTypeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
+			addDescPropertyDescriptor(object);
+			addAuthorPropertyDescriptor(object);
+			addEmailPropertyDescriptor(object);
+			addUrlPropertyDescriptor(object);
+			addUrlnamePropertyDescriptor(object);
+			addTimePropertyDescriptor(object);
+			addKeywordsPropertyDescriptor(object);
 			addCreatorPropertyDescriptor(object);
 			addVersionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GpxType_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GpxType_name_feature", "_UI_GpxType_type"),
+				 GpxPackage.Literals.GPX_TYPE__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Desc feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GpxType_desc_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GpxType_desc_feature", "_UI_GpxType_type"),
+				 GpxPackage.Literals.GPX_TYPE__DESC,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Author feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GpxType_author_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GpxType_author_feature", "_UI_GpxType_type"),
+				 GpxPackage.Literals.GPX_TYPE__AUTHOR,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Email feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEmailPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GpxType_email_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GpxType_email_feature", "_UI_GpxType_type"),
+				 GpxPackage.Literals.GPX_TYPE__EMAIL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GpxType_url_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GpxType_url_feature", "_UI_GpxType_type"),
+				 GpxPackage.Literals.GPX_TYPE__URL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Urlname feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlnamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GpxType_urlname_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GpxType_urlname_feature", "_UI_GpxType_type"),
+				 GpxPackage.Literals.GPX_TYPE__URLNAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Time feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTimePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GpxType_time_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GpxType_time_feature", "_UI_GpxType_type"),
+				 GpxPackage.Literals.GPX_TYPE__TIME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Keywords feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addKeywordsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GpxType_keywords_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GpxType_keywords_feature", "_UI_GpxType_type"),
+				 GpxPackage.Literals.GPX_TYPE__KEYWORDS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -125,11 +309,11 @@ public class GpxTypeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GpxPackage.Literals.GPX_TYPE__METADATA);
+			childrenFeatures.add(GpxPackage.Literals.GPX_TYPE__BOUNDS);
 			childrenFeatures.add(GpxPackage.Literals.GPX_TYPE__WPT);
 			childrenFeatures.add(GpxPackage.Literals.GPX_TYPE__RTE);
 			childrenFeatures.add(GpxPackage.Literals.GPX_TYPE__TRK);
-			childrenFeatures.add(GpxPackage.Literals.GPX_TYPE__EXTENSIONS);
+			childrenFeatures.add(GpxPackage.Literals.GPX_TYPE__ANY);
 		}
 		return childrenFeatures;
 	}
@@ -166,7 +350,7 @@ public class GpxTypeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((GpxType)object).getCreator();
+		String label = ((GpxType)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_GpxType_type") :
 			getString("_UI_GpxType_type") + " " + label;
@@ -184,15 +368,23 @@ public class GpxTypeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GpxType.class)) {
+			case GpxPackage.GPX_TYPE__NAME:
+			case GpxPackage.GPX_TYPE__DESC:
+			case GpxPackage.GPX_TYPE__AUTHOR:
+			case GpxPackage.GPX_TYPE__EMAIL:
+			case GpxPackage.GPX_TYPE__URL:
+			case GpxPackage.GPX_TYPE__URLNAME:
+			case GpxPackage.GPX_TYPE__TIME:
+			case GpxPackage.GPX_TYPE__KEYWORDS:
 			case GpxPackage.GPX_TYPE__CREATOR:
 			case GpxPackage.GPX_TYPE__VERSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case GpxPackage.GPX_TYPE__METADATA:
+			case GpxPackage.GPX_TYPE__BOUNDS:
 			case GpxPackage.GPX_TYPE__WPT:
 			case GpxPackage.GPX_TYPE__RTE:
 			case GpxPackage.GPX_TYPE__TRK:
-			case GpxPackage.GPX_TYPE__EXTENSIONS:
+			case GpxPackage.GPX_TYPE__ANY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -212,8 +404,8 @@ public class GpxTypeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GpxPackage.Literals.GPX_TYPE__METADATA,
-				 GpxFactory.eINSTANCE.createMetadataType()));
+				(GpxPackage.Literals.GPX_TYPE__BOUNDS,
+				 GpxFactory.eINSTANCE.createBoundsType()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -229,11 +421,6 @@ public class GpxTypeItemProvider
 			(createChildParameter
 				(GpxPackage.Literals.GPX_TYPE__TRK,
 				 GpxFactory.eINSTANCE.createTrkType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GpxPackage.Literals.GPX_TYPE__EXTENSIONS,
-				 GpxFactory.eINSTANCE.createExtensionsType()));
 	}
 
 	/**

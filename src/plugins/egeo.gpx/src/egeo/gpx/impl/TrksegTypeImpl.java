@@ -2,14 +2,12 @@
  */
 package egeo.gpx.impl;
 
-import egeo.gpx.ExtensionsType;
 import egeo.gpx.GpxPackage;
+import egeo.gpx.TrkptType;
 import egeo.gpx.TrksegType;
-import egeo.gpx.WptType;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -17,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -31,7 +28,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link egeo.gpx.impl.TrksegTypeImpl#getTrkpt <em>Trkpt</em>}</li>
- *   <li>{@link egeo.gpx.impl.TrksegTypeImpl#getExtensions <em>Extensions</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,17 +42,7 @@ public class TrksegTypeImpl extends MinimalEObjectImpl.Container implements Trks
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<WptType> trkpt;
-
-	/**
-	 * The cached value of the '{@link #getExtensions() <em>Extensions</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExtensions()
-	 * @generated
-	 * @ordered
-	 */
-	protected ExtensionsType extensions;
+	protected EList<TrkptType> trkpt;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,54 +68,11 @@ public class TrksegTypeImpl extends MinimalEObjectImpl.Container implements Trks
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<WptType> getTrkpt() {
+	public EList<TrkptType> getTrkpt() {
 		if (trkpt == null) {
-			trkpt = new EObjectContainmentEList<WptType>(WptType.class, this, GpxPackage.TRKSEG_TYPE__TRKPT);
+			trkpt = new EObjectContainmentEList<TrkptType>(TrkptType.class, this, GpxPackage.TRKSEG_TYPE__TRKPT);
 		}
 		return trkpt;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExtensionsType getExtensions() {
-		return extensions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetExtensions(ExtensionsType newExtensions, NotificationChain msgs) {
-		ExtensionsType oldExtensions = extensions;
-		extensions = newExtensions;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GpxPackage.TRKSEG_TYPE__EXTENSIONS, oldExtensions, newExtensions);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExtensions(ExtensionsType newExtensions) {
-		if (newExtensions != extensions) {
-			NotificationChain msgs = null;
-			if (extensions != null)
-				msgs = ((InternalEObject)extensions).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GpxPackage.TRKSEG_TYPE__EXTENSIONS, null, msgs);
-			if (newExtensions != null)
-				msgs = ((InternalEObject)newExtensions).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GpxPackage.TRKSEG_TYPE__EXTENSIONS, null, msgs);
-			msgs = basicSetExtensions(newExtensions, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GpxPackage.TRKSEG_TYPE__EXTENSIONS, newExtensions, newExtensions));
 	}
 
 	/**
@@ -142,8 +85,6 @@ public class TrksegTypeImpl extends MinimalEObjectImpl.Container implements Trks
 		switch (featureID) {
 			case GpxPackage.TRKSEG_TYPE__TRKPT:
 				return ((InternalEList<?>)getTrkpt()).basicRemove(otherEnd, msgs);
-			case GpxPackage.TRKSEG_TYPE__EXTENSIONS:
-				return basicSetExtensions(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -158,8 +99,6 @@ public class TrksegTypeImpl extends MinimalEObjectImpl.Container implements Trks
 		switch (featureID) {
 			case GpxPackage.TRKSEG_TYPE__TRKPT:
 				return getTrkpt();
-			case GpxPackage.TRKSEG_TYPE__EXTENSIONS:
-				return getExtensions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -175,10 +114,7 @@ public class TrksegTypeImpl extends MinimalEObjectImpl.Container implements Trks
 		switch (featureID) {
 			case GpxPackage.TRKSEG_TYPE__TRKPT:
 				getTrkpt().clear();
-				getTrkpt().addAll((Collection<? extends WptType>)newValue);
-				return;
-			case GpxPackage.TRKSEG_TYPE__EXTENSIONS:
-				setExtensions((ExtensionsType)newValue);
+				getTrkpt().addAll((Collection<? extends TrkptType>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,9 +131,6 @@ public class TrksegTypeImpl extends MinimalEObjectImpl.Container implements Trks
 			case GpxPackage.TRKSEG_TYPE__TRKPT:
 				getTrkpt().clear();
 				return;
-			case GpxPackage.TRKSEG_TYPE__EXTENSIONS:
-				setExtensions((ExtensionsType)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -212,8 +145,6 @@ public class TrksegTypeImpl extends MinimalEObjectImpl.Container implements Trks
 		switch (featureID) {
 			case GpxPackage.TRKSEG_TYPE__TRKPT:
 				return trkpt != null && !trkpt.isEmpty();
-			case GpxPackage.TRKSEG_TYPE__EXTENSIONS:
-				return extensions != null;
 		}
 		return super.eIsSet(featureID);
 	}

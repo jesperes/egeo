@@ -78,7 +78,6 @@ public class TrksegTypeItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(GpxPackage.Literals.TRKSEG_TYPE__TRKPT);
-			childrenFeatures.add(GpxPackage.Literals.TRKSEG_TYPE__EXTENSIONS);
 		}
 		return childrenFeatures;
 	}
@@ -131,7 +130,6 @@ public class TrksegTypeItemProvider
 
 		switch (notification.getFeatureID(TrksegType.class)) {
 			case GpxPackage.TRKSEG_TYPE__TRKPT:
-			case GpxPackage.TRKSEG_TYPE__EXTENSIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,12 +150,7 @@ public class TrksegTypeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(GpxPackage.Literals.TRKSEG_TYPE__TRKPT,
-				 GpxFactory.eINSTANCE.createWptType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GpxPackage.Literals.TRKSEG_TYPE__EXTENSIONS,
-				 GpxFactory.eINSTANCE.createExtensionsType()));
+				 GpxFactory.eINSTANCE.createTrkptType()));
 	}
 
 	/**

@@ -67,8 +67,9 @@ public class RteTypeItemProvider
 			addCmtPropertyDescriptor(object);
 			addDescPropertyDescriptor(object);
 			addSrcPropertyDescriptor(object);
+			addUrlPropertyDescriptor(object);
+			addUrlnamePropertyDescriptor(object);
 			addNumberPropertyDescriptor(object);
-			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -162,6 +163,50 @@ public class RteTypeItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RteType_url_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RteType_url_feature", "_UI_RteType_type"),
+				 GpxPackage.Literals.RTE_TYPE__URL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Urlname feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlnamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_RteType_urlname_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_RteType_urlname_feature", "_UI_RteType_type"),
+				 GpxPackage.Literals.RTE_TYPE__URLNAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Number feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,28 +229,6 @@ public class RteTypeItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_RteType_type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_RteType_type_feature", "_UI_RteType_type"),
-				 GpxPackage.Literals.RTE_TYPE__TYPE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -217,8 +240,7 @@ public class RteTypeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GpxPackage.Literals.RTE_TYPE__LINK);
-			childrenFeatures.add(GpxPackage.Literals.RTE_TYPE__EXTENSIONS);
+			childrenFeatures.add(GpxPackage.Literals.RTE_TYPE__ANY);
 			childrenFeatures.add(GpxPackage.Literals.RTE_TYPE__RTEPT);
 		}
 		return childrenFeatures;
@@ -278,12 +300,12 @@ public class RteTypeItemProvider
 			case GpxPackage.RTE_TYPE__CMT:
 			case GpxPackage.RTE_TYPE__DESC:
 			case GpxPackage.RTE_TYPE__SRC:
+			case GpxPackage.RTE_TYPE__URL:
+			case GpxPackage.RTE_TYPE__URLNAME:
 			case GpxPackage.RTE_TYPE__NUMBER:
-			case GpxPackage.RTE_TYPE__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case GpxPackage.RTE_TYPE__LINK:
-			case GpxPackage.RTE_TYPE__EXTENSIONS:
+			case GpxPackage.RTE_TYPE__ANY:
 			case GpxPackage.RTE_TYPE__RTEPT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -304,18 +326,8 @@ public class RteTypeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GpxPackage.Literals.RTE_TYPE__LINK,
-				 GpxFactory.eINSTANCE.createLinkType()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GpxPackage.Literals.RTE_TYPE__EXTENSIONS,
-				 GpxFactory.eINSTANCE.createExtensionsType()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(GpxPackage.Literals.RTE_TYPE__RTEPT,
-				 GpxFactory.eINSTANCE.createWptType()));
+				 GpxFactory.eINSTANCE.createRteptType()));
 	}
 
 	/**

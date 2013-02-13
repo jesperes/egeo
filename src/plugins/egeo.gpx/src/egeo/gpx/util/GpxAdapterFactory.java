@@ -72,48 +72,24 @@ public class GpxAdapterFactory extends AdapterFactoryImpl {
 				return createBoundsTypeAdapter();
 			}
 			@Override
-			public Adapter caseCopyrightType(CopyrightType object) {
-				return createCopyrightTypeAdapter();
-			}
-			@Override
 			public Adapter caseDocumentRoot(DocumentRoot object) {
 				return createDocumentRootAdapter();
-			}
-			@Override
-			public Adapter caseEmailType(EmailType object) {
-				return createEmailTypeAdapter();
-			}
-			@Override
-			public Adapter caseExtensionsType(ExtensionsType object) {
-				return createExtensionsTypeAdapter();
 			}
 			@Override
 			public Adapter caseGpxType(GpxType object) {
 				return createGpxTypeAdapter();
 			}
 			@Override
-			public Adapter caseLinkType(LinkType object) {
-				return createLinkTypeAdapter();
-			}
-			@Override
-			public Adapter caseMetadataType(MetadataType object) {
-				return createMetadataTypeAdapter();
-			}
-			@Override
-			public Adapter casePersonType(PersonType object) {
-				return createPersonTypeAdapter();
-			}
-			@Override
-			public Adapter casePtsegType(PtsegType object) {
-				return createPtsegTypeAdapter();
-			}
-			@Override
-			public Adapter casePtType(PtType object) {
-				return createPtTypeAdapter();
+			public Adapter caseRteptType(RteptType object) {
+				return createRteptTypeAdapter();
 			}
 			@Override
 			public Adapter caseRteType(RteType object) {
 				return createRteTypeAdapter();
+			}
+			@Override
+			public Adapter caseTrkptType(TrkptType object) {
+				return createTrkptTypeAdapter();
 			}
 			@Override
 			public Adapter caseTrksegType(TrksegType object) {
@@ -162,20 +138,6 @@ public class GpxAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link egeo.gpx.CopyrightType <em>Copyright Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see egeo.gpx.CopyrightType
-	 * @generated
-	 */
-	public Adapter createCopyrightTypeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link egeo.gpx.DocumentRoot <em>Document Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -186,34 +148,6 @@ public class GpxAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDocumentRootAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link egeo.gpx.EmailType <em>Email Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see egeo.gpx.EmailType
-	 * @generated
-	 */
-	public Adapter createEmailTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link egeo.gpx.ExtensionsType <em>Extensions Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see egeo.gpx.ExtensionsType
-	 * @generated
-	 */
-	public Adapter createExtensionsTypeAdapter() {
 		return null;
 	}
 
@@ -232,72 +166,16 @@ public class GpxAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link egeo.gpx.LinkType <em>Link Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link egeo.gpx.RteptType <em>Rtept Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see egeo.gpx.LinkType
+	 * @see egeo.gpx.RteptType
 	 * @generated
 	 */
-	public Adapter createLinkTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link egeo.gpx.MetadataType <em>Metadata Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see egeo.gpx.MetadataType
-	 * @generated
-	 */
-	public Adapter createMetadataTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link egeo.gpx.PersonType <em>Person Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see egeo.gpx.PersonType
-	 * @generated
-	 */
-	public Adapter createPersonTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link egeo.gpx.PtsegType <em>Ptseg Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see egeo.gpx.PtsegType
-	 * @generated
-	 */
-	public Adapter createPtsegTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link egeo.gpx.PtType <em>Pt Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see egeo.gpx.PtType
-	 * @generated
-	 */
-	public Adapter createPtTypeAdapter() {
+	public Adapter createRteptTypeAdapter() {
 		return null;
 	}
 
@@ -312,6 +190,20 @@ public class GpxAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRteTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link egeo.gpx.TrkptType <em>Trkpt Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see egeo.gpx.TrkptType
+	 * @generated
+	 */
+	public Adapter createTrkptTypeAdapter() {
 		return null;
 	}
 

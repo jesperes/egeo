@@ -21,15 +21,6 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * <!-- begin-model-doc -->
- * 
- * 			GPX schema version 1.1 - For more information on GPX and this schema,
- * 			visit http://www.topografix.com/gpx.asp
- * 
- * 			GPX uses the following conventions: all coordinates are relative to the
- * 			WGS84 datum. All measurements are in metric units.
- * 		
- * <!-- end-model-doc -->
  * @see egeo.gpx.GpxFactory
  * @model kind="package"
  * @generated
@@ -49,7 +40,7 @@ public interface GpxPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.topografix.com/GPX/1/1";
+	String eNS_URI = "http://www.topografix.com/GPX/1/0";
 
 	/**
 	 * The package namespace name.
@@ -132,61 +123,6 @@ public interface GpxPackage extends EPackage {
 	int BOUNDS_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link egeo.gpx.impl.CopyrightTypeImpl <em>Copyright Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see egeo.gpx.impl.CopyrightTypeImpl
-	 * @see egeo.gpx.impl.GpxPackageImpl#getCopyrightType()
-	 * @generated
-	 */
-	int COPYRIGHT_TYPE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Year</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COPYRIGHT_TYPE__YEAR = 0;
-
-	/**
-	 * The feature id for the '<em><b>License</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COPYRIGHT_TYPE__LICENSE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Author</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COPYRIGHT_TYPE__AUTHOR = 2;
-
-	/**
-	 * The number of structural features of the '<em>Copyright Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COPYRIGHT_TYPE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Copyright Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COPYRIGHT_TYPE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link egeo.gpx.impl.DocumentRootImpl <em>Document Root</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -194,7 +130,7 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getDocumentRoot()
 	 * @generated
 	 */
-	int DOCUMENT_ROOT = 2;
+	int DOCUMENT_ROOT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
@@ -251,89 +187,6 @@ public interface GpxPackage extends EPackage {
 	int DOCUMENT_ROOT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link egeo.gpx.impl.EmailTypeImpl <em>Email Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see egeo.gpx.impl.EmailTypeImpl
-	 * @see egeo.gpx.impl.GpxPackageImpl#getEmailType()
-	 * @generated
-	 */
-	int EMAIL_TYPE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Domain</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMAIL_TYPE__DOMAIN = 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMAIL_TYPE__ID = 1;
-
-	/**
-	 * The number of structural features of the '<em>Email Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMAIL_TYPE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Email Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMAIL_TYPE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link egeo.gpx.impl.ExtensionsTypeImpl <em>Extensions Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see egeo.gpx.impl.ExtensionsTypeImpl
-	 * @see egeo.gpx.impl.GpxPackageImpl#getExtensionsType()
-	 * @generated
-	 */
-	int EXTENSIONS_TYPE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Any</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENSIONS_TYPE__ANY = 0;
-
-	/**
-	 * The number of structural features of the '<em>Extensions Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENSIONS_TYPE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Extensions Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENSIONS_TYPE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link egeo.gpx.impl.GpxTypeImpl <em>Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -341,16 +194,88 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getGpxType()
 	 * @generated
 	 */
-	int GPX_TYPE = 5;
+	int GPX_TYPE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Metadata</b></em>' containment reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GPX_TYPE__METADATA = 0;
+	int GPX_TYPE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Desc</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPX_TYPE__DESC = 1;
+
+	/**
+	 * The feature id for the '<em><b>Author</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPX_TYPE__AUTHOR = 2;
+
+	/**
+	 * The feature id for the '<em><b>Email</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPX_TYPE__EMAIL = 3;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPX_TYPE__URL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Urlname</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPX_TYPE__URLNAME = 5;
+
+	/**
+	 * The feature id for the '<em><b>Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPX_TYPE__TIME = 6;
+
+	/**
+	 * The feature id for the '<em><b>Keywords</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPX_TYPE__KEYWORDS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Bounds</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GPX_TYPE__BOUNDS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Wpt</b></em>' containment reference list.
@@ -359,7 +284,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GPX_TYPE__WPT = 1;
+	int GPX_TYPE__WPT = 9;
 
 	/**
 	 * The feature id for the '<em><b>Rte</b></em>' containment reference list.
@@ -368,7 +293,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GPX_TYPE__RTE = 2;
+	int GPX_TYPE__RTE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Trk</b></em>' containment reference list.
@@ -377,16 +302,16 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GPX_TYPE__TRK = 3;
+	int GPX_TYPE__TRK = 11;
 
 	/**
-	 * The feature id for the '<em><b>Extensions</b></em>' containment reference.
+	 * The feature id for the '<em><b>Any</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GPX_TYPE__EXTENSIONS = 4;
+	int GPX_TYPE__ANY = 12;
 
 	/**
 	 * The feature id for the '<em><b>Creator</b></em>' attribute.
@@ -395,7 +320,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GPX_TYPE__CREATOR = 5;
+	int GPX_TYPE__CREATOR = 13;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -404,7 +329,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GPX_TYPE__VERSION = 6;
+	int GPX_TYPE__VERSION = 14;
 
 	/**
 	 * The number of structural features of the '<em>Type</em>' class.
@@ -413,7 +338,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GPX_TYPE_FEATURE_COUNT = 7;
+	int GPX_TYPE_FEATURE_COUNT = 15;
 
 	/**
 	 * The number of operations of the '<em>Type</em>' class.
@@ -425,270 +350,14 @@ public interface GpxPackage extends EPackage {
 	int GPX_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link egeo.gpx.impl.LinkTypeImpl <em>Link Type</em>}' class.
+	 * The meta object id for the '{@link egeo.gpx.impl.RteptTypeImpl <em>Rtept Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see egeo.gpx.impl.LinkTypeImpl
-	 * @see egeo.gpx.impl.GpxPackageImpl#getLinkType()
+	 * @see egeo.gpx.impl.RteptTypeImpl
+	 * @see egeo.gpx.impl.GpxPackageImpl#getRteptType()
 	 * @generated
 	 */
-	int LINK_TYPE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK_TYPE__TEXT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK_TYPE__TYPE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Href</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK_TYPE__HREF = 2;
-
-	/**
-	 * The number of structural features of the '<em>Link Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK_TYPE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Link Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK_TYPE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link egeo.gpx.impl.MetadataTypeImpl <em>Metadata Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see egeo.gpx.impl.MetadataTypeImpl
-	 * @see egeo.gpx.impl.GpxPackageImpl#getMetadataType()
-	 * @generated
-	 */
-	int METADATA_TYPE = 7;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_TYPE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Desc</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_TYPE__DESC = 1;
-
-	/**
-	 * The feature id for the '<em><b>Author</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_TYPE__AUTHOR = 2;
-
-	/**
-	 * The feature id for the '<em><b>Copyright</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_TYPE__COPYRIGHT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Link</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_TYPE__LINK = 4;
-
-	/**
-	 * The feature id for the '<em><b>Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_TYPE__TIME = 5;
-
-	/**
-	 * The feature id for the '<em><b>Keywords</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_TYPE__KEYWORDS = 6;
-
-	/**
-	 * The feature id for the '<em><b>Bounds</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_TYPE__BOUNDS = 7;
-
-	/**
-	 * The feature id for the '<em><b>Extensions</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_TYPE__EXTENSIONS = 8;
-
-	/**
-	 * The number of structural features of the '<em>Metadata Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_TYPE_FEATURE_COUNT = 9;
-
-	/**
-	 * The number of operations of the '<em>Metadata Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METADATA_TYPE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link egeo.gpx.impl.PersonTypeImpl <em>Person Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see egeo.gpx.impl.PersonTypeImpl
-	 * @see egeo.gpx.impl.GpxPackageImpl#getPersonType()
-	 * @generated
-	 */
-	int PERSON_TYPE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PERSON_TYPE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Email</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PERSON_TYPE__EMAIL = 1;
-
-	/**
-	 * The feature id for the '<em><b>Link</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PERSON_TYPE__LINK = 2;
-
-	/**
-	 * The number of structural features of the '<em>Person Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PERSON_TYPE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Person Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PERSON_TYPE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link egeo.gpx.impl.PtsegTypeImpl <em>Ptseg Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see egeo.gpx.impl.PtsegTypeImpl
-	 * @see egeo.gpx.impl.GpxPackageImpl#getPtsegType()
-	 * @generated
-	 */
-	int PTSEG_TYPE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Pt</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTSEG_TYPE__PT = 0;
-
-	/**
-	 * The number of structural features of the '<em>Ptseg Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTSEG_TYPE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Ptseg Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PTSEG_TYPE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link egeo.gpx.impl.PtTypeImpl <em>Pt Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see egeo.gpx.impl.PtTypeImpl
-	 * @see egeo.gpx.impl.GpxPackageImpl#getPtType()
-	 * @generated
-	 */
-	int PT_TYPE = 10;
+	int RTEPT_TYPE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Ele</b></em>' attribute.
@@ -697,7 +366,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PT_TYPE__ELE = 0;
+	int RTEPT_TYPE__ELE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -706,7 +375,169 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PT_TYPE__TIME = 1;
+	int RTEPT_TYPE__TIME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Magvar</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__MAGVAR = 2;
+
+	/**
+	 * The feature id for the '<em><b>Geoidheight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__GEOIDHEIGHT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__NAME = 4;
+
+	/**
+	 * The feature id for the '<em><b>Cmt</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__CMT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Desc</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__DESC = 6;
+
+	/**
+	 * The feature id for the '<em><b>Src</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__SRC = 7;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__URL = 8;
+
+	/**
+	 * The feature id for the '<em><b>Urlname</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__URLNAME = 9;
+
+	/**
+	 * The feature id for the '<em><b>Sym</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__SYM = 10;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__TYPE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Fix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__FIX = 12;
+
+	/**
+	 * The feature id for the '<em><b>Sat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__SAT = 13;
+
+	/**
+	 * The feature id for the '<em><b>Hdop</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__HDOP = 14;
+
+	/**
+	 * The feature id for the '<em><b>Vdop</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__VDOP = 15;
+
+	/**
+	 * The feature id for the '<em><b>Pdop</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__PDOP = 16;
+
+	/**
+	 * The feature id for the '<em><b>Ageofdgpsdata</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__AGEOFDGPSDATA = 17;
+
+	/**
+	 * The feature id for the '<em><b>Dgpsid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__DGPSID = 18;
+
+	/**
+	 * The feature id for the '<em><b>Any</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTEPT_TYPE__ANY = 19;
 
 	/**
 	 * The feature id for the '<em><b>Lat</b></em>' attribute.
@@ -715,7 +546,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PT_TYPE__LAT = 2;
+	int RTEPT_TYPE__LAT = 20;
 
 	/**
 	 * The feature id for the '<em><b>Lon</b></em>' attribute.
@@ -724,25 +555,25 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PT_TYPE__LON = 3;
+	int RTEPT_TYPE__LON = 21;
 
 	/**
-	 * The number of structural features of the '<em>Pt Type</em>' class.
+	 * The number of structural features of the '<em>Rtept Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PT_TYPE_FEATURE_COUNT = 4;
+	int RTEPT_TYPE_FEATURE_COUNT = 22;
 
 	/**
-	 * The number of operations of the '<em>Pt Type</em>' class.
+	 * The number of operations of the '<em>Rtept Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PT_TYPE_OPERATION_COUNT = 0;
+	int RTEPT_TYPE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link egeo.gpx.impl.RteTypeImpl <em>Rte Type</em>}' class.
@@ -752,7 +583,7 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getRteType()
 	 * @generated
 	 */
-	int RTE_TYPE = 11;
+	int RTE_TYPE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -791,13 +622,22 @@ public interface GpxPackage extends EPackage {
 	int RTE_TYPE__SRC = 3;
 
 	/**
-	 * The feature id for the '<em><b>Link</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RTE_TYPE__LINK = 4;
+	int RTE_TYPE__URL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Urlname</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RTE_TYPE__URLNAME = 5;
 
 	/**
 	 * The feature id for the '<em><b>Number</b></em>' attribute.
@@ -806,25 +646,16 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RTE_TYPE__NUMBER = 5;
+	int RTE_TYPE__NUMBER = 6;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Any</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RTE_TYPE__TYPE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Extensions</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RTE_TYPE__EXTENSIONS = 7;
+	int RTE_TYPE__ANY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Rtept</b></em>' containment reference list.
@@ -854,6 +685,250 @@ public interface GpxPackage extends EPackage {
 	int RTE_TYPE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link egeo.gpx.impl.TrkptTypeImpl <em>Trkpt Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see egeo.gpx.impl.TrkptTypeImpl
+	 * @see egeo.gpx.impl.GpxPackageImpl#getTrkptType()
+	 * @generated
+	 */
+	int TRKPT_TYPE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Ele</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__ELE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__TIME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Course</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__COURSE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Speed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__SPEED = 3;
+
+	/**
+	 * The feature id for the '<em><b>Magvar</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__MAGVAR = 4;
+
+	/**
+	 * The feature id for the '<em><b>Geoidheight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__GEOIDHEIGHT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__NAME = 6;
+
+	/**
+	 * The feature id for the '<em><b>Cmt</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__CMT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Desc</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__DESC = 8;
+
+	/**
+	 * The feature id for the '<em><b>Src</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__SRC = 9;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__URL = 10;
+
+	/**
+	 * The feature id for the '<em><b>Urlname</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__URLNAME = 11;
+
+	/**
+	 * The feature id for the '<em><b>Sym</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__SYM = 12;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__TYPE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Fix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__FIX = 14;
+
+	/**
+	 * The feature id for the '<em><b>Sat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__SAT = 15;
+
+	/**
+	 * The feature id for the '<em><b>Hdop</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__HDOP = 16;
+
+	/**
+	 * The feature id for the '<em><b>Vdop</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__VDOP = 17;
+
+	/**
+	 * The feature id for the '<em><b>Pdop</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__PDOP = 18;
+
+	/**
+	 * The feature id for the '<em><b>Ageofdgpsdata</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__AGEOFDGPSDATA = 19;
+
+	/**
+	 * The feature id for the '<em><b>Dgpsid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__DGPSID = 20;
+
+	/**
+	 * The feature id for the '<em><b>Any</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__ANY = 21;
+
+	/**
+	 * The feature id for the '<em><b>Lat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__LAT = 22;
+
+	/**
+	 * The feature id for the '<em><b>Lon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE__LON = 23;
+
+	/**
+	 * The number of structural features of the '<em>Trkpt Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE_FEATURE_COUNT = 24;
+
+	/**
+	 * The number of operations of the '<em>Trkpt Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRKPT_TYPE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link egeo.gpx.impl.TrksegTypeImpl <em>Trkseg Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -861,7 +936,7 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getTrksegType()
 	 * @generated
 	 */
-	int TRKSEG_TYPE = 12;
+	int TRKSEG_TYPE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Trkpt</b></em>' containment reference list.
@@ -873,22 +948,13 @@ public interface GpxPackage extends EPackage {
 	int TRKSEG_TYPE__TRKPT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Extensions</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRKSEG_TYPE__EXTENSIONS = 1;
-
-	/**
 	 * The number of structural features of the '<em>Trkseg Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRKSEG_TYPE_FEATURE_COUNT = 2;
+	int TRKSEG_TYPE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Trkseg Type</em>' class.
@@ -907,7 +973,7 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getTrkType()
 	 * @generated
 	 */
-	int TRK_TYPE = 13;
+	int TRK_TYPE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -946,13 +1012,22 @@ public interface GpxPackage extends EPackage {
 	int TRK_TYPE__SRC = 3;
 
 	/**
-	 * The feature id for the '<em><b>Link</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRK_TYPE__LINK = 4;
+	int TRK_TYPE__URL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Urlname</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRK_TYPE__URLNAME = 5;
 
 	/**
 	 * The feature id for the '<em><b>Number</b></em>' attribute.
@@ -961,25 +1036,16 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRK_TYPE__NUMBER = 5;
+	int TRK_TYPE__NUMBER = 6;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Any</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRK_TYPE__TYPE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Extensions</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRK_TYPE__EXTENSIONS = 7;
+	int TRK_TYPE__ANY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Trkseg</b></em>' containment reference list.
@@ -1016,7 +1082,7 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getWptType()
 	 * @generated
 	 */
-	int WPT_TYPE = 14;
+	int WPT_TYPE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Ele</b></em>' attribute.
@@ -1091,13 +1157,22 @@ public interface GpxPackage extends EPackage {
 	int WPT_TYPE__SRC = 7;
 
 	/**
-	 * The feature id for the '<em><b>Link</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__LINK = 8;
+	int WPT_TYPE__URL = 8;
+
+	/**
+	 * The feature id for the '<em><b>Urlname</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WPT_TYPE__URLNAME = 9;
 
 	/**
 	 * The feature id for the '<em><b>Sym</b></em>' attribute.
@@ -1106,7 +1181,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__SYM = 9;
+	int WPT_TYPE__SYM = 10;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1115,7 +1190,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__TYPE = 10;
+	int WPT_TYPE__TYPE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Fix</b></em>' attribute.
@@ -1124,7 +1199,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__FIX = 11;
+	int WPT_TYPE__FIX = 12;
 
 	/**
 	 * The feature id for the '<em><b>Sat</b></em>' attribute.
@@ -1133,7 +1208,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__SAT = 12;
+	int WPT_TYPE__SAT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Hdop</b></em>' attribute.
@@ -1142,7 +1217,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__HDOP = 13;
+	int WPT_TYPE__HDOP = 14;
 
 	/**
 	 * The feature id for the '<em><b>Vdop</b></em>' attribute.
@@ -1151,7 +1226,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__VDOP = 14;
+	int WPT_TYPE__VDOP = 15;
 
 	/**
 	 * The feature id for the '<em><b>Pdop</b></em>' attribute.
@@ -1160,7 +1235,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__PDOP = 15;
+	int WPT_TYPE__PDOP = 16;
 
 	/**
 	 * The feature id for the '<em><b>Ageofdgpsdata</b></em>' attribute.
@@ -1169,7 +1244,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__AGEOFDGPSDATA = 16;
+	int WPT_TYPE__AGEOFDGPSDATA = 17;
 
 	/**
 	 * The feature id for the '<em><b>Dgpsid</b></em>' attribute.
@@ -1178,16 +1253,16 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__DGPSID = 17;
+	int WPT_TYPE__DGPSID = 18;
 
 	/**
-	 * The feature id for the '<em><b>Extensions</b></em>' containment reference.
+	 * The feature id for the '<em><b>Any</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__EXTENSIONS = 18;
+	int WPT_TYPE__ANY = 19;
 
 	/**
 	 * The feature id for the '<em><b>Lat</b></em>' attribute.
@@ -1196,7 +1271,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__LAT = 19;
+	int WPT_TYPE__LAT = 20;
 
 	/**
 	 * The feature id for the '<em><b>Lon</b></em>' attribute.
@@ -1205,7 +1280,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE__LON = 20;
+	int WPT_TYPE__LON = 21;
 
 	/**
 	 * The number of structural features of the '<em>Wpt Type</em>' class.
@@ -1214,7 +1289,7 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WPT_TYPE_FEATURE_COUNT = 21;
+	int WPT_TYPE_FEATURE_COUNT = 22;
 
 	/**
 	 * The number of operations of the '<em>Wpt Type</em>' class.
@@ -1233,7 +1308,7 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getFixType()
 	 * @generated
 	 */
-	int FIX_TYPE = 15;
+	int FIX_TYPE = 9;
 
 	/**
 	 * The meta object id for the '<em>Degrees Type</em>' data type.
@@ -1243,7 +1318,7 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getDegreesType()
 	 * @generated
 	 */
-	int DEGREES_TYPE = 16;
+	int DEGREES_TYPE = 10;
 
 	/**
 	 * The meta object id for the '<em>Dgps Station Type</em>' data type.
@@ -1253,7 +1328,17 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getDgpsStationType()
 	 * @generated
 	 */
-	int DGPS_STATION_TYPE = 17;
+	int DGPS_STATION_TYPE = 11;
+
+	/**
+	 * The meta object id for the '<em>Email Type</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see egeo.gpx.impl.GpxPackageImpl#getEmailType()
+	 * @generated
+	 */
+	int EMAIL_TYPE = 12;
 
 	/**
 	 * The meta object id for the '<em>Fix Type Object</em>' data type.
@@ -1263,7 +1348,7 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getFixTypeObject()
 	 * @generated
 	 */
-	int FIX_TYPE_OBJECT = 18;
+	int FIX_TYPE_OBJECT = 13;
 
 	/**
 	 * The meta object id for the '<em>Latitude Type</em>' data type.
@@ -1273,7 +1358,7 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getLatitudeType()
 	 * @generated
 	 */
-	int LATITUDE_TYPE = 19;
+	int LATITUDE_TYPE = 14;
 
 	/**
 	 * The meta object id for the '<em>Longitude Type</em>' data type.
@@ -1283,7 +1368,7 @@ public interface GpxPackage extends EPackage {
 	 * @see egeo.gpx.impl.GpxPackageImpl#getLongitudeType()
 	 * @generated
 	 */
-	int LONGITUDE_TYPE = 20;
+	int LONGITUDE_TYPE = 15;
 
 
 	/**
@@ -1341,49 +1426,6 @@ public interface GpxPackage extends EPackage {
 	EAttribute getBoundsType_Minlon();
 
 	/**
-	 * Returns the meta object for class '{@link egeo.gpx.CopyrightType <em>Copyright Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Copyright Type</em>'.
-	 * @see egeo.gpx.CopyrightType
-	 * @generated
-	 */
-	EClass getCopyrightType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.CopyrightType#getYear <em>Year</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Year</em>'.
-	 * @see egeo.gpx.CopyrightType#getYear()
-	 * @see #getCopyrightType()
-	 * @generated
-	 */
-	EAttribute getCopyrightType_Year();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.CopyrightType#getLicense <em>License</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>License</em>'.
-	 * @see egeo.gpx.CopyrightType#getLicense()
-	 * @see #getCopyrightType()
-	 * @generated
-	 */
-	EAttribute getCopyrightType_License();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.CopyrightType#getAuthor <em>Author</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Author</em>'.
-	 * @see egeo.gpx.CopyrightType#getAuthor()
-	 * @see #getCopyrightType()
-	 * @generated
-	 */
-	EAttribute getCopyrightType_Author();
-
-	/**
 	 * Returns the meta object for class '{@link egeo.gpx.DocumentRoot <em>Document Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1438,59 +1480,6 @@ public interface GpxPackage extends EPackage {
 	EReference getDocumentRoot_Gpx();
 
 	/**
-	 * Returns the meta object for class '{@link egeo.gpx.EmailType <em>Email Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Email Type</em>'.
-	 * @see egeo.gpx.EmailType
-	 * @generated
-	 */
-	EClass getEmailType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.EmailType#getDomain <em>Domain</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Domain</em>'.
-	 * @see egeo.gpx.EmailType#getDomain()
-	 * @see #getEmailType()
-	 * @generated
-	 */
-	EAttribute getEmailType_Domain();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.EmailType#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see egeo.gpx.EmailType#getId()
-	 * @see #getEmailType()
-	 * @generated
-	 */
-	EAttribute getEmailType_Id();
-
-	/**
-	 * Returns the meta object for class '{@link egeo.gpx.ExtensionsType <em>Extensions Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Extensions Type</em>'.
-	 * @see egeo.gpx.ExtensionsType
-	 * @generated
-	 */
-	EClass getExtensionsType();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link egeo.gpx.ExtensionsType#getAny <em>Any</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Any</em>'.
-	 * @see egeo.gpx.ExtensionsType#getAny()
-	 * @see #getExtensionsType()
-	 * @generated
-	 */
-	EAttribute getExtensionsType_Any();
-
-	/**
 	 * Returns the meta object for class '{@link egeo.gpx.GpxType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1501,15 +1490,103 @@ public interface GpxPackage extends EPackage {
 	EClass getGpxType();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.GpxType#getMetadata <em>Metadata</em>}'.
+	 * Returns the meta object for the attribute '{@link egeo.gpx.GpxType#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Metadata</em>'.
-	 * @see egeo.gpx.GpxType#getMetadata()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see egeo.gpx.GpxType#getName()
 	 * @see #getGpxType()
 	 * @generated
 	 */
-	EReference getGpxType_Metadata();
+	EAttribute getGpxType_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.GpxType#getDesc <em>Desc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Desc</em>'.
+	 * @see egeo.gpx.GpxType#getDesc()
+	 * @see #getGpxType()
+	 * @generated
+	 */
+	EAttribute getGpxType_Desc();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.GpxType#getAuthor <em>Author</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Author</em>'.
+	 * @see egeo.gpx.GpxType#getAuthor()
+	 * @see #getGpxType()
+	 * @generated
+	 */
+	EAttribute getGpxType_Author();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.GpxType#getEmail <em>Email</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Email</em>'.
+	 * @see egeo.gpx.GpxType#getEmail()
+	 * @see #getGpxType()
+	 * @generated
+	 */
+	EAttribute getGpxType_Email();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.GpxType#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see egeo.gpx.GpxType#getUrl()
+	 * @see #getGpxType()
+	 * @generated
+	 */
+	EAttribute getGpxType_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.GpxType#getUrlname <em>Urlname</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Urlname</em>'.
+	 * @see egeo.gpx.GpxType#getUrlname()
+	 * @see #getGpxType()
+	 * @generated
+	 */
+	EAttribute getGpxType_Urlname();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.GpxType#getTime <em>Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time</em>'.
+	 * @see egeo.gpx.GpxType#getTime()
+	 * @see #getGpxType()
+	 * @generated
+	 */
+	EAttribute getGpxType_Time();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.GpxType#getKeywords <em>Keywords</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Keywords</em>'.
+	 * @see egeo.gpx.GpxType#getKeywords()
+	 * @see #getGpxType()
+	 * @generated
+	 */
+	EAttribute getGpxType_Keywords();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link egeo.gpx.GpxType#getBounds <em>Bounds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Bounds</em>'.
+	 * @see egeo.gpx.GpxType#getBounds()
+	 * @see #getGpxType()
+	 * @generated
+	 */
+	EReference getGpxType_Bounds();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link egeo.gpx.GpxType#getWpt <em>Wpt</em>}'.
@@ -1545,15 +1622,15 @@ public interface GpxPackage extends EPackage {
 	EReference getGpxType_Trk();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.GpxType#getExtensions <em>Extensions</em>}'.
+	 * Returns the meta object for the attribute list '{@link egeo.gpx.GpxType#getAny <em>Any</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Extensions</em>'.
-	 * @see egeo.gpx.GpxType#getExtensions()
+	 * @return the meta object for the attribute list '<em>Any</em>'.
+	 * @see egeo.gpx.GpxType#getAny()
 	 * @see #getGpxType()
 	 * @generated
 	 */
-	EReference getGpxType_Extensions();
+	EAttribute getGpxType_Any();
 
 	/**
 	 * Returns the meta object for the attribute '{@link egeo.gpx.GpxType#getCreator <em>Creator</em>}'.
@@ -1578,274 +1655,256 @@ public interface GpxPackage extends EPackage {
 	EAttribute getGpxType_Version();
 
 	/**
-	 * Returns the meta object for class '{@link egeo.gpx.LinkType <em>Link Type</em>}'.
+	 * Returns the meta object for class '{@link egeo.gpx.RteptType <em>Rtept Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Link Type</em>'.
-	 * @see egeo.gpx.LinkType
+	 * @return the meta object for class '<em>Rtept Type</em>'.
+	 * @see egeo.gpx.RteptType
 	 * @generated
 	 */
-	EClass getLinkType();
+	EClass getRteptType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.LinkType#getText <em>Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text</em>'.
-	 * @see egeo.gpx.LinkType#getText()
-	 * @see #getLinkType()
-	 * @generated
-	 */
-	EAttribute getLinkType_Text();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.LinkType#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see egeo.gpx.LinkType#getType()
-	 * @see #getLinkType()
-	 * @generated
-	 */
-	EAttribute getLinkType_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.LinkType#getHref <em>Href</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Href</em>'.
-	 * @see egeo.gpx.LinkType#getHref()
-	 * @see #getLinkType()
-	 * @generated
-	 */
-	EAttribute getLinkType_Href();
-
-	/**
-	 * Returns the meta object for class '{@link egeo.gpx.MetadataType <em>Metadata Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Metadata Type</em>'.
-	 * @see egeo.gpx.MetadataType
-	 * @generated
-	 */
-	EClass getMetadataType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.MetadataType#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see egeo.gpx.MetadataType#getName()
-	 * @see #getMetadataType()
-	 * @generated
-	 */
-	EAttribute getMetadataType_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.MetadataType#getDesc <em>Desc</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Desc</em>'.
-	 * @see egeo.gpx.MetadataType#getDesc()
-	 * @see #getMetadataType()
-	 * @generated
-	 */
-	EAttribute getMetadataType_Desc();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.MetadataType#getAuthor <em>Author</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Author</em>'.
-	 * @see egeo.gpx.MetadataType#getAuthor()
-	 * @see #getMetadataType()
-	 * @generated
-	 */
-	EReference getMetadataType_Author();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.MetadataType#getCopyright <em>Copyright</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Copyright</em>'.
-	 * @see egeo.gpx.MetadataType#getCopyright()
-	 * @see #getMetadataType()
-	 * @generated
-	 */
-	EReference getMetadataType_Copyright();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link egeo.gpx.MetadataType#getLink <em>Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Link</em>'.
-	 * @see egeo.gpx.MetadataType#getLink()
-	 * @see #getMetadataType()
-	 * @generated
-	 */
-	EReference getMetadataType_Link();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.MetadataType#getTime <em>Time</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Time</em>'.
-	 * @see egeo.gpx.MetadataType#getTime()
-	 * @see #getMetadataType()
-	 * @generated
-	 */
-	EAttribute getMetadataType_Time();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.MetadataType#getKeywords <em>Keywords</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Keywords</em>'.
-	 * @see egeo.gpx.MetadataType#getKeywords()
-	 * @see #getMetadataType()
-	 * @generated
-	 */
-	EAttribute getMetadataType_Keywords();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.MetadataType#getBounds <em>Bounds</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Bounds</em>'.
-	 * @see egeo.gpx.MetadataType#getBounds()
-	 * @see #getMetadataType()
-	 * @generated
-	 */
-	EReference getMetadataType_Bounds();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.MetadataType#getExtensions <em>Extensions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Extensions</em>'.
-	 * @see egeo.gpx.MetadataType#getExtensions()
-	 * @see #getMetadataType()
-	 * @generated
-	 */
-	EReference getMetadataType_Extensions();
-
-	/**
-	 * Returns the meta object for class '{@link egeo.gpx.PersonType <em>Person Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Person Type</em>'.
-	 * @see egeo.gpx.PersonType
-	 * @generated
-	 */
-	EClass getPersonType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.PersonType#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see egeo.gpx.PersonType#getName()
-	 * @see #getPersonType()
-	 * @generated
-	 */
-	EAttribute getPersonType_Name();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.PersonType#getEmail <em>Email</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Email</em>'.
-	 * @see egeo.gpx.PersonType#getEmail()
-	 * @see #getPersonType()
-	 * @generated
-	 */
-	EReference getPersonType_Email();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.PersonType#getLink <em>Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Link</em>'.
-	 * @see egeo.gpx.PersonType#getLink()
-	 * @see #getPersonType()
-	 * @generated
-	 */
-	EReference getPersonType_Link();
-
-	/**
-	 * Returns the meta object for class '{@link egeo.gpx.PtsegType <em>Ptseg Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ptseg Type</em>'.
-	 * @see egeo.gpx.PtsegType
-	 * @generated
-	 */
-	EClass getPtsegType();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link egeo.gpx.PtsegType#getPt <em>Pt</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pt</em>'.
-	 * @see egeo.gpx.PtsegType#getPt()
-	 * @see #getPtsegType()
-	 * @generated
-	 */
-	EReference getPtsegType_Pt();
-
-	/**
-	 * Returns the meta object for class '{@link egeo.gpx.PtType <em>Pt Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Pt Type</em>'.
-	 * @see egeo.gpx.PtType
-	 * @generated
-	 */
-	EClass getPtType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.PtType#getEle <em>Ele</em>}'.
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getEle <em>Ele</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Ele</em>'.
-	 * @see egeo.gpx.PtType#getEle()
-	 * @see #getPtType()
+	 * @see egeo.gpx.RteptType#getEle()
+	 * @see #getRteptType()
 	 * @generated
 	 */
-	EAttribute getPtType_Ele();
+	EAttribute getRteptType_Ele();
 
 	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.PtType#getTime <em>Time</em>}'.
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getTime <em>Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Time</em>'.
-	 * @see egeo.gpx.PtType#getTime()
-	 * @see #getPtType()
+	 * @see egeo.gpx.RteptType#getTime()
+	 * @see #getRteptType()
 	 * @generated
 	 */
-	EAttribute getPtType_Time();
+	EAttribute getRteptType_Time();
 
 	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.PtType#getLat <em>Lat</em>}'.
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getMagvar <em>Magvar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Magvar</em>'.
+	 * @see egeo.gpx.RteptType#getMagvar()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Magvar();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getGeoidheight <em>Geoidheight</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Geoidheight</em>'.
+	 * @see egeo.gpx.RteptType#getGeoidheight()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Geoidheight();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see egeo.gpx.RteptType#getName()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getCmt <em>Cmt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cmt</em>'.
+	 * @see egeo.gpx.RteptType#getCmt()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Cmt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getDesc <em>Desc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Desc</em>'.
+	 * @see egeo.gpx.RteptType#getDesc()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Desc();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getSrc <em>Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Src</em>'.
+	 * @see egeo.gpx.RteptType#getSrc()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Src();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see egeo.gpx.RteptType#getUrl()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getUrlname <em>Urlname</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Urlname</em>'.
+	 * @see egeo.gpx.RteptType#getUrlname()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Urlname();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getSym <em>Sym</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Sym</em>'.
+	 * @see egeo.gpx.RteptType#getSym()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Sym();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see egeo.gpx.RteptType#getType()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getFix <em>Fix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fix</em>'.
+	 * @see egeo.gpx.RteptType#getFix()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Fix();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getSat <em>Sat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Sat</em>'.
+	 * @see egeo.gpx.RteptType#getSat()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Sat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getHdop <em>Hdop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Hdop</em>'.
+	 * @see egeo.gpx.RteptType#getHdop()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Hdop();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getVdop <em>Vdop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Vdop</em>'.
+	 * @see egeo.gpx.RteptType#getVdop()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Vdop();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getPdop <em>Pdop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pdop</em>'.
+	 * @see egeo.gpx.RteptType#getPdop()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Pdop();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getAgeofdgpsdata <em>Ageofdgpsdata</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ageofdgpsdata</em>'.
+	 * @see egeo.gpx.RteptType#getAgeofdgpsdata()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Ageofdgpsdata();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getDgpsid <em>Dgpsid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Dgpsid</em>'.
+	 * @see egeo.gpx.RteptType#getDgpsid()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Dgpsid();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link egeo.gpx.RteptType#getAny <em>Any</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Any</em>'.
+	 * @see egeo.gpx.RteptType#getAny()
+	 * @see #getRteptType()
+	 * @generated
+	 */
+	EAttribute getRteptType_Any();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getLat <em>Lat</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Lat</em>'.
-	 * @see egeo.gpx.PtType#getLat()
-	 * @see #getPtType()
+	 * @see egeo.gpx.RteptType#getLat()
+	 * @see #getRteptType()
 	 * @generated
 	 */
-	EAttribute getPtType_Lat();
+	EAttribute getRteptType_Lat();
 
 	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.PtType#getLon <em>Lon</em>}'.
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteptType#getLon <em>Lon</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Lon</em>'.
-	 * @see egeo.gpx.PtType#getLon()
-	 * @see #getPtType()
+	 * @see egeo.gpx.RteptType#getLon()
+	 * @see #getRteptType()
 	 * @generated
 	 */
-	EAttribute getPtType_Lon();
+	EAttribute getRteptType_Lon();
 
 	/**
 	 * Returns the meta object for class '{@link egeo.gpx.RteType <em>Rte Type</em>}'.
@@ -1902,15 +1961,26 @@ public interface GpxPackage extends EPackage {
 	EAttribute getRteType_Src();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link egeo.gpx.RteType#getLink <em>Link</em>}'.
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteType#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Link</em>'.
-	 * @see egeo.gpx.RteType#getLink()
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see egeo.gpx.RteType#getUrl()
 	 * @see #getRteType()
 	 * @generated
 	 */
-	EReference getRteType_Link();
+	EAttribute getRteType_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.RteType#getUrlname <em>Urlname</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Urlname</em>'.
+	 * @see egeo.gpx.RteType#getUrlname()
+	 * @see #getRteType()
+	 * @generated
+	 */
+	EAttribute getRteType_Urlname();
 
 	/**
 	 * Returns the meta object for the attribute '{@link egeo.gpx.RteType#getNumber <em>Number</em>}'.
@@ -1924,26 +1994,15 @@ public interface GpxPackage extends EPackage {
 	EAttribute getRteType_Number();
 
 	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.RteType#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute list '{@link egeo.gpx.RteType#getAny <em>Any</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see egeo.gpx.RteType#getType()
+	 * @return the meta object for the attribute list '<em>Any</em>'.
+	 * @see egeo.gpx.RteType#getAny()
 	 * @see #getRteType()
 	 * @generated
 	 */
-	EAttribute getRteType_Type();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.RteType#getExtensions <em>Extensions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Extensions</em>'.
-	 * @see egeo.gpx.RteType#getExtensions()
-	 * @see #getRteType()
-	 * @generated
-	 */
-	EReference getRteType_Extensions();
+	EAttribute getRteType_Any();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link egeo.gpx.RteType#getRtept <em>Rtept</em>}'.
@@ -1955,6 +2014,280 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRteType_Rtept();
+
+	/**
+	 * Returns the meta object for class '{@link egeo.gpx.TrkptType <em>Trkpt Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Trkpt Type</em>'.
+	 * @see egeo.gpx.TrkptType
+	 * @generated
+	 */
+	EClass getTrkptType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getEle <em>Ele</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ele</em>'.
+	 * @see egeo.gpx.TrkptType#getEle()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Ele();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getTime <em>Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time</em>'.
+	 * @see egeo.gpx.TrkptType#getTime()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Time();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getCourse <em>Course</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Course</em>'.
+	 * @see egeo.gpx.TrkptType#getCourse()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Course();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getSpeed <em>Speed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Speed</em>'.
+	 * @see egeo.gpx.TrkptType#getSpeed()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Speed();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getMagvar <em>Magvar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Magvar</em>'.
+	 * @see egeo.gpx.TrkptType#getMagvar()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Magvar();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getGeoidheight <em>Geoidheight</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Geoidheight</em>'.
+	 * @see egeo.gpx.TrkptType#getGeoidheight()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Geoidheight();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see egeo.gpx.TrkptType#getName()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getCmt <em>Cmt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cmt</em>'.
+	 * @see egeo.gpx.TrkptType#getCmt()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Cmt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getDesc <em>Desc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Desc</em>'.
+	 * @see egeo.gpx.TrkptType#getDesc()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Desc();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getSrc <em>Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Src</em>'.
+	 * @see egeo.gpx.TrkptType#getSrc()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Src();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see egeo.gpx.TrkptType#getUrl()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getUrlname <em>Urlname</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Urlname</em>'.
+	 * @see egeo.gpx.TrkptType#getUrlname()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Urlname();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getSym <em>Sym</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Sym</em>'.
+	 * @see egeo.gpx.TrkptType#getSym()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Sym();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see egeo.gpx.TrkptType#getType()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getFix <em>Fix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fix</em>'.
+	 * @see egeo.gpx.TrkptType#getFix()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Fix();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getSat <em>Sat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Sat</em>'.
+	 * @see egeo.gpx.TrkptType#getSat()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Sat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getHdop <em>Hdop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Hdop</em>'.
+	 * @see egeo.gpx.TrkptType#getHdop()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Hdop();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getVdop <em>Vdop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Vdop</em>'.
+	 * @see egeo.gpx.TrkptType#getVdop()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Vdop();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getPdop <em>Pdop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pdop</em>'.
+	 * @see egeo.gpx.TrkptType#getPdop()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Pdop();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getAgeofdgpsdata <em>Ageofdgpsdata</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ageofdgpsdata</em>'.
+	 * @see egeo.gpx.TrkptType#getAgeofdgpsdata()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Ageofdgpsdata();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getDgpsid <em>Dgpsid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Dgpsid</em>'.
+	 * @see egeo.gpx.TrkptType#getDgpsid()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Dgpsid();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link egeo.gpx.TrkptType#getAny <em>Any</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Any</em>'.
+	 * @see egeo.gpx.TrkptType#getAny()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Any();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getLat <em>Lat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lat</em>'.
+	 * @see egeo.gpx.TrkptType#getLat()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Lat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkptType#getLon <em>Lon</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lon</em>'.
+	 * @see egeo.gpx.TrkptType#getLon()
+	 * @see #getTrkptType()
+	 * @generated
+	 */
+	EAttribute getTrkptType_Lon();
 
 	/**
 	 * Returns the meta object for class '{@link egeo.gpx.TrksegType <em>Trkseg Type</em>}'.
@@ -1976,17 +2309,6 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTrksegType_Trkpt();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.TrksegType#getExtensions <em>Extensions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Extensions</em>'.
-	 * @see egeo.gpx.TrksegType#getExtensions()
-	 * @see #getTrksegType()
-	 * @generated
-	 */
-	EReference getTrksegType_Extensions();
 
 	/**
 	 * Returns the meta object for class '{@link egeo.gpx.TrkType <em>Trk Type</em>}'.
@@ -2043,15 +2365,26 @@ public interface GpxPackage extends EPackage {
 	EAttribute getTrkType_Src();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link egeo.gpx.TrkType#getLink <em>Link</em>}'.
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkType#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Link</em>'.
-	 * @see egeo.gpx.TrkType#getLink()
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see egeo.gpx.TrkType#getUrl()
 	 * @see #getTrkType()
 	 * @generated
 	 */
-	EReference getTrkType_Link();
+	EAttribute getTrkType_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkType#getUrlname <em>Urlname</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Urlname</em>'.
+	 * @see egeo.gpx.TrkType#getUrlname()
+	 * @see #getTrkType()
+	 * @generated
+	 */
+	EAttribute getTrkType_Urlname();
 
 	/**
 	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkType#getNumber <em>Number</em>}'.
@@ -2065,26 +2398,15 @@ public interface GpxPackage extends EPackage {
 	EAttribute getTrkType_Number();
 
 	/**
-	 * Returns the meta object for the attribute '{@link egeo.gpx.TrkType#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute list '{@link egeo.gpx.TrkType#getAny <em>Any</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see egeo.gpx.TrkType#getType()
+	 * @return the meta object for the attribute list '<em>Any</em>'.
+	 * @see egeo.gpx.TrkType#getAny()
 	 * @see #getTrkType()
 	 * @generated
 	 */
-	EAttribute getTrkType_Type();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.TrkType#getExtensions <em>Extensions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Extensions</em>'.
-	 * @see egeo.gpx.TrkType#getExtensions()
-	 * @see #getTrkType()
-	 * @generated
-	 */
-	EReference getTrkType_Extensions();
+	EAttribute getTrkType_Any();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link egeo.gpx.TrkType#getTrkseg <em>Trkseg</em>}'.
@@ -2196,15 +2518,26 @@ public interface GpxPackage extends EPackage {
 	EAttribute getWptType_Src();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link egeo.gpx.WptType#getLink <em>Link</em>}'.
+	 * Returns the meta object for the attribute '{@link egeo.gpx.WptType#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Link</em>'.
-	 * @see egeo.gpx.WptType#getLink()
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see egeo.gpx.WptType#getUrl()
 	 * @see #getWptType()
 	 * @generated
 	 */
-	EReference getWptType_Link();
+	EAttribute getWptType_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link egeo.gpx.WptType#getUrlname <em>Urlname</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Urlname</em>'.
+	 * @see egeo.gpx.WptType#getUrlname()
+	 * @see #getWptType()
+	 * @generated
+	 */
+	EAttribute getWptType_Urlname();
 
 	/**
 	 * Returns the meta object for the attribute '{@link egeo.gpx.WptType#getSym <em>Sym</em>}'.
@@ -2306,15 +2639,15 @@ public interface GpxPackage extends EPackage {
 	EAttribute getWptType_Dgpsid();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link egeo.gpx.WptType#getExtensions <em>Extensions</em>}'.
+	 * Returns the meta object for the attribute list '{@link egeo.gpx.WptType#getAny <em>Any</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Extensions</em>'.
-	 * @see egeo.gpx.WptType#getExtensions()
+	 * @return the meta object for the attribute list '<em>Any</em>'.
+	 * @see egeo.gpx.WptType#getAny()
 	 * @see #getWptType()
 	 * @generated
 	 */
-	EReference getWptType_Extensions();
+	EAttribute getWptType_Any();
 
 	/**
 	 * Returns the meta object for the attribute '{@link egeo.gpx.WptType#getLat <em>Lat</em>}'.
@@ -2355,7 +2688,7 @@ public interface GpxPackage extends EPackage {
 	 * @return the meta object for data type '<em>Degrees Type</em>'.
 	 * @see java.math.BigDecimal
 	 * @model instanceClass="java.math.BigDecimal"
-	 *        extendedMetaData="name='degreesType' baseType='http://www.eclipse.org/emf/2003/XMLType#decimal' minInclusive='0.0' maxExclusive='360.0'"
+	 *        extendedMetaData="name='degreesType' baseType='http://www.eclipse.org/emf/2003/XMLType#decimal' minInclusive='0.0' maxInclusive='360.0'"
 	 * @generated
 	 */
 	EDataType getDegreesType();
@@ -2371,6 +2704,18 @@ public interface GpxPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getDgpsStationType();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Email Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Email Type</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="name='emailType' baseType='http://www.eclipse.org/emf/2003/XMLType#string' pattern='[\\p{L}_]+(\\.[\\p{L}_]+)*@[\\p{L}_]+(\\.[\\p{L}_]+)+'"
+	 * @generated
+	 */
+	EDataType getEmailType();
 
 	/**
 	 * Returns the meta object for data type '{@link egeo.gpx.FixType <em>Fix Type Object</em>}'.
@@ -2403,7 +2748,7 @@ public interface GpxPackage extends EPackage {
 	 * @return the meta object for data type '<em>Longitude Type</em>'.
 	 * @see java.math.BigDecimal
 	 * @model instanceClass="java.math.BigDecimal"
-	 *        extendedMetaData="name='longitudeType' baseType='http://www.eclipse.org/emf/2003/XMLType#decimal' minInclusive='-180.0' maxExclusive='180.0'"
+	 *        extendedMetaData="name='longitudeType' baseType='http://www.eclipse.org/emf/2003/XMLType#decimal' minInclusive='-180.0' maxInclusive='180.0'"
 	 * @generated
 	 */
 	EDataType getLongitudeType();
@@ -2474,40 +2819,6 @@ public interface GpxPackage extends EPackage {
 		EAttribute BOUNDS_TYPE__MINLON = eINSTANCE.getBoundsType_Minlon();
 
 		/**
-		 * The meta object literal for the '{@link egeo.gpx.impl.CopyrightTypeImpl <em>Copyright Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see egeo.gpx.impl.CopyrightTypeImpl
-		 * @see egeo.gpx.impl.GpxPackageImpl#getCopyrightType()
-		 * @generated
-		 */
-		EClass COPYRIGHT_TYPE = eINSTANCE.getCopyrightType();
-
-		/**
-		 * The meta object literal for the '<em><b>Year</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COPYRIGHT_TYPE__YEAR = eINSTANCE.getCopyrightType_Year();
-
-		/**
-		 * The meta object literal for the '<em><b>License</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COPYRIGHT_TYPE__LICENSE = eINSTANCE.getCopyrightType_License();
-
-		/**
-		 * The meta object literal for the '<em><b>Author</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COPYRIGHT_TYPE__AUTHOR = eINSTANCE.getCopyrightType_Author();
-
-		/**
 		 * The meta object literal for the '{@link egeo.gpx.impl.DocumentRootImpl <em>Document Root</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2550,50 +2861,6 @@ public interface GpxPackage extends EPackage {
 		EReference DOCUMENT_ROOT__GPX = eINSTANCE.getDocumentRoot_Gpx();
 
 		/**
-		 * The meta object literal for the '{@link egeo.gpx.impl.EmailTypeImpl <em>Email Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see egeo.gpx.impl.EmailTypeImpl
-		 * @see egeo.gpx.impl.GpxPackageImpl#getEmailType()
-		 * @generated
-		 */
-		EClass EMAIL_TYPE = eINSTANCE.getEmailType();
-
-		/**
-		 * The meta object literal for the '<em><b>Domain</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMAIL_TYPE__DOMAIN = eINSTANCE.getEmailType_Domain();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMAIL_TYPE__ID = eINSTANCE.getEmailType_Id();
-
-		/**
-		 * The meta object literal for the '{@link egeo.gpx.impl.ExtensionsTypeImpl <em>Extensions Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see egeo.gpx.impl.ExtensionsTypeImpl
-		 * @see egeo.gpx.impl.GpxPackageImpl#getExtensionsType()
-		 * @generated
-		 */
-		EClass EXTENSIONS_TYPE = eINSTANCE.getExtensionsType();
-
-		/**
-		 * The meta object literal for the '<em><b>Any</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXTENSIONS_TYPE__ANY = eINSTANCE.getExtensionsType_Any();
-
-		/**
 		 * The meta object literal for the '{@link egeo.gpx.impl.GpxTypeImpl <em>Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2604,12 +2871,76 @@ public interface GpxPackage extends EPackage {
 		EClass GPX_TYPE = eINSTANCE.getGpxType();
 
 		/**
-		 * The meta object literal for the '<em><b>Metadata</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GPX_TYPE__METADATA = eINSTANCE.getGpxType_Metadata();
+		EAttribute GPX_TYPE__NAME = eINSTANCE.getGpxType_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Desc</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GPX_TYPE__DESC = eINSTANCE.getGpxType_Desc();
+
+		/**
+		 * The meta object literal for the '<em><b>Author</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GPX_TYPE__AUTHOR = eINSTANCE.getGpxType_Author();
+
+		/**
+		 * The meta object literal for the '<em><b>Email</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GPX_TYPE__EMAIL = eINSTANCE.getGpxType_Email();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GPX_TYPE__URL = eINSTANCE.getGpxType_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Urlname</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GPX_TYPE__URLNAME = eINSTANCE.getGpxType_Urlname();
+
+		/**
+		 * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GPX_TYPE__TIME = eINSTANCE.getGpxType_Time();
+
+		/**
+		 * The meta object literal for the '<em><b>Keywords</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GPX_TYPE__KEYWORDS = eINSTANCE.getGpxType_Keywords();
+
+		/**
+		 * The meta object literal for the '<em><b>Bounds</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GPX_TYPE__BOUNDS = eINSTANCE.getGpxType_Bounds();
 
 		/**
 		 * The meta object literal for the '<em><b>Wpt</b></em>' containment reference list feature.
@@ -2636,12 +2967,12 @@ public interface GpxPackage extends EPackage {
 		EReference GPX_TYPE__TRK = eINSTANCE.getGpxType_Trk();
 
 		/**
-		 * The meta object literal for the '<em><b>Extensions</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Any</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GPX_TYPE__EXTENSIONS = eINSTANCE.getGpxType_Extensions();
+		EAttribute GPX_TYPE__ANY = eINSTANCE.getGpxType_Any();
 
 		/**
 		 * The meta object literal for the '<em><b>Creator</b></em>' attribute feature.
@@ -2660,182 +2991,14 @@ public interface GpxPackage extends EPackage {
 		EAttribute GPX_TYPE__VERSION = eINSTANCE.getGpxType_Version();
 
 		/**
-		 * The meta object literal for the '{@link egeo.gpx.impl.LinkTypeImpl <em>Link Type</em>}' class.
+		 * The meta object literal for the '{@link egeo.gpx.impl.RteptTypeImpl <em>Rtept Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see egeo.gpx.impl.LinkTypeImpl
-		 * @see egeo.gpx.impl.GpxPackageImpl#getLinkType()
+		 * @see egeo.gpx.impl.RteptTypeImpl
+		 * @see egeo.gpx.impl.GpxPackageImpl#getRteptType()
 		 * @generated
 		 */
-		EClass LINK_TYPE = eINSTANCE.getLinkType();
-
-		/**
-		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LINK_TYPE__TEXT = eINSTANCE.getLinkType_Text();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LINK_TYPE__TYPE = eINSTANCE.getLinkType_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Href</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LINK_TYPE__HREF = eINSTANCE.getLinkType_Href();
-
-		/**
-		 * The meta object literal for the '{@link egeo.gpx.impl.MetadataTypeImpl <em>Metadata Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see egeo.gpx.impl.MetadataTypeImpl
-		 * @see egeo.gpx.impl.GpxPackageImpl#getMetadataType()
-		 * @generated
-		 */
-		EClass METADATA_TYPE = eINSTANCE.getMetadataType();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METADATA_TYPE__NAME = eINSTANCE.getMetadataType_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Desc</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METADATA_TYPE__DESC = eINSTANCE.getMetadataType_Desc();
-
-		/**
-		 * The meta object literal for the '<em><b>Author</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference METADATA_TYPE__AUTHOR = eINSTANCE.getMetadataType_Author();
-
-		/**
-		 * The meta object literal for the '<em><b>Copyright</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference METADATA_TYPE__COPYRIGHT = eINSTANCE.getMetadataType_Copyright();
-
-		/**
-		 * The meta object literal for the '<em><b>Link</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference METADATA_TYPE__LINK = eINSTANCE.getMetadataType_Link();
-
-		/**
-		 * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METADATA_TYPE__TIME = eINSTANCE.getMetadataType_Time();
-
-		/**
-		 * The meta object literal for the '<em><b>Keywords</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute METADATA_TYPE__KEYWORDS = eINSTANCE.getMetadataType_Keywords();
-
-		/**
-		 * The meta object literal for the '<em><b>Bounds</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference METADATA_TYPE__BOUNDS = eINSTANCE.getMetadataType_Bounds();
-
-		/**
-		 * The meta object literal for the '<em><b>Extensions</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference METADATA_TYPE__EXTENSIONS = eINSTANCE.getMetadataType_Extensions();
-
-		/**
-		 * The meta object literal for the '{@link egeo.gpx.impl.PersonTypeImpl <em>Person Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see egeo.gpx.impl.PersonTypeImpl
-		 * @see egeo.gpx.impl.GpxPackageImpl#getPersonType()
-		 * @generated
-		 */
-		EClass PERSON_TYPE = eINSTANCE.getPersonType();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PERSON_TYPE__NAME = eINSTANCE.getPersonType_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Email</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PERSON_TYPE__EMAIL = eINSTANCE.getPersonType_Email();
-
-		/**
-		 * The meta object literal for the '<em><b>Link</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PERSON_TYPE__LINK = eINSTANCE.getPersonType_Link();
-
-		/**
-		 * The meta object literal for the '{@link egeo.gpx.impl.PtsegTypeImpl <em>Ptseg Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see egeo.gpx.impl.PtsegTypeImpl
-		 * @see egeo.gpx.impl.GpxPackageImpl#getPtsegType()
-		 * @generated
-		 */
-		EClass PTSEG_TYPE = eINSTANCE.getPtsegType();
-
-		/**
-		 * The meta object literal for the '<em><b>Pt</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PTSEG_TYPE__PT = eINSTANCE.getPtsegType_Pt();
-
-		/**
-		 * The meta object literal for the '{@link egeo.gpx.impl.PtTypeImpl <em>Pt Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see egeo.gpx.impl.PtTypeImpl
-		 * @see egeo.gpx.impl.GpxPackageImpl#getPtType()
-		 * @generated
-		 */
-		EClass PT_TYPE = eINSTANCE.getPtType();
+		EClass RTEPT_TYPE = eINSTANCE.getRteptType();
 
 		/**
 		 * The meta object literal for the '<em><b>Ele</b></em>' attribute feature.
@@ -2843,7 +3006,7 @@ public interface GpxPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PT_TYPE__ELE = eINSTANCE.getPtType_Ele();
+		EAttribute RTEPT_TYPE__ELE = eINSTANCE.getRteptType_Ele();
 
 		/**
 		 * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
@@ -2851,7 +3014,151 @@ public interface GpxPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PT_TYPE__TIME = eINSTANCE.getPtType_Time();
+		EAttribute RTEPT_TYPE__TIME = eINSTANCE.getRteptType_Time();
+
+		/**
+		 * The meta object literal for the '<em><b>Magvar</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__MAGVAR = eINSTANCE.getRteptType_Magvar();
+
+		/**
+		 * The meta object literal for the '<em><b>Geoidheight</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__GEOIDHEIGHT = eINSTANCE.getRteptType_Geoidheight();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__NAME = eINSTANCE.getRteptType_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Cmt</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__CMT = eINSTANCE.getRteptType_Cmt();
+
+		/**
+		 * The meta object literal for the '<em><b>Desc</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__DESC = eINSTANCE.getRteptType_Desc();
+
+		/**
+		 * The meta object literal for the '<em><b>Src</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__SRC = eINSTANCE.getRteptType_Src();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__URL = eINSTANCE.getRteptType_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Urlname</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__URLNAME = eINSTANCE.getRteptType_Urlname();
+
+		/**
+		 * The meta object literal for the '<em><b>Sym</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__SYM = eINSTANCE.getRteptType_Sym();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__TYPE = eINSTANCE.getRteptType_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Fix</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__FIX = eINSTANCE.getRteptType_Fix();
+
+		/**
+		 * The meta object literal for the '<em><b>Sat</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__SAT = eINSTANCE.getRteptType_Sat();
+
+		/**
+		 * The meta object literal for the '<em><b>Hdop</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__HDOP = eINSTANCE.getRteptType_Hdop();
+
+		/**
+		 * The meta object literal for the '<em><b>Vdop</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__VDOP = eINSTANCE.getRteptType_Vdop();
+
+		/**
+		 * The meta object literal for the '<em><b>Pdop</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__PDOP = eINSTANCE.getRteptType_Pdop();
+
+		/**
+		 * The meta object literal for the '<em><b>Ageofdgpsdata</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__AGEOFDGPSDATA = eINSTANCE.getRteptType_Ageofdgpsdata();
+
+		/**
+		 * The meta object literal for the '<em><b>Dgpsid</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__DGPSID = eINSTANCE.getRteptType_Dgpsid();
+
+		/**
+		 * The meta object literal for the '<em><b>Any</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTEPT_TYPE__ANY = eINSTANCE.getRteptType_Any();
 
 		/**
 		 * The meta object literal for the '<em><b>Lat</b></em>' attribute feature.
@@ -2859,7 +3166,7 @@ public interface GpxPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PT_TYPE__LAT = eINSTANCE.getPtType_Lat();
+		EAttribute RTEPT_TYPE__LAT = eINSTANCE.getRteptType_Lat();
 
 		/**
 		 * The meta object literal for the '<em><b>Lon</b></em>' attribute feature.
@@ -2867,7 +3174,7 @@ public interface GpxPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PT_TYPE__LON = eINSTANCE.getPtType_Lon();
+		EAttribute RTEPT_TYPE__LON = eINSTANCE.getRteptType_Lon();
 
 		/**
 		 * The meta object literal for the '{@link egeo.gpx.impl.RteTypeImpl <em>Rte Type</em>}' class.
@@ -2912,12 +3219,20 @@ public interface GpxPackage extends EPackage {
 		EAttribute RTE_TYPE__SRC = eINSTANCE.getRteType_Src();
 
 		/**
-		 * The meta object literal for the '<em><b>Link</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RTE_TYPE__LINK = eINSTANCE.getRteType_Link();
+		EAttribute RTE_TYPE__URL = eINSTANCE.getRteType_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Urlname</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RTE_TYPE__URLNAME = eINSTANCE.getRteType_Urlname();
 
 		/**
 		 * The meta object literal for the '<em><b>Number</b></em>' attribute feature.
@@ -2928,20 +3243,12 @@ public interface GpxPackage extends EPackage {
 		EAttribute RTE_TYPE__NUMBER = eINSTANCE.getRteType_Number();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Any</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RTE_TYPE__TYPE = eINSTANCE.getRteType_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Extensions</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RTE_TYPE__EXTENSIONS = eINSTANCE.getRteType_Extensions();
+		EAttribute RTE_TYPE__ANY = eINSTANCE.getRteType_Any();
 
 		/**
 		 * The meta object literal for the '<em><b>Rtept</b></em>' containment reference list feature.
@@ -2950,6 +3257,208 @@ public interface GpxPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RTE_TYPE__RTEPT = eINSTANCE.getRteType_Rtept();
+
+		/**
+		 * The meta object literal for the '{@link egeo.gpx.impl.TrkptTypeImpl <em>Trkpt Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see egeo.gpx.impl.TrkptTypeImpl
+		 * @see egeo.gpx.impl.GpxPackageImpl#getTrkptType()
+		 * @generated
+		 */
+		EClass TRKPT_TYPE = eINSTANCE.getTrkptType();
+
+		/**
+		 * The meta object literal for the '<em><b>Ele</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__ELE = eINSTANCE.getTrkptType_Ele();
+
+		/**
+		 * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__TIME = eINSTANCE.getTrkptType_Time();
+
+		/**
+		 * The meta object literal for the '<em><b>Course</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__COURSE = eINSTANCE.getTrkptType_Course();
+
+		/**
+		 * The meta object literal for the '<em><b>Speed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__SPEED = eINSTANCE.getTrkptType_Speed();
+
+		/**
+		 * The meta object literal for the '<em><b>Magvar</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__MAGVAR = eINSTANCE.getTrkptType_Magvar();
+
+		/**
+		 * The meta object literal for the '<em><b>Geoidheight</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__GEOIDHEIGHT = eINSTANCE.getTrkptType_Geoidheight();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__NAME = eINSTANCE.getTrkptType_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Cmt</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__CMT = eINSTANCE.getTrkptType_Cmt();
+
+		/**
+		 * The meta object literal for the '<em><b>Desc</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__DESC = eINSTANCE.getTrkptType_Desc();
+
+		/**
+		 * The meta object literal for the '<em><b>Src</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__SRC = eINSTANCE.getTrkptType_Src();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__URL = eINSTANCE.getTrkptType_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Urlname</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__URLNAME = eINSTANCE.getTrkptType_Urlname();
+
+		/**
+		 * The meta object literal for the '<em><b>Sym</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__SYM = eINSTANCE.getTrkptType_Sym();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__TYPE = eINSTANCE.getTrkptType_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Fix</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__FIX = eINSTANCE.getTrkptType_Fix();
+
+		/**
+		 * The meta object literal for the '<em><b>Sat</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__SAT = eINSTANCE.getTrkptType_Sat();
+
+		/**
+		 * The meta object literal for the '<em><b>Hdop</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__HDOP = eINSTANCE.getTrkptType_Hdop();
+
+		/**
+		 * The meta object literal for the '<em><b>Vdop</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__VDOP = eINSTANCE.getTrkptType_Vdop();
+
+		/**
+		 * The meta object literal for the '<em><b>Pdop</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__PDOP = eINSTANCE.getTrkptType_Pdop();
+
+		/**
+		 * The meta object literal for the '<em><b>Ageofdgpsdata</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__AGEOFDGPSDATA = eINSTANCE.getTrkptType_Ageofdgpsdata();
+
+		/**
+		 * The meta object literal for the '<em><b>Dgpsid</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__DGPSID = eINSTANCE.getTrkptType_Dgpsid();
+
+		/**
+		 * The meta object literal for the '<em><b>Any</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__ANY = eINSTANCE.getTrkptType_Any();
+
+		/**
+		 * The meta object literal for the '<em><b>Lat</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__LAT = eINSTANCE.getTrkptType_Lat();
+
+		/**
+		 * The meta object literal for the '<em><b>Lon</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRKPT_TYPE__LON = eINSTANCE.getTrkptType_Lon();
 
 		/**
 		 * The meta object literal for the '{@link egeo.gpx.impl.TrksegTypeImpl <em>Trkseg Type</em>}' class.
@@ -2968,14 +3477,6 @@ public interface GpxPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRKSEG_TYPE__TRKPT = eINSTANCE.getTrksegType_Trkpt();
-
-		/**
-		 * The meta object literal for the '<em><b>Extensions</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRKSEG_TYPE__EXTENSIONS = eINSTANCE.getTrksegType_Extensions();
 
 		/**
 		 * The meta object literal for the '{@link egeo.gpx.impl.TrkTypeImpl <em>Trk Type</em>}' class.
@@ -3020,12 +3521,20 @@ public interface GpxPackage extends EPackage {
 		EAttribute TRK_TYPE__SRC = eINSTANCE.getTrkType_Src();
 
 		/**
-		 * The meta object literal for the '<em><b>Link</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRK_TYPE__LINK = eINSTANCE.getTrkType_Link();
+		EAttribute TRK_TYPE__URL = eINSTANCE.getTrkType_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Urlname</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRK_TYPE__URLNAME = eINSTANCE.getTrkType_Urlname();
 
 		/**
 		 * The meta object literal for the '<em><b>Number</b></em>' attribute feature.
@@ -3036,20 +3545,12 @@ public interface GpxPackage extends EPackage {
 		EAttribute TRK_TYPE__NUMBER = eINSTANCE.getTrkType_Number();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Any</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRK_TYPE__TYPE = eINSTANCE.getTrkType_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Extensions</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRK_TYPE__EXTENSIONS = eINSTANCE.getTrkType_Extensions();
+		EAttribute TRK_TYPE__ANY = eINSTANCE.getTrkType_Any();
 
 		/**
 		 * The meta object literal for the '<em><b>Trkseg</b></em>' containment reference list feature.
@@ -3134,12 +3635,20 @@ public interface GpxPackage extends EPackage {
 		EAttribute WPT_TYPE__SRC = eINSTANCE.getWptType_Src();
 
 		/**
-		 * The meta object literal for the '<em><b>Link</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WPT_TYPE__LINK = eINSTANCE.getWptType_Link();
+		EAttribute WPT_TYPE__URL = eINSTANCE.getWptType_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Urlname</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WPT_TYPE__URLNAME = eINSTANCE.getWptType_Urlname();
 
 		/**
 		 * The meta object literal for the '<em><b>Sym</b></em>' attribute feature.
@@ -3214,12 +3723,12 @@ public interface GpxPackage extends EPackage {
 		EAttribute WPT_TYPE__DGPSID = eINSTANCE.getWptType_Dgpsid();
 
 		/**
-		 * The meta object literal for the '<em><b>Extensions</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Any</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WPT_TYPE__EXTENSIONS = eINSTANCE.getWptType_Extensions();
+		EAttribute WPT_TYPE__ANY = eINSTANCE.getWptType_Any();
 
 		/**
 		 * The meta object literal for the '<em><b>Lat</b></em>' attribute feature.
@@ -3266,6 +3775,16 @@ public interface GpxPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType DGPS_STATION_TYPE = eINSTANCE.getDgpsStationType();
+
+		/**
+		 * The meta object literal for the '<em>Email Type</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see egeo.gpx.impl.GpxPackageImpl#getEmailType()
+		 * @generated
+		 */
+		EDataType EMAIL_TYPE = eINSTANCE.getEmailType();
 
 		/**
 		 * The meta object literal for the '<em>Fix Type Object</em>' data type.

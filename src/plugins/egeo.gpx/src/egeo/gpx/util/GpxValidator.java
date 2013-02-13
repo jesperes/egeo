@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.EObjectValidator;
 
+import org.eclipse.emf.ecore.xml.type.util.XMLTypeUtil;
 import org.eclipse.emf.ecore.xml.type.util.XMLTypeValidator;
 
 /**
@@ -101,28 +102,16 @@ public class GpxValidator extends EObjectValidator {
 		switch (classifierID) {
 			case GpxPackage.BOUNDS_TYPE:
 				return validateBoundsType((BoundsType)value, diagnostics, context);
-			case GpxPackage.COPYRIGHT_TYPE:
-				return validateCopyrightType((CopyrightType)value, diagnostics, context);
 			case GpxPackage.DOCUMENT_ROOT:
 				return validateDocumentRoot((DocumentRoot)value, diagnostics, context);
-			case GpxPackage.EMAIL_TYPE:
-				return validateEmailType((EmailType)value, diagnostics, context);
-			case GpxPackage.EXTENSIONS_TYPE:
-				return validateExtensionsType((ExtensionsType)value, diagnostics, context);
 			case GpxPackage.GPX_TYPE:
 				return validateGpxType((GpxType)value, diagnostics, context);
-			case GpxPackage.LINK_TYPE:
-				return validateLinkType((LinkType)value, diagnostics, context);
-			case GpxPackage.METADATA_TYPE:
-				return validateMetadataType((MetadataType)value, diagnostics, context);
-			case GpxPackage.PERSON_TYPE:
-				return validatePersonType((PersonType)value, diagnostics, context);
-			case GpxPackage.PTSEG_TYPE:
-				return validatePtsegType((PtsegType)value, diagnostics, context);
-			case GpxPackage.PT_TYPE:
-				return validatePtType((PtType)value, diagnostics, context);
+			case GpxPackage.RTEPT_TYPE:
+				return validateRteptType((RteptType)value, diagnostics, context);
 			case GpxPackage.RTE_TYPE:
 				return validateRteType((RteType)value, diagnostics, context);
+			case GpxPackage.TRKPT_TYPE:
+				return validateTrkptType((TrkptType)value, diagnostics, context);
 			case GpxPackage.TRKSEG_TYPE:
 				return validateTrksegType((TrksegType)value, diagnostics, context);
 			case GpxPackage.TRK_TYPE:
@@ -135,6 +124,8 @@ public class GpxValidator extends EObjectValidator {
 				return validateDegreesType((BigDecimal)value, diagnostics, context);
 			case GpxPackage.DGPS_STATION_TYPE:
 				return validateDgpsStationType((BigInteger)value, diagnostics, context);
+			case GpxPackage.EMAIL_TYPE:
+				return validateEmailType((String)value, diagnostics, context);
 			case GpxPackage.FIX_TYPE_OBJECT:
 				return validateFixTypeObject((FixType)value, diagnostics, context);
 			case GpxPackage.LATITUDE_TYPE:
@@ -160,35 +151,8 @@ public class GpxValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateCopyrightType(CopyrightType copyrightType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(copyrightType, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateDocumentRoot(DocumentRoot documentRoot, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(documentRoot, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEmailType(EmailType emailType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(emailType, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateExtensionsType(ExtensionsType extensionsType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(extensionsType, diagnostics, context);
 	}
 
 	/**
@@ -205,44 +169,8 @@ public class GpxValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateLinkType(LinkType linkType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(linkType, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateMetadataType(MetadataType metadataType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(metadataType, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatePersonType(PersonType personType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(personType, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatePtsegType(PtsegType ptsegType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(ptsegType, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatePtType(PtType ptType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(ptType, diagnostics, context);
+	public boolean validateRteptType(RteptType rteptType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(rteptType, diagnostics, context);
 	}
 
 	/**
@@ -252,6 +180,15 @@ public class GpxValidator extends EObjectValidator {
 	 */
 	public boolean validateRteType(RteType rteType, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(rteType, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTrkptType(TrkptType trkptType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(trkptType, diagnostics, context);
 	}
 
 	/**
@@ -337,9 +274,9 @@ public class GpxValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateDegreesType_Max(BigDecimal degreesType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = degreesType.compareTo(DEGREES_TYPE__MAX__VALUE) < 0;
+		boolean result = degreesType.compareTo(DEGREES_TYPE__MAX__VALUE) <= 0;
 		if (!result && diagnostics != null)
-			reportMaxViolation(GpxPackage.Literals.DEGREES_TYPE, degreesType, DEGREES_TYPE__MAX__VALUE, false, diagnostics, context);
+			reportMaxViolation(GpxPackage.Literals.DEGREES_TYPE, degreesType, DEGREES_TYPE__MAX__VALUE, true, diagnostics, context);
 		return result;
 	}
 
@@ -394,6 +331,39 @@ public class GpxValidator extends EObjectValidator {
 		if (!result && diagnostics != null)
 			reportMaxViolation(GpxPackage.Literals.DGPS_STATION_TYPE, dgpsStationType, DGPS_STATION_TYPE__MAX__VALUE, true, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEmailType(String emailType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = validateEmailType_Pattern(emailType, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validateEmailType_Pattern
+	 */
+	public static final  PatternMatcher [][] EMAIL_TYPE__PATTERN__VALUES =
+		new PatternMatcher [][] {
+			new PatternMatcher [] {
+				XMLTypeUtil.createPatternMatcher("[\\p{L}_]+(\\.[\\p{L}_]+)*@[\\p{L}_]+(\\.[\\p{L}_]+)+")
+			}
+		};
+
+	/**
+	 * Validates the Pattern constraint of '<em>Email Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEmailType_Pattern(String emailType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validatePattern(GpxPackage.Literals.EMAIL_TYPE, emailType, EMAIL_TYPE__PATTERN__VALUES, diagnostics, context);
 	}
 
 	/**
@@ -505,9 +475,9 @@ public class GpxValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateLongitudeType_Max(BigDecimal longitudeType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		boolean result = longitudeType.compareTo(LONGITUDE_TYPE__MAX__VALUE) < 0;
+		boolean result = longitudeType.compareTo(LONGITUDE_TYPE__MAX__VALUE) <= 0;
 		if (!result && diagnostics != null)
-			reportMaxViolation(GpxPackage.Literals.LONGITUDE_TYPE, longitudeType, LONGITUDE_TYPE__MAX__VALUE, false, diagnostics, context);
+			reportMaxViolation(GpxPackage.Literals.LONGITUDE_TYPE, longitudeType, LONGITUDE_TYPE__MAX__VALUE, true, diagnostics, context);
 		return result;
 	}
 
