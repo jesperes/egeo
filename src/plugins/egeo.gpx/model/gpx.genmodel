@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/egeo.gpx/src" modelPluginID="egeo.gpx" modelName="Gpx"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>gpx.xsd</foreignModel>
+  <genPackages prefix="Gpx" basePackage="egeo" resource="XML" disposableProviderFactory="true"
+      ecorePackage="gpx.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gpx.ecore#//FixType">
+      <genEnumLiterals ecoreEnumLiteral="gpx.ecore#//FixType/none"/>
+      <genEnumLiterals ecoreEnumLiteral="gpx.ecore#//FixType/_2d"/>
+      <genEnumLiterals ecoreEnumLiteral="gpx.ecore#//FixType/_3d"/>
+      <genEnumLiterals ecoreEnumLiteral="gpx.ecore#//FixType/dgps"/>
+      <genEnumLiterals ecoreEnumLiteral="gpx.ecore#//FixType/pps"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="gpx.ecore#//DegreesType"/>
+    <genDataTypes ecoreDataType="gpx.ecore#//DgpsStationType"/>
+    <genDataTypes ecoreDataType="gpx.ecore#//FixTypeObject"/>
+    <genDataTypes ecoreDataType="gpx.ecore#//LatitudeType"/>
+    <genDataTypes ecoreDataType="gpx.ecore#//LongitudeType"/>
+    <genClasses ecoreClass="gpx.ecore#//BoundsType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//BoundsType/maxlat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//BoundsType/maxlon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//BoundsType/minlat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//BoundsType/minlon"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//CopyrightType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//CopyrightType/year"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//CopyrightType/license"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//CopyrightType/author"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference gpx.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference gpx.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//DocumentRoot/gpx"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//EmailType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//EmailType/domain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//EmailType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//ExtensionsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute gpx.ecore#//ExtensionsType/any"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//GpxType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//GpxType/metadata"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//GpxType/wpt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//GpxType/rte"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//GpxType/trk"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//GpxType/extensions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//GpxType/creator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//GpxType/version"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//LinkType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//LinkType/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//LinkType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//LinkType/href"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//MetadataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//MetadataType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//MetadataType/desc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//MetadataType/author"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//MetadataType/copyright"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//MetadataType/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//MetadataType/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//MetadataType/keywords"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//MetadataType/bounds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//MetadataType/extensions"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//PersonType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//PersonType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//PersonType/email"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//PersonType/link"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//PtsegType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//PtsegType/pt"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//PtType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//PtType/ele"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//PtType/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//PtType/lat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//PtType/lon"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//RteType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//RteType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//RteType/cmt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//RteType/desc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//RteType/src"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//RteType/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//RteType/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//RteType/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//RteType/extensions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//RteType/rtept"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//TrksegType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//TrksegType/trkpt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//TrksegType/extensions"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//TrkType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//TrkType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//TrkType/cmt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//TrkType/desc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//TrkType/src"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//TrkType/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//TrkType/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//TrkType/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//TrkType/extensions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//TrkType/trkseg"/>
+    </genClasses>
+    <genClasses ecoreClass="gpx.ecore#//WptType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/ele"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/magvar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/geoidheight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/cmt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/desc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/src"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//WptType/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/sym"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/fix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/sat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/hdop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/vdop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/pdop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/ageofdgpsdata"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/dgpsid"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gpx.ecore#//WptType/extensions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/lat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gpx.ecore#//WptType/lon"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
