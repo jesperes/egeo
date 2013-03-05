@@ -24,14 +24,6 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>target-platform-configuration</artifactId>
-				<version>${tycho-version}</version>
-				<configuration>
 					<target>
 						<artifact>
 							<groupId>${project.groupId}</groupId>
@@ -75,5 +67,6 @@
 	<modules>
 		<module>src/plugins/egeo.gpx</module>
 		<module>src/plugins/egeo.gpx.tests</module>
+		<module>src/plugins/egeo.ui</module>
 	</modules>
 </project>
