@@ -3,11 +3,20 @@
 package egeo.gpx.util;
 
 import egeo.gpx.*;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
+
+import egeo.gpx.BoundsType;
+import egeo.gpx.DocumentRoot;
+import egeo.gpx.GpxPackage;
+import egeo.gpx.GpxType;
+import egeo.gpx.RteType;
+import egeo.gpx.RteptType;
+import egeo.gpx.TrkType;
+import egeo.gpx.TrkptType;
+import egeo.gpx.TrksegType;
+import egeo.gpx.WptType;
 
 /**
  * <!-- begin-user-doc -->

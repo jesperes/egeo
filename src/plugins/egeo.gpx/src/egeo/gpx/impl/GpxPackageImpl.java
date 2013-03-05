@@ -2,6 +2,19 @@
  */
 package egeo.gpx.impl;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EValidator;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
 import egeo.gpx.BoundsType;
 import egeo.gpx.DocumentRoot;
 import egeo.gpx.FixType;
@@ -14,23 +27,7 @@ import egeo.gpx.TrkType;
 import egeo.gpx.TrkptType;
 import egeo.gpx.TrksegType;
 import egeo.gpx.WptType;
-
 import egeo.gpx.util.GpxValidator;
-
-import java.math.BigDecimal;
-import java.math.BigInteger;
-
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EValidator;
-
-import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,23 +2,19 @@
  */
 package egeo.gpx.groundspeak.impl;
 
-import egeo.gpx.groundspeak.GroundspeakPackage;
-import egeo.gpx.groundspeak.TravelbugType;
-import egeo.gpx.groundspeak.TravelbugsType;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import egeo.gpx.groundspeak.GroundspeakPackage;
+import egeo.gpx.groundspeak.TravelbugType;
+import egeo.gpx.groundspeak.TravelbugsType;
 
 /**
  * <!-- begin-user-doc -->

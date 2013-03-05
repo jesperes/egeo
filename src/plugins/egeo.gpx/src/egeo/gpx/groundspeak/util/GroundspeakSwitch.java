@@ -2,12 +2,25 @@
  */
 package egeo.gpx.groundspeak.util;
 
-import egeo.gpx.groundspeak.*;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
+
+import egeo.gpx.groundspeak.AttributeType;
+import egeo.gpx.groundspeak.AttributesType;
+import egeo.gpx.groundspeak.CacheType;
+import egeo.gpx.groundspeak.DocumentRoot;
+import egeo.gpx.groundspeak.FinderType;
+import egeo.gpx.groundspeak.GroundspeakPackage;
+import egeo.gpx.groundspeak.LogType;
+import egeo.gpx.groundspeak.LogWptType;
+import egeo.gpx.groundspeak.LogsType;
+import egeo.gpx.groundspeak.LongDescriptionType;
+import egeo.gpx.groundspeak.OwnerType;
+import egeo.gpx.groundspeak.ShortDescriptionType;
+import egeo.gpx.groundspeak.TextType;
+import egeo.gpx.groundspeak.TravelbugType;
+import egeo.gpx.groundspeak.TravelbugsType;
 
 /**
  * <!-- begin-user-doc -->

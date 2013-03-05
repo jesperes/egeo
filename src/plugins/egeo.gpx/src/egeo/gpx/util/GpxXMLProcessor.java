@@ -2,15 +2,13 @@
  */
 package egeo.gpx.util;
 
-import egeo.gpx.GpxPackage;
-
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
+
+import egeo.gpx.GpxPackage;
 
 /**
  * This class contains helper methods to serialize and deserialize XML documents

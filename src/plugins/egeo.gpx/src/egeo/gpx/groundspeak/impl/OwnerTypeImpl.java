@@ -2,15 +2,13 @@
  */
 package egeo.gpx.groundspeak.impl;
 
-import egeo.gpx.groundspeak.GroundspeakPackage;
-import egeo.gpx.groundspeak.OwnerType;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import egeo.gpx.groundspeak.GroundspeakPackage;
+import egeo.gpx.groundspeak.OwnerType;
 
 /**
  * <!-- begin-user-doc -->

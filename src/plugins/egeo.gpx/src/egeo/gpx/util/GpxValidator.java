@@ -3,21 +3,28 @@
 package egeo.gpx.util;
 
 import egeo.gpx.*;
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
-
 import java.util.Map;
 
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.EObjectValidator;
-
 import org.eclipse.emf.ecore.xml.type.util.XMLTypeUtil;
 import org.eclipse.emf.ecore.xml.type.util.XMLTypeValidator;
+
+import egeo.gpx.BoundsType;
+import egeo.gpx.DocumentRoot;
+import egeo.gpx.FixType;
+import egeo.gpx.GpxPackage;
+import egeo.gpx.GpxType;
+import egeo.gpx.RteType;
+import egeo.gpx.RteptType;
+import egeo.gpx.TrkType;
+import egeo.gpx.TrkptType;
+import egeo.gpx.TrksegType;
+import egeo.gpx.WptType;
 
 /**
  * <!-- begin-user-doc -->

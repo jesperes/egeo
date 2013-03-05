@@ -2,10 +2,6 @@
  */
 package egeo.gpx.impl;
 
-import egeo.gpx.FixType;
-import egeo.gpx.GpxPackage;
-import egeo.gpx.RteptType;
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
@@ -13,16 +9,17 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import egeo.gpx.FixType;
+import egeo.gpx.GpxPackage;
+import egeo.gpx.RteptType;
 
 /**
  * <!-- begin-user-doc -->

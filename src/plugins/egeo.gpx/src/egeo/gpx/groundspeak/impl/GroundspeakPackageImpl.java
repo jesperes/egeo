@@ -2,6 +2,13 @@
  */
 package egeo.gpx.groundspeak.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
 import egeo.gpx.groundspeak.AttributeType;
 import egeo.gpx.groundspeak.AttributesType;
 import egeo.gpx.groundspeak.CacheType;
@@ -18,15 +25,6 @@ import egeo.gpx.groundspeak.ShortDescriptionType;
 import egeo.gpx.groundspeak.TextType;
 import egeo.gpx.groundspeak.TravelbugType;
 import egeo.gpx.groundspeak.TravelbugsType;
-
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-
-import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->

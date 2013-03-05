@@ -2,26 +2,22 @@
  */
 package egeo.gpx.groundspeak.impl;
 
-import egeo.gpx.groundspeak.CacheType;
-import egeo.gpx.groundspeak.DocumentRoot;
-import egeo.gpx.groundspeak.GroundspeakPackage;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EMap;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.EStringToStringMapEntryImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import egeo.gpx.groundspeak.CacheType;
+import egeo.gpx.groundspeak.DocumentRoot;
+import egeo.gpx.groundspeak.GroundspeakPackage;
 
 /**
  * <!-- begin-user-doc -->

@@ -2,15 +2,28 @@
  */
 package egeo.gpx.groundspeak.impl;
 
-import egeo.gpx.groundspeak.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+
+import egeo.gpx.groundspeak.AttributeType;
+import egeo.gpx.groundspeak.AttributesType;
+import egeo.gpx.groundspeak.CacheType;
+import egeo.gpx.groundspeak.DocumentRoot;
+import egeo.gpx.groundspeak.FinderType;
+import egeo.gpx.groundspeak.GroundspeakFactory;
+import egeo.gpx.groundspeak.GroundspeakPackage;
+import egeo.gpx.groundspeak.LogType;
+import egeo.gpx.groundspeak.LogWptType;
+import egeo.gpx.groundspeak.LogsType;
+import egeo.gpx.groundspeak.LongDescriptionType;
+import egeo.gpx.groundspeak.OwnerType;
+import egeo.gpx.groundspeak.ShortDescriptionType;
+import egeo.gpx.groundspeak.TextType;
+import egeo.gpx.groundspeak.TravelbugType;
+import egeo.gpx.groundspeak.TravelbugsType;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +40,7 @@ public class GroundspeakFactoryImpl extends EFactoryImpl implements GroundspeakF
 	 */
 	public static GroundspeakFactory init() {
 		try {
-			GroundspeakFactory theGroundspeakFactory = (GroundspeakFactory)EPackage.Registry.INSTANCE.getEFactory(GroundspeakPackage.eNS_URI);
+			GroundspeakFactory theGroundspeakFactory = (GroundspeakFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.groundspeak.com/cache/1/0/1"); 
 			if (theGroundspeakFactory != null) {
 				return theGroundspeakFactory;
 			}

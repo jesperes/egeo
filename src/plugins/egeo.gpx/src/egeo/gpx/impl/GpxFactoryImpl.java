@@ -3,7 +3,6 @@
 package egeo.gpx.impl;
 
 import egeo.gpx.*;
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
@@ -11,13 +10,23 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
+import egeo.gpx.BoundsType;
+import egeo.gpx.DocumentRoot;
+import egeo.gpx.FixType;
+import egeo.gpx.GpxFactory;
+import egeo.gpx.GpxPackage;
+import egeo.gpx.GpxType;
+import egeo.gpx.RteType;
+import egeo.gpx.RteptType;
+import egeo.gpx.TrkType;
+import egeo.gpx.TrkptType;
+import egeo.gpx.TrksegType;
+import egeo.gpx.WptType;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +43,7 @@ public class GpxFactoryImpl extends EFactoryImpl implements GpxFactory {
 	 */
 	public static GpxFactory init() {
 		try {
-			GpxFactory theGpxFactory = (GpxFactory)EPackage.Registry.INSTANCE.getEFactory(GpxPackage.eNS_URI);
+			GpxFactory theGpxFactory = (GpxFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.topografix.com/GPX/1/0"); 
 			if (theGpxFactory != null) {
 				return theGpxFactory;
 			}

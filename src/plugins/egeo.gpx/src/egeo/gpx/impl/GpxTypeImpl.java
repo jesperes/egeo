@@ -2,32 +2,28 @@
  */
 package egeo.gpx.impl;
 
-import egeo.gpx.BoundsType;
-import egeo.gpx.GpxPackage;
-import egeo.gpx.GpxType;
-import egeo.gpx.RteType;
-import egeo.gpx.TrkType;
-import egeo.gpx.WptType;
-
 import java.util.Collection;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import egeo.gpx.BoundsType;
+import egeo.gpx.GpxPackage;
+import egeo.gpx.GpxType;
+import egeo.gpx.RteType;
+import egeo.gpx.TrkType;
+import egeo.gpx.WptType;
 
 /**
  * <!-- begin-user-doc -->

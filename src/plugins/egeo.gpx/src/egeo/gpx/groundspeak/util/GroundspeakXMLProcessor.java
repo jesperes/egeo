@@ -2,15 +2,13 @@
  */
 package egeo.gpx.groundspeak.util;
 
-import egeo.gpx.groundspeak.GroundspeakPackage;
-
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.resource.Resource;
-
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
+
+import egeo.gpx.groundspeak.GroundspeakPackage;
 
 /**
  * This class contains helper methods to serialize and deserialize XML documents

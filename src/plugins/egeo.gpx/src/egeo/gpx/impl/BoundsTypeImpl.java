@@ -2,17 +2,15 @@
  */
 package egeo.gpx.impl;
 
-import egeo.gpx.BoundsType;
-import egeo.gpx.GpxPackage;
-
 import java.math.BigDecimal;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import egeo.gpx.BoundsType;
+import egeo.gpx.GpxPackage;
 
 /**
  * <!-- begin-user-doc -->
