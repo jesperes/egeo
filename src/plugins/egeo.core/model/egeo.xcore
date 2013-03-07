@@ -1,0 +1,95 @@
+package egeo
+
+import java.net.URL
+
+class Coordinate
+{
+	BigDecimal lat
+	BigDecimal lon
+}
+
+type URL wraps java.net.URL
+type Date wraps java.util.Date
+type BigDecimal wraps java.math.BigDecimal
+
+enum CacheType
+{
+	Traditional
+	Multi
+	Unknown
+	Event
+}
+
+enum LogType
+{
+	FoundIt
+	DidNotFind
+	Note
+}
+
+enum Attribute
+{
+	RecommendedForKids = 6
+	TakesLessThanAnHour = 7
+	AvailableAtAllTimes = 13
+	RecommendedAtNight = 14
+	AvailableDuringWinter = 15
+	Bicycles = 32
+}
+
+class Description
+{
+	boolean html
+	String text
+}
+
+class Log
+{
+	int logId
+	Date date
+	LogType logType
+	String text
+	contains User finder
+	boolean encoded
+}
+
+class User
+{
+	long userId
+	String name
+}
+
+enum ContainerType
+{
+	Micro
+	Small
+	Regular
+	Large
+	Other
+	Unspecified
+}
+
+class Geocache
+{
+	long cacheId
+	String code
+	Date time
+	String name
+	boolean available
+	boolean archived
+	ContainerType containerType
+	contains User owner
+	String placedBy
+	CacheType cacheType
+	double difficulty
+	double terrain
+	String country
+	String state
+	contains Coordinate coord
+	URL url
+	Attribute [] attributes
+	String hint
+	contains Description shortText
+	contains Description longText
+	contains Log [] logs
+}

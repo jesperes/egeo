@@ -1,37 +1,34 @@
 package egeo.gpx.tests;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.util.Diagnostician;
 import org.junit.Before;
 import org.junit.Test;
 
+import egeo.Geocache;
+import egeo.core.GpxLoader;
 import egeo.gpx.DocumentRoot;
 import egeo.gpx.GpxPackage;
-import egeo.gpx.WptType;
-import egeo.gpx.groundspeak.CacheType;
 import egeo.gpx.groundspeak.GroundspeakPackage;
 import egeo.gpx.util.GpxResourceFactoryImpl;
 
 public class GpxTest {
 
+	private DocumentRoot root;
+
 	@Before
-	public void setup() {
+	public void setup() throws IOException {
 		GpxPackage.eINSTANCE.getEFactoryInstance();
 		GroundspeakPackage.eINSTANCE.getEFactoryInstance();
-	}
 
-	@Test
-	public void testLoadGpx() throws IOException {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		URI uri;
 
@@ -39,60 +36,25 @@ public class GpxTest {
 			uri = URI.createPlatformPluginURI("/egeo.gpx.tests/5110831.gpx",
 					false);
 		else
-			// uri = URI.createFileURI("5110831.gpx");
-			uri = URI
-					.createFileURI("c:/Users/jesperes/Documents/Waypoints.gpx");
+			uri = URI.createFileURI("5110831.gpx");
 
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
 				.put("gpx", new GpxResourceFactoryImpl());
 
 		Resource resource = resourceSet.createResource(uri);
 		Map<String, Object> map = new HashMap<String, Object>();
-		long t0 = System.nanoTime();
 		resource.load(map);
-		long t1 = System.nanoTime();
 
-		System.out.println("Loaded " + uri + " in " + (double) (t1 - t0)
-				/ 1000000000 + " seconds");
-
-		for (EObject eObject : resource.getContents()) {
-			Diagnostic diagnostic = Diagnostician.INSTANCE.validate(eObject);
-			if (diagnostic.getSeverity() != Diagnostic.OK) {
-				printDiagnostic(diagnostic, "");
-			}
-		}
-
-		t0 = System.nanoTime();
-
-		DocumentRoot root = (DocumentRoot) resource.getContents().get(0);
-		for (WptType wpt : root.getGpx().getWpt()) {
-			if (wpt.getAny().size() > 0) {
-				CacheType cache = (CacheType) wpt.getAny().get(0).getValue();
-				// System.out.println("Cache: " + cache.getName());
-
-				// for (LogType logs : cache.getLogs().get(0).getLog()) {
-				// System.out.format("Log [%s: %s]: %s\n", logs.getFinder()
-				// .get(0).getValue(), logs.getType(), logs.getText()
-				// .get(0).getValue());
-				// }
-
-				// System.out.println();
-			}
-		}
-
-		t1 = System.nanoTime();
-
-		System.out.println("Caches: " + root.getGpx().getWpt().size());
-		System.out.println("Printed descriptions in " + (t1 - t0) / 100000000.0
-				+ " seconds.");
-		System.out.flush();
+		root = (DocumentRoot) resource.getContents().get(0);
 	}
 
-	protected static void printDiagnostic(Diagnostic diagnostic, String indent) {
-		System.out.print(indent);
-		System.out.println(diagnostic.getMessage());
-		for (Diagnostic child : diagnostic.getChildren()) {
-			printDiagnostic(child, indent + "  ");
+	@Test
+	public void testConvertGpx() throws IOException {
+		Collection<Geocache> caches = GpxLoader.loadGpx(root.getGpx());
+		for (Geocache cache : caches) {
+			System.out.format("%s (%s)\n", cache.getName(), cache.getCoord());
 		}
+
+		System.out.println(caches.size());
 	}
 }

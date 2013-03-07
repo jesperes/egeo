@@ -132,6 +132,7 @@ public class MapWidget extends Canvas {
 			this.maxZoom = maxZoom;
 		}
 
+		@Override
 		public String toString() {
 			return url;
 		}
@@ -178,6 +179,7 @@ public class MapWidget extends Canvas {
 			this.z = z;
 		}
 
+		@Override
 		public int hashCode() {
 			final int prime = 31;
 			int result = 1;
@@ -188,6 +190,7 @@ public class MapWidget extends Canvas {
 			return result;
 		}
 
+		@Override
 		public boolean equals(Object obj) {
 			if (this == obj)
 				return true;
@@ -212,8 +215,9 @@ public class MapWidget extends Canvas {
 	}
 
 	public class TileCache {
-		private LinkedHashMap<Tile, AsyncImage> map = new LinkedHashMap<Tile, AsyncImage>(
+		private final LinkedHashMap<Tile, AsyncImage> map = new LinkedHashMap<Tile, AsyncImage>(
 				CACHE_SIZE, 0.75f, true) {
+			@Override
 			protected boolean removeEldestEntry(
 					Map.Entry<Tile, AsyncImage> eldest) {
 				boolean remove = size() > CACHE_SIZE;
@@ -244,7 +248,7 @@ public class MapWidget extends Canvas {
 	public final class AsyncImage implements Runnable {
 		private final AtomicReference<ImageData> imageData = new AtomicReference<ImageData>();
 		private Image image; // might as well be thread-local
-		private FutureTask<Boolean> task;
+		private final FutureTask<Boolean> task;
 		private volatile long stamp = zoomStamp.longValue();
 		private final TileServer tileServer;
 		private final int x, y, z;
@@ -258,6 +262,7 @@ public class MapWidget extends Canvas {
 			executor.execute(task);
 		}
 
+		@Override
 		public void run() {
 			String url = getTileString(tileServer, x, y, z);
 			if (stamp != zoomStamp.longValue()) {
@@ -266,6 +271,7 @@ public class MapWidget extends Canvas {
 					// here is a race, we just live with.
 					if (!getDisplay().isDisposed()) {
 						getDisplay().asyncExec(new Runnable() {
+							@Override
 							public void run() {
 								getCache().remove(tileServer, x, y, z);
 							}
@@ -279,7 +285,7 @@ public class MapWidget extends Canvas {
 				return;
 			}
 			try {
-				System.err.println("fetch " + url);
+				// System.err.println("fetch " + url);
 				// Thread.sleep(2000);
 				InputStream in = new URL(url).openConnection().getInputStream();
 				imageData.set(new ImageData(in));
@@ -287,6 +293,7 @@ public class MapWidget extends Canvas {
 					// here is a race, we just live with.
 					if (!getDisplay().isDisposed()) {
 						getDisplay().asyncExec(new Runnable() {
+							@Override
 							public void run() {
 								redraw();
 							}
@@ -338,16 +345,20 @@ public class MapWidget extends Canvas {
 		private Point downCoords;
 		private Point downPosition;
 
+		@Override
 		public void mouseEnter(MouseEvent e) {
 			MapWidget.this.forceFocus();
 		}
 
+		@Override
 		public void mouseExit(MouseEvent e) {
 		}
 
+		@Override
 		public void mouseHover(MouseEvent e) {
 		}
 
+		@Override
 		public void mouseDoubleClick(MouseEvent e) {
 			if (e.button == 1)
 				zoomIn(new Point(mouseCoords.x, mouseCoords.y));
@@ -355,6 +366,7 @@ public class MapWidget extends Canvas {
 				zoomOut(new Point(mouseCoords.x, mouseCoords.y));
 		}
 
+		@Override
 		public void mouseDown(MouseEvent e) {
 			if (e.button == 1 && (e.stateMask & SWT.CTRL) != 0) {
 				setCenterPosition(getCursorPosition());
@@ -366,6 +378,7 @@ public class MapWidget extends Canvas {
 			}
 		}
 
+		@Override
 		public void mouseUp(MouseEvent e) {
 			if (e.count == 1) {
 				handleDrag(e);
@@ -374,11 +387,13 @@ public class MapWidget extends Canvas {
 			downPosition = null;
 		}
 
+		@Override
 		public void mouseMove(MouseEvent e) {
 			handlePosition(e);
 			handleDrag(e);
 		}
 
+		@Override
 		public void mouseScrolled(MouseEvent e) {
 			if (e.count > 0)
 				zoomIn(new Point(mouseCoords.x, mouseCoords.y));
@@ -433,19 +448,20 @@ public class MapWidget extends Canvas {
 	public static final int CACHE_SIZE = 256;
 	public static final int IMAGEFETCHER_THREADS = 4;
 
-	private PropertyChangeSupport pcs = new PropertyChangeSupport(this);
-	private Point mapSize = new Point(0, 0);
-	private Point mapPosition = new Point(0, 0);
+	private final PropertyChangeSupport pcs = new PropertyChangeSupport(this);
+	private final Point mapSize = new Point(0, 0);
+	private final Point mapPosition = new Point(0, 0);
 	private int zoom;
-	private AtomicLong zoomStamp = new AtomicLong();
+	private final AtomicLong zoomStamp = new AtomicLong();
 
 	private TileServer tileServer = TILESERVERS[0];
-	private TileCache cache = new TileCache();
-	private Stats stats = new Stats();
-	private MapMouseListener mouseListener = new MapMouseListener();
+	private final TileCache cache = new TileCache();
+	private final Stats stats = new Stats();
+	private final MapMouseListener mouseListener = new MapMouseListener();
 
-	private BlockingQueue<Runnable> workQueue = new LinkedBlockingQueue<Runnable>();
-	private ThreadFactory threadFactory = new ThreadFactory() {
+	private final BlockingQueue<Runnable> workQueue = new LinkedBlockingQueue<Runnable>();
+	private final ThreadFactory threadFactory = new ThreadFactory() {
+		@Override
 		public Thread newThread(Runnable r) {
 			Thread t = new Thread(r);
 			t.setName("Async Image Loader " + t.getId() + " "
@@ -454,11 +470,11 @@ public class MapWidget extends Canvas {
 			return t;
 		}
 	};
-	private ThreadPoolExecutor executor = new ThreadPoolExecutor(
+	private final ThreadPoolExecutor executor = new ThreadPoolExecutor(
 			IMAGEFETCHER_THREADS, 16, 2, TimeUnit.SECONDS, workQueue,
 			threadFactory);
 
-	private Color waitBackground, waitForeground;
+	private final Color waitBackground, waitForeground;
 
 	public MapWidget(Composite parent, int style) {
 		this(parent, style, new Point(275091, 180145), 11);
@@ -471,11 +487,13 @@ public class MapWidget extends Canvas {
 
 		setZoom(zoom);
 		addDisposeListener(new DisposeListener() {
+			@Override
 			public void widgetDisposed(DisposeEvent e) {
 				MapWidget.this.widgetDisposed(e);
 			}
 		});
 		addPaintListener(new PaintListener() {
+			@Override
 			public void paintControl(PaintEvent e) {
 				MapWidget.this.paintControl(e);
 			}
@@ -763,7 +781,7 @@ public class MapWidget extends Canvas {
 	}
 
 	public final class MapBrowserComposite extends Composite {
-		private SashForm sashForm;
+		private final SashForm sashForm;
 
 		public MapBrowserComposite(Composite parent, int style) {
 			super(parent, style);

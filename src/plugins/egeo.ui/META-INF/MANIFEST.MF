@@ -5,6 +5,9 @@ Bundle-SymbolicName: egeo.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: egeo.ui.Activator
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ egeo.core;bundle-version="1.0.0",
+ egeo.gpx;bundle-version="1.0.0",
+ org.eclipse.emf;bundle-version="2.6.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
