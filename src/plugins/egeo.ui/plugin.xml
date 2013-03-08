@@ -9,5 +9,19 @@
             name="Egeo Map View"
             restorable="true">
       </view>
+      <view
+            class="egeo.ui.EgeoDatabaseView"
+            id="egeo.ui.database"
+            name="Egeo Database"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="egeo.ui.PerspectiveFactory"
+            id="egeo.ui.perspective"
+            name="Egeo">
+      </perspective>
    </extension>
 </plugin>

@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see egeo.EgeoFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel editDirectory='/egeo.core.edit/src' editorDirectory='/egeo.core.editor/src'"
  * @generated
  */
 public interface EgeoPackage extends EPackage
@@ -479,13 +480,40 @@ public interface EgeoPackage extends EPackage
   int GEOCACHE__LOGS = 20;
 
   /**
+   * The feature id for the '<em><b>Source</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__SOURCE = 21;
+
+  /**
+   * The feature id for the '<em><b>Last Update</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__LAST_UPDATE = 22;
+
+  /**
+   * The feature id for the '<em><b>Tags</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__TAGS = 23;
+
+  /**
    * The number of structural features of the '<em>Geocache</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GEOCACHE_FEATURE_COUNT = 21;
+  int GEOCACHE_FEATURE_COUNT = 24;
 
   /**
    * The number of operations of the '<em>Geocache</em>' class.
@@ -497,6 +525,43 @@ public interface EgeoPackage extends EPackage
   int GEOCACHE_OPERATION_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link egeo.impl.CacheDatabaseImpl <em>Cache Database</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see egeo.impl.CacheDatabaseImpl
+   * @see egeo.impl.EgeoPackageImpl#getCacheDatabase()
+   * @generated
+   */
+  int CACHE_DATABASE = 5;
+
+  /**
+   * The feature id for the '<em><b>Caches</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CACHE_DATABASE__CACHES = 0;
+
+  /**
+   * The number of structural features of the '<em>Cache Database</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CACHE_DATABASE_FEATURE_COUNT = 1;
+
+  /**
+   * The number of operations of the '<em>Cache Database</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CACHE_DATABASE_OPERATION_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link egeo.CacheType <em>Cache Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -504,7 +569,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getCacheType()
    * @generated
    */
-  int CACHE_TYPE = 5;
+  int CACHE_TYPE = 6;
 
   /**
    * The meta object id for the '{@link egeo.LogType <em>Log Type</em>}' enum.
@@ -514,7 +579,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getLogType()
    * @generated
    */
-  int LOG_TYPE = 6;
+  int LOG_TYPE = 7;
 
   /**
    * The meta object id for the '{@link egeo.Attribute <em>Attribute</em>}' enum.
@@ -524,7 +589,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getAttribute()
    * @generated
    */
-  int ATTRIBUTE = 7;
+  int ATTRIBUTE = 8;
 
   /**
    * The meta object id for the '{@link egeo.ContainerType <em>Container Type</em>}' enum.
@@ -534,7 +599,17 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getContainerType()
    * @generated
    */
-  int CONTAINER_TYPE = 8;
+  int CONTAINER_TYPE = 9;
+
+  /**
+   * The meta object id for the '<em>URI</em>' data type.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.emf.common.util.URI
+   * @see egeo.impl.EgeoPackageImpl#getURI()
+   * @generated
+   */
+  int URI = 10;
 
   /**
    * The meta object id for the '<em>URL</em>' data type.
@@ -544,7 +619,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getURL()
    * @generated
    */
-  int URL = 9;
+  int URL = 11;
 
   /**
    * The meta object id for the '<em>Date</em>' data type.
@@ -554,8 +629,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getDate()
    * @generated
    */
-  int DATE = 10;
-
+  int DATE = 12;
 
   /**
    * The meta object id for the '<em>Big Decimal</em>' data type.
@@ -565,7 +639,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getBigDecimal()
    * @generated
    */
-  int BIG_DECIMAL = 11;
+  int BIG_DECIMAL = 13;
 
 
   /**
@@ -982,6 +1056,60 @@ public interface EgeoPackage extends EPackage
   EReference getGeocache_Logs();
 
   /**
+   * Returns the meta object for the attribute '{@link egeo.Geocache#getSource <em>Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Source</em>'.
+   * @see egeo.Geocache#getSource()
+   * @see #getGeocache()
+   * @generated
+   */
+  EAttribute getGeocache_Source();
+
+  /**
+   * Returns the meta object for the attribute '{@link egeo.Geocache#getLastUpdate <em>Last Update</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Last Update</em>'.
+   * @see egeo.Geocache#getLastUpdate()
+   * @see #getGeocache()
+   * @generated
+   */
+  EAttribute getGeocache_LastUpdate();
+
+  /**
+   * Returns the meta object for the attribute list '{@link egeo.Geocache#getTags <em>Tags</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Tags</em>'.
+   * @see egeo.Geocache#getTags()
+   * @see #getGeocache()
+   * @generated
+   */
+  EAttribute getGeocache_Tags();
+
+  /**
+   * Returns the meta object for class '{@link egeo.CacheDatabase <em>Cache Database</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Cache Database</em>'.
+   * @see egeo.CacheDatabase
+   * @generated
+   */
+  EClass getCacheDatabase();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link egeo.CacheDatabase#getCaches <em>Caches</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Caches</em>'.
+   * @see egeo.CacheDatabase#getCaches()
+   * @see #getCacheDatabase()
+   * @generated
+   */
+  EReference getCacheDatabase_Caches();
+
+  /**
    * Returns the meta object for enum '{@link egeo.CacheType <em>Cache Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1020,6 +1148,17 @@ public interface EgeoPackage extends EPackage
    * @generated
    */
   EEnum getContainerType();
+
+  /**
+   * Returns the meta object for data type '{@link org.eclipse.emf.common.util.URI <em>URI</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for data type '<em>URI</em>'.
+   * @see org.eclipse.emf.common.util.URI
+   * @model instanceClass="org.eclipse.emf.common.util.URI"
+   * @generated
+   */
+  EDataType getURI();
 
   /**
    * Returns the meta object for data type '{@link java.net.URL <em>URL</em>}'.
@@ -1393,6 +1532,48 @@ public interface EgeoPackage extends EPackage
     EReference GEOCACHE__LOGS = eINSTANCE.getGeocache_Logs();
 
     /**
+     * The meta object literal for the '<em><b>Source</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GEOCACHE__SOURCE = eINSTANCE.getGeocache_Source();
+
+    /**
+     * The meta object literal for the '<em><b>Last Update</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GEOCACHE__LAST_UPDATE = eINSTANCE.getGeocache_LastUpdate();
+
+    /**
+     * The meta object literal for the '<em><b>Tags</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GEOCACHE__TAGS = eINSTANCE.getGeocache_Tags();
+
+    /**
+     * The meta object literal for the '{@link egeo.impl.CacheDatabaseImpl <em>Cache Database</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see egeo.impl.CacheDatabaseImpl
+     * @see egeo.impl.EgeoPackageImpl#getCacheDatabase()
+     * @generated
+     */
+    EClass CACHE_DATABASE = eINSTANCE.getCacheDatabase();
+
+    /**
+     * The meta object literal for the '<em><b>Caches</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CACHE_DATABASE__CACHES = eINSTANCE.getCacheDatabase_Caches();
+
+    /**
      * The meta object literal for the '{@link egeo.CacheType <em>Cache Type</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1431,6 +1612,16 @@ public interface EgeoPackage extends EPackage
      * @generated
      */
     EEnum CONTAINER_TYPE = eINSTANCE.getContainerType();
+
+    /**
+     * The meta object literal for the '<em>URI</em>' data type.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.emf.common.util.URI
+     * @see egeo.impl.EgeoPackageImpl#getURI()
+     * @generated
+     */
+    EDataType URI = eINSTANCE.getURI();
 
     /**
      * The meta object literal for the '<em>URL</em>' data type.

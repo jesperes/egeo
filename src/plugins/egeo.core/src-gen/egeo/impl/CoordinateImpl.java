@@ -6,6 +6,7 @@ import egeo.Coordinate;
 import egeo.EgeoPackage;
 
 import java.math.BigDecimal;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

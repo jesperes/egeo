@@ -21,6 +21,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.URI;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -60,6 +61,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link egeo.impl.GeocacheImpl#getShortText <em>Short Text</em>}</li>
  *   <li>{@link egeo.impl.GeocacheImpl#getLongText <em>Long Text</em>}</li>
  *   <li>{@link egeo.impl.GeocacheImpl#getLogs <em>Logs</em>}</li>
+ *   <li>{@link egeo.impl.GeocacheImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link egeo.impl.GeocacheImpl#getLastUpdate <em>Last Update</em>}</li>
+ *   <li>{@link egeo.impl.GeocacheImpl#getTags <em>Tags</em>}</li>
  * </ul>
  * </p>
  *
@@ -426,6 +430,56 @@ public class GeocacheImpl extends MinimalEObjectImpl.Container implements Geocac
    * @ordered
    */
   protected EList<Log> logs;
+
+  /**
+   * The default value of the '{@link #getSource() <em>Source</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSource()
+   * @generated
+   * @ordered
+   */
+  protected static final URI SOURCE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSource() <em>Source</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSource()
+   * @generated
+   * @ordered
+   */
+  protected URI source = SOURCE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getLastUpdate() <em>Last Update</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLastUpdate()
+   * @generated
+   * @ordered
+   */
+  protected static final Date LAST_UPDATE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getLastUpdate() <em>Last Update</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLastUpdate()
+   * @generated
+   * @ordered
+   */
+  protected Date lastUpdate = LAST_UPDATE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTags()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> tags;
 
   /**
    * <!-- begin-user-doc -->
@@ -1018,6 +1072,66 @@ public class GeocacheImpl extends MinimalEObjectImpl.Container implements Geocac
    * <!-- end-user-doc -->
    * @generated
    */
+  public URI getSource()
+  {
+    return source;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSource(URI newSource)
+  {
+    URI oldSource = source;
+    source = newSource;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EgeoPackage.GEOCACHE__SOURCE, oldSource, source));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Date getLastUpdate()
+  {
+    return lastUpdate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLastUpdate(Date newLastUpdate)
+  {
+    Date oldLastUpdate = lastUpdate;
+    lastUpdate = newLastUpdate;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EgeoPackage.GEOCACHE__LAST_UPDATE, oldLastUpdate, lastUpdate));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<String> getTags()
+  {
+    if (tags == null)
+    {
+      tags = new EDataTypeEList<String>(String.class, this, EgeoPackage.GEOCACHE__TAGS);
+    }
+    return tags;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -1089,6 +1203,12 @@ public class GeocacheImpl extends MinimalEObjectImpl.Container implements Geocac
         return getLongText();
       case EgeoPackage.GEOCACHE__LOGS:
         return getLogs();
+      case EgeoPackage.GEOCACHE__SOURCE:
+        return getSource();
+      case EgeoPackage.GEOCACHE__LAST_UPDATE:
+        return getLastUpdate();
+      case EgeoPackage.GEOCACHE__TAGS:
+        return getTags();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -1169,6 +1289,16 @@ public class GeocacheImpl extends MinimalEObjectImpl.Container implements Geocac
         getLogs().clear();
         getLogs().addAll((Collection<? extends Log>)newValue);
         return;
+      case EgeoPackage.GEOCACHE__SOURCE:
+        setSource((URI)newValue);
+        return;
+      case EgeoPackage.GEOCACHE__LAST_UPDATE:
+        setLastUpdate((Date)newValue);
+        return;
+      case EgeoPackage.GEOCACHE__TAGS:
+        getTags().clear();
+        getTags().addAll((Collection<? extends String>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -1246,6 +1376,15 @@ public class GeocacheImpl extends MinimalEObjectImpl.Container implements Geocac
       case EgeoPackage.GEOCACHE__LOGS:
         getLogs().clear();
         return;
+      case EgeoPackage.GEOCACHE__SOURCE:
+        setSource(SOURCE_EDEFAULT);
+        return;
+      case EgeoPackage.GEOCACHE__LAST_UPDATE:
+        setLastUpdate(LAST_UPDATE_EDEFAULT);
+        return;
+      case EgeoPackage.GEOCACHE__TAGS:
+        getTags().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -1302,6 +1441,12 @@ public class GeocacheImpl extends MinimalEObjectImpl.Container implements Geocac
         return longText != null;
       case EgeoPackage.GEOCACHE__LOGS:
         return logs != null && !logs.isEmpty();
+      case EgeoPackage.GEOCACHE__SOURCE:
+        return SOURCE_EDEFAULT == null ? source != null : !SOURCE_EDEFAULT.equals(source);
+      case EgeoPackage.GEOCACHE__LAST_UPDATE:
+        return LAST_UPDATE_EDEFAULT == null ? lastUpdate != null : !LAST_UPDATE_EDEFAULT.equals(lastUpdate);
+      case EgeoPackage.GEOCACHE__TAGS:
+        return tags != null && !tags.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -1349,6 +1494,12 @@ public class GeocacheImpl extends MinimalEObjectImpl.Container implements Geocac
     result.append(attributes);
     result.append(", hint: ");
     result.append(hint);
+    result.append(", source: ");
+    result.append(source);
+    result.append(", lastUpdate: ");
+    result.append(lastUpdate);
+    result.append(", tags: ");
+    result.append(tags);
     result.append(')');
     return result.toString();
   }

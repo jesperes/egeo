@@ -5,9 +5,12 @@ package egeo.impl;
 import egeo.*;
 
 import java.math.BigDecimal;
+
 import java.net.URL;
 
 import java.util.Date;
+
+import org.eclipse.emf.common.util.URI;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -75,6 +78,7 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory
       case EgeoPackage.LOG: return createLog();
       case EgeoPackage.USER: return createUser();
       case EgeoPackage.GEOCACHE: return createGeocache();
+      case EgeoPackage.CACHE_DATABASE: return createCacheDatabase();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -98,6 +102,8 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory
         return createAttributeFromString(eDataType, initialValue);
       case EgeoPackage.CONTAINER_TYPE:
         return createContainerTypeFromString(eDataType, initialValue);
+      case EgeoPackage.URI:
+        return createURIFromString(eDataType, initialValue);
       case EgeoPackage.URL:
         return createURLFromString(eDataType, initialValue);
       case EgeoPackage.DATE:
@@ -127,6 +133,8 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory
         return convertAttributeToString(eDataType, instanceValue);
       case EgeoPackage.CONTAINER_TYPE:
         return convertContainerTypeToString(eDataType, instanceValue);
+      case EgeoPackage.URI:
+        return convertURIToString(eDataType, instanceValue);
       case EgeoPackage.URL:
         return convertURLToString(eDataType, instanceValue);
       case EgeoPackage.DATE:
@@ -191,6 +199,17 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory
   {
     GeocacheImpl geocache = new GeocacheImpl();
     return geocache;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CacheDatabase createCacheDatabase()
+  {
+    CacheDatabaseImpl cacheDatabase = new CacheDatabaseImpl();
+    return cacheDatabase;
   }
 
   /**
@@ -279,6 +298,26 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory
   public String convertContainerTypeToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public URI createURIFromString(EDataType eDataType, String initialValue)
+  {
+    return (URI)super.createFromString(eDataType, initialValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertURIToString(EDataType eDataType, Object instanceValue)
+  {
+    return super.convertToString(eDataType, instanceValue);
   }
 
   /**

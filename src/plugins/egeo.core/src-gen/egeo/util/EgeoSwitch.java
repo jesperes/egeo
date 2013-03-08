@@ -107,6 +107,13 @@ public class EgeoSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EgeoPackage.CACHE_DATABASE:
+      {
+        CacheDatabase cacheDatabase = (CacheDatabase)theEObject;
+        T result = caseCacheDatabase(cacheDatabase);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -187,6 +194,22 @@ public class EgeoSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseGeocache(Geocache object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Cache Database</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Cache Database</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCacheDatabase(CacheDatabase object)
   {
     return null;
   }

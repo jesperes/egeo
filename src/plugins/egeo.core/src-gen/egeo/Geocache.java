@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.URI;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -39,6 +40,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link egeo.Geocache#getShortText <em>Short Text</em>}</li>
  *   <li>{@link egeo.Geocache#getLongText <em>Long Text</em>}</li>
  *   <li>{@link egeo.Geocache#getLogs <em>Logs</em>}</li>
+ *   <li>{@link egeo.Geocache#getSource <em>Source</em>}</li>
+ *   <li>{@link egeo.Geocache#getLastUpdate <em>Last Update</em>}</li>
+ *   <li>{@link egeo.Geocache#getTags <em>Tags</em>}</li>
  * </ul>
  * </p>
  *
@@ -581,5 +585,73 @@ public interface Geocache extends EObject
    * @generated
    */
   EList<Log> getLogs();
+
+  /**
+   * Returns the value of the '<em><b>Source</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Source</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Source</em>' attribute.
+   * @see #setSource(URI)
+   * @see egeo.EgeoPackage#getGeocache_Source()
+   * @model unique="false" dataType="egeo.URI"
+   * @generated
+   */
+  URI getSource();
+
+  /**
+   * Sets the value of the '{@link egeo.Geocache#getSource <em>Source</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Source</em>' attribute.
+   * @see #getSource()
+   * @generated
+   */
+  void setSource(URI value);
+
+  /**
+   * Returns the value of the '<em><b>Last Update</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Last Update</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Last Update</em>' attribute.
+   * @see #setLastUpdate(Date)
+   * @see egeo.EgeoPackage#getGeocache_LastUpdate()
+   * @model unique="false" dataType="egeo.Date"
+   * @generated
+   */
+  Date getLastUpdate();
+
+  /**
+   * Sets the value of the '{@link egeo.Geocache#getLastUpdate <em>Last Update</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Last Update</em>' attribute.
+   * @see #getLastUpdate()
+   * @generated
+   */
+  void setLastUpdate(Date value);
+
+  /**
+   * Returns the value of the '<em><b>Tags</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Tags</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tags</em>' attribute list.
+   * @see egeo.EgeoPackage#getGeocache_Tags()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getTags();
 
 } // Geocache

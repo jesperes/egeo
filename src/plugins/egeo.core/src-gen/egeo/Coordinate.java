@@ -3,6 +3,7 @@
 package egeo;
 
 import java.math.BigDecimal;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**

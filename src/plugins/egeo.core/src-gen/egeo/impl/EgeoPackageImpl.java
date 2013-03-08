@@ -3,6 +3,7 @@
 package egeo.impl;
 
 import egeo.Attribute;
+import egeo.CacheDatabase;
 import egeo.CacheType;
 import egeo.ContainerType;
 import egeo.Coordinate;
@@ -15,6 +16,7 @@ import egeo.LogType;
 import egeo.User;
 
 import java.math.BigDecimal;
+
 import java.util.Date;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -75,6 +77,13 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass cacheDatabaseEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum cacheTypeEEnum = null;
 
   /**
@@ -97,6 +106,13 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * @generated
    */
   private EEnum containerTypeEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EDataType uriEDataType = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -570,6 +586,56 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getGeocache_Source()
+  {
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(21);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGeocache_LastUpdate()
+  {
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(22);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGeocache_Tags()
+  {
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(23);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCacheDatabase()
+  {
+    return cacheDatabaseEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCacheDatabase_Caches()
+  {
+    return (EReference)cacheDatabaseEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getCacheType()
   {
     return cacheTypeEEnum;
@@ -603,6 +669,16 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
   public EEnum getContainerType()
   {
     return containerTypeEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EDataType getURI()
+  {
+    return uriEDataType;
   }
 
   /**
@@ -707,6 +783,12 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     createEReference(geocacheEClass, GEOCACHE__SHORT_TEXT);
     createEReference(geocacheEClass, GEOCACHE__LONG_TEXT);
     createEReference(geocacheEClass, GEOCACHE__LOGS);
+    createEAttribute(geocacheEClass, GEOCACHE__SOURCE);
+    createEAttribute(geocacheEClass, GEOCACHE__LAST_UPDATE);
+    createEAttribute(geocacheEClass, GEOCACHE__TAGS);
+
+    cacheDatabaseEClass = createEClass(CACHE_DATABASE);
+    createEReference(cacheDatabaseEClass, CACHE_DATABASE__CACHES);
 
     // Create enums
     cacheTypeEEnum = createEEnum(CACHE_TYPE);
@@ -715,6 +797,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     containerTypeEEnum = createEEnum(CONTAINER_TYPE);
 
     // Create data types
+    uriEDataType = createEDataType(URI);
     urlEDataType = createEDataType(URL);
     dateEDataType = createEDataType(DATE);
     bigDecimalEDataType = createEDataType(BIG_DECIMAL);
@@ -796,6 +879,12 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     initEReference(getGeocache_ShortText(), this.getDescription(), null, "shortText", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGeocache_LongText(), this.getDescription(), null, "longText", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGeocache_Logs(), this.getLog(), null, "logs", null, 0, -1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGeocache_Source(), this.getURI(), "source", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGeocache_LastUpdate(), this.getDate(), "lastUpdate", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGeocache_Tags(), theEcorePackage.getEString(), "tags", null, 0, -1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cacheDatabaseEClass, CacheDatabase.class, "CacheDatabase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCacheDatabase_Caches(), this.getGeocache(), null, "caches", null, 0, -1, CacheDatabase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(cacheTypeEEnum, CacheType.class, "CacheType");
@@ -826,6 +915,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     addEEnumLiteral(containerTypeEEnum, ContainerType.UNSPECIFIED);
 
     // Initialize data types
+    initEDataType(uriEDataType, org.eclipse.emf.common.util.URI.class, "URI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
     initEDataType(urlEDataType, java.net.URL.class, "URL", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
     initEDataType(dateEDataType, Date.class, "Date", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
     initEDataType(bigDecimalEDataType, BigDecimal.class, "BigDecimal", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

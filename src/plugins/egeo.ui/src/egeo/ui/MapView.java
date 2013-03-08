@@ -71,6 +71,12 @@ public class MapView extends ViewPart {
 					e.gc.setBackground(Display.getCurrent().getSystemColor(
 							SWT.COLOR_RED));
 					e.gc.fillRectangle(p.x - 5, p.y - 5, 10, 10);
+
+					e.gc.setBackground(Display.getCurrent().getSystemColor(
+							SWT.COLOR_WHITE));
+					e.gc.setForeground(Display.getCurrent().getSystemColor(
+							SWT.COLOR_BLACK));
+					e.gc.drawText(cache.getName(), p.x, p.y);
 				}
 			}
 		});
