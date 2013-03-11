@@ -28,13 +28,24 @@ public class DatabaseView extends ViewPart {
 
     private final ComposedAdapterFactory adapterFactory;
     private TreeViewer viewer;
-    private final CacheDatabase db;
+    private final static CacheDatabase db = EgeoFactory.eINSTANCE
+            .createCacheDatabase();
 
     // String gpx = "GC3X94J.gpx";
     // String gpx = "5110831.gpx";
-    String gpx = "5982344_Uppsala.gpx";
+    static String gpx = "5982344_Uppsala.gpx";
 
-    private void loadDatabase() {
+    public static CacheDatabase getDefaultDatabase() {
+        return db;
+    }
+
+    static {
+        loadDatabase();
+    }
+
+    private static void loadDatabase() {
+        System.out.println("Loading cache database...");
+
         ResourceSet resourceSet = new ResourceSetImpl();
         URI uri = URI.createPlatformPluginURI("/egeo.ui/" + gpx, false);
         Resource resource = resourceSet.createResource(uri);
@@ -47,13 +58,13 @@ public class DatabaseView extends ViewPart {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        System.out.println("Done.");
     }
 
     public DatabaseView() {
-        db = EgeoFactory.eINSTANCE.createCacheDatabase();
         adapterFactory = new ComposedAdapterFactory();
         adapterFactory.addAdapterFactory(new EgeoItemProviderAdapterFactory());
-        loadDatabase();
     }
 
     @Override
