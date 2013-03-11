@@ -10,7 +10,7 @@
             restorable="true">
       </view>
       <view
-            class="egeo.ui.EgeoDatabaseView"
+            class="egeo.ui.DatabaseView"
             id="egeo.ui.database"
             name="Egeo Database"
             restorable="true">
