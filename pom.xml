@@ -67,5 +67,8 @@
 		<module>src/plugins/egeo.gpx</module>
 		<module>src/plugins/egeo.gpx.tests</module>
 		<module>src/plugins/egeo.ui</module>
+		<module>src/plugins/egeo.core</module>
+		<module>src/plugins/egeo.core.edit</module>
+		<module>src/plugins/egeo.core.editor</module>
 	</modules>
 </project>

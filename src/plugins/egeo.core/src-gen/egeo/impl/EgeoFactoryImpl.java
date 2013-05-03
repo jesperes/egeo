@@ -39,7 +39,7 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory
   {
     try
     {
-      EgeoFactory theEgeoFactory = (EgeoFactory)EPackage.Registry.INSTANCE.getEFactory("egeo"); 
+      EgeoFactory theEgeoFactory = (EgeoFactory)EPackage.Registry.INSTANCE.getEFactory(EgeoPackage.eNS_URI);
       if (theEgeoFactory != null)
       {
         return theEgeoFactory;

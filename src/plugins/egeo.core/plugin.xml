@@ -6,4 +6,12 @@
 
 <plugin>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated egeo -->
+      <package
+            uri="egeo"
+            class="egeo.EgeoPackage"
+            genModel="model/egeo.xcore"/>
+   </extension>
+
 </plugin>
