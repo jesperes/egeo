@@ -14,6 +14,10 @@ lookup_attr(Name, [{_, _, NameStr, Val}|Rest]) ->
 	    lookup_attr(Name, Rest)
     end.
 
+
+qname({NS, Name}) ->
+    {list_to_atom(NS), list_to_atom(Name)}.
+
 %%%
 %%% Event callback
 event({startElement, _, _, QName, Attrs }, _, S) ->
@@ -39,57 +43,46 @@ event({startElement, _, _, QName, Attrs }, _, S) ->
 	_ ->
 	    S
     end;
-event({endElement, _, _, QName}, _, S) ->
-    case S of
-	%% Closing an element with body text
-	{Cs, [Cache|S0]} ->
-	    case qname(QName) of
-		{'', name} ->
-		    [Cache#geocache{gccode=Cs}|S0];
-		{groundspeak, name} ->
-		    [Cache#geocache{name=Cs}|S0];
- 		{'', dest} ->
-		    [Cache#geocache{descr=Cs}|S0];
-		{'', time} ->
-		    [Cache#geocache{date=Cs}|S0];
-		{groundspeak, type} ->
-		    [Cache#geocache{type=Cs}|S0];
-		{groundspeak, placed_by} ->
-		    [Cache#geocache{placed_by=Cs}|S0];		
- 		{groundspeak, container} ->
-		    [Cache#geocache{container=Cs}|S0];		
-  		{groundspeak, difficulty} ->
-		    [Cache#geocache{difficulty=Cs}|S0];		
-  		{groundspeak, terrain} ->
-		    [Cache#geocache{terrain=Cs}|S0];		
-  		{groundspeak, country} ->
-		    [Cache#geocache{country=Cs}|S0];		
-  		{groundspeak, state} ->
-		    [Cache#geocache{state=Cs}|S0];		
-		_ ->
-		    [Cache|S0]
-	    end;
-	_ ->
-	    S
-    end;
+event({endElement, _, _, QName}, _, S) when is_list(S)->
+    end_element(qname(QName), [], S);
+event({endElement, _, _, QName}, _, {Cs, S}) ->
+    end_element(qname(QName), Cs, S);
 event({characters, Cs}, _, {C, Acc}) ->
     {[C,Cs], Acc};
 event({characters, Cs}, _, Acc) ->
     {Cs, Acc};
-event(_, _, S) ->
-    S.
+event(_, _, Acc) ->
+    Acc.
 
-qname({NS, Name}) ->
-    {list_to_atom(NS), list_to_atom(Name)}.
+end_element({'', name}, Cs, [Cache|S]) ->
+    [Cache#geocache{gccode=Cs}|S];
+end_element({groundspeak, name}, Cs, [Cache|S]) ->
+    [Cache#geocache{name=Cs}|S];
+end_element({'', desc}, Cs, [Cache|S]) ->
+    [Cache#geocache{descr=Cs}|S];
+end_element({'', time}, Cs, [Cache|S]) ->
+    [Cache#geocache{date=Cs}|S];
+end_element({groundspeak, type}, Cs, [Cache|S]) ->
+    [Cache#geocache{type=Cs}|S];
+end_element({groundspeak, placed_by}, Cs, [Cache|S]) ->
+    [Cache#geocache{placed_by=Cs}|S];
+end_element({groundspeak, container}, Cs, [Cache|S]) ->
+    [Cache#geocache{container=Cs}|S];
+end_element({groundspeak, difficulty}, Cs, [Cache|S]) ->
+    [Cache#geocache{difficulty=Cs}|S];
+end_element({groundspeak, terrain}, Cs, [Cache|S]) ->
+    [Cache#geocache{terrain=Cs}|S];
+end_element({groundspeak, country}, Cs, [Cache|S]) ->
+    [Cache#geocache{country=Cs}|S];
+end_element({groundspeak, state}, Cs, [Cache|S]) ->
+    [Cache#geocache{state=Cs}|S];
+end_element(_, _, S) ->
+    S.
 
 %%
 %% Returns a list of geocaches found in the given GPX file.
-parse(GpxFile) ->	     
-    {ok, State, _} = xmerl_sax_parser:file(GpxFile, 
-					   [{event_state, []}, 
-					    {event_fun, fun event/3}]),
-    State.
-
-    
-
-%% xmerl_xpath:string("//groundspeak:cache", Doc).
+parse(File) ->
+    {ok, State, _} = 
+	xmerl_sax_parser:file(File, [{event_fun, fun event/3},
+				     {event_state, []}]),
+    length(State).
