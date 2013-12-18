@@ -68,15 +68,6 @@ public interface EgeoFactory extends EFactory
   Geocache createGeocache();
 
   /**
-   * Returns a new object of class '<em>Cache Database</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Cache Database</em>'.
-   * @generated
-   */
-  CacheDatabase createCacheDatabase();
-
-  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

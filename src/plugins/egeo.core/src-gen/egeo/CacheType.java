@@ -57,7 +57,77 @@ public enum CacheType implements Enumerator
    * @generated
    * @ordered
    */
-  EVENT(0, "Event", "Event");
+  EVENT(0, "Event", "Event"),
+
+  /**
+   * The '<em><b>Earthcache</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #EARTHCACHE_VALUE
+   * @generated
+   * @ordered
+   */
+  EARTHCACHE(0, "Earthcache", "Earthcache"),
+
+  /**
+   * The '<em><b>Webcam</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #WEBCAM_VALUE
+   * @generated
+   * @ordered
+   */
+  WEBCAM(0, "Webcam", "Webcam"),
+
+  /**
+   * The '<em><b>Wherigo</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #WHERIGO_VALUE
+   * @generated
+   * @ordered
+   */
+  WHERIGO(0, "Wherigo", "Wherigo"),
+
+  /**
+   * The '<em><b>Letterbox Hybrid</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #LETTERBOX_HYBRID_VALUE
+   * @generated
+   * @ordered
+   */
+  LETTERBOX_HYBRID(0, "LetterboxHybrid", "LetterboxHybrid"),
+
+  /**
+   * The '<em><b>CITO</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #CITO_VALUE
+   * @generated
+   * @ordered
+   */
+  CITO(0, "CITO", "CITO"),
+
+  /**
+   * The '<em><b>Mega Event</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #MEGA_EVENT_VALUE
+   * @generated
+   * @ordered
+   */
+  MEGA_EVENT(0, "MegaEvent", "MegaEvent"),
+
+  /**
+   * The '<em><b>Virtual</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #VIRTUAL_VALUE
+   * @generated
+   * @ordered
+   */
+  VIRTUAL(0, "Virtual", "Virtual");
 
   /**
    * The '<em><b>Traditional</b></em>' literal value.
@@ -120,6 +190,111 @@ public enum CacheType implements Enumerator
   public static final int EVENT_VALUE = 0;
 
   /**
+   * The '<em><b>Earthcache</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Earthcache</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #EARTHCACHE
+   * @model name="Earthcache"
+   * @generated
+   * @ordered
+   */
+  public static final int EARTHCACHE_VALUE = 0;
+
+  /**
+   * The '<em><b>Webcam</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Webcam</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #WEBCAM
+   * @model name="Webcam"
+   * @generated
+   * @ordered
+   */
+  public static final int WEBCAM_VALUE = 0;
+
+  /**
+   * The '<em><b>Wherigo</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Wherigo</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #WHERIGO
+   * @model name="Wherigo"
+   * @generated
+   * @ordered
+   */
+  public static final int WHERIGO_VALUE = 0;
+
+  /**
+   * The '<em><b>Letterbox Hybrid</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Letterbox Hybrid</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #LETTERBOX_HYBRID
+   * @model name="LetterboxHybrid"
+   * @generated
+   * @ordered
+   */
+  public static final int LETTERBOX_HYBRID_VALUE = 0;
+
+  /**
+   * The '<em><b>CITO</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>CITO</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #CITO
+   * @model
+   * @generated
+   * @ordered
+   */
+  public static final int CITO_VALUE = 0;
+
+  /**
+   * The '<em><b>Mega Event</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Mega Event</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #MEGA_EVENT
+   * @model name="MegaEvent"
+   * @generated
+   * @ordered
+   */
+  public static final int MEGA_EVENT_VALUE = 0;
+
+  /**
+   * The '<em><b>Virtual</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Virtual</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #VIRTUAL
+   * @model name="Virtual"
+   * @generated
+   * @ordered
+   */
+  public static final int VIRTUAL_VALUE = 0;
+
+  /**
    * An array of all the '<em><b>Cache Type</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -132,6 +307,13 @@ public enum CacheType implements Enumerator
       MULTI,
       UNKNOWN,
       EVENT,
+      EARTHCACHE,
+      WEBCAM,
+      WHERIGO,
+      LETTERBOX_HYBRID,
+      CITO,
+      MEGA_EVENT,
+      VIRTUAL,
     };
 
   /**

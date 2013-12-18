@@ -7,10 +7,10 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: egeo.gpx.tests
 Require-Bundle: org.eclipse.core.runtime,
- egeo.gpx;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport,
- egeo.core;bundle-version="1.0.0"
+ egeo.core;bundle-version="1.0.0",
+ org.jsoup;bundle-version="1.7.3",
+ egeo.core.parsers;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

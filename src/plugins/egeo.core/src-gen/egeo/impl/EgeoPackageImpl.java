@@ -3,7 +3,6 @@
 package egeo.impl;
 
 import egeo.Attribute;
-import egeo.CacheDatabase;
 import egeo.CacheType;
 import egeo.ContainerType;
 import egeo.Coordinate;
@@ -71,13 +70,6 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * @generated
    */
   private EClass geocacheEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass cacheDatabaseEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -616,26 +608,6 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getCacheDatabase()
-  {
-    return cacheDatabaseEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getCacheDatabase_Caches()
-  {
-    return (EReference)cacheDatabaseEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EEnum getCacheType()
   {
     return cacheTypeEEnum;
@@ -787,9 +759,6 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     createEAttribute(geocacheEClass, GEOCACHE__LAST_UPDATE);
     createEAttribute(geocacheEClass, GEOCACHE__TAGS);
 
-    cacheDatabaseEClass = createEClass(CACHE_DATABASE);
-    createEReference(cacheDatabaseEClass, CACHE_DATABASE__CACHES);
-
     // Create enums
     cacheTypeEEnum = createEEnum(CACHE_TYPE);
     logTypeEEnum = createEEnum(LOG_TYPE);
@@ -883,15 +852,19 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     initEAttribute(getGeocache_LastUpdate(), this.getDate(), "lastUpdate", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_Tags(), theEcorePackage.getEString(), "tags", null, 0, -1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cacheDatabaseEClass, CacheDatabase.class, "CacheDatabase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getCacheDatabase_Caches(), this.getGeocache(), null, "caches", null, 0, -1, CacheDatabase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     // Initialize enums and add enum literals
     initEEnum(cacheTypeEEnum, CacheType.class, "CacheType");
     addEEnumLiteral(cacheTypeEEnum, CacheType.TRADITIONAL);
     addEEnumLiteral(cacheTypeEEnum, CacheType.MULTI);
     addEEnumLiteral(cacheTypeEEnum, CacheType.UNKNOWN);
     addEEnumLiteral(cacheTypeEEnum, CacheType.EVENT);
+    addEEnumLiteral(cacheTypeEEnum, CacheType.EARTHCACHE);
+    addEEnumLiteral(cacheTypeEEnum, CacheType.WEBCAM);
+    addEEnumLiteral(cacheTypeEEnum, CacheType.WHERIGO);
+    addEEnumLiteral(cacheTypeEEnum, CacheType.LETTERBOX_HYBRID);
+    addEEnumLiteral(cacheTypeEEnum, CacheType.CITO);
+    addEEnumLiteral(cacheTypeEEnum, CacheType.MEGA_EVENT);
+    addEEnumLiteral(cacheTypeEEnum, CacheType.VIRTUAL);
 
     initEEnum(logTypeEEnum, LogType.class, "LogType");
     addEEnumLiteral(logTypeEEnum, LogType.FOUND_IT);
