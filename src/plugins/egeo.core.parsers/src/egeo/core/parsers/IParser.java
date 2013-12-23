@@ -5,11 +5,11 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.util.URI;
 
-import egeo.Geocache;
+import egeo.Waypoint;
 
 public interface IParser {
 
-	Collection<Geocache> parse(URI input) throws ParseException;
+	Collection<Waypoint> parse(URI input) throws ParseException;
 
-	Collection<Geocache> parse(File input) throws ParseException;
+	Collection<Waypoint> parse(File input) throws ParseException;
 }

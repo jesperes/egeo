@@ -59,6 +59,15 @@ public interface EgeoFactory extends EFactory
   User createUser();
 
   /**
+   * Returns a new object of class '<em>Waypoint</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Waypoint</em>'.
+   * @generated
+   */
+  Waypoint createWaypoint();
+
+  /**
    * Returns a new object of class '<em>Geocache</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

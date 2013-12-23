@@ -13,6 +13,7 @@ import egeo.Geocache;
 import egeo.Log;
 import egeo.LogType;
 import egeo.User;
+import egeo.Waypoint;
 
 import java.math.BigDecimal;
 
@@ -63,6 +64,13 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * @generated
    */
   private EClass userEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass waypointEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -358,6 +366,106 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getWaypoint()
+  {
+    return waypointEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWaypoint_Name()
+  {
+    return (EAttribute)waypointEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWaypoint_Time()
+  {
+    return (EAttribute)waypointEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWaypoint_Cmt()
+  {
+    return (EAttribute)waypointEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWaypoint_Type0()
+  {
+    return (EAttribute)waypointEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWaypoint_Sym()
+  {
+    return (EAttribute)waypointEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWaypoint_Url()
+  {
+    return (EAttribute)waypointEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWaypoint_Urlname()
+  {
+    return (EAttribute)waypointEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getWaypoint_Coord()
+  {
+    return (EReference)waypointEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWaypoint_LastUpdate()
+  {
+    return (EAttribute)waypointEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getGeocache()
   {
     return geocacheEClass;
@@ -378,7 +486,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGeocache_Code()
+  public EAttribute getGeocache_Available()
   {
     return (EAttribute)geocacheEClass.getEStructuralFeatures().get(1);
   }
@@ -388,7 +496,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGeocache_Time()
+  public EAttribute getGeocache_Archived()
   {
     return (EAttribute)geocacheEClass.getEStructuralFeatures().get(2);
   }
@@ -398,7 +506,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGeocache_Name()
+  public EAttribute getGeocache_ContainerType()
   {
     return (EAttribute)geocacheEClass.getEStructuralFeatures().get(3);
   }
@@ -408,39 +516,9 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGeocache_Available()
-  {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getGeocache_Archived()
-  {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getGeocache_ContainerType()
-  {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getGeocache_Owner()
   {
-    return (EReference)geocacheEClass.getEStructuralFeatures().get(7);
+    return (EReference)geocacheEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -450,7 +528,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EAttribute getGeocache_PlacedBy()
   {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(8);
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -460,7 +538,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EAttribute getGeocache_CacheType()
   {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(9);
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -470,7 +548,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EAttribute getGeocache_Difficulty()
   {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(10);
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -480,7 +558,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EAttribute getGeocache_Terrain()
   {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(11);
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(8);
   }
 
   /**
@@ -490,7 +568,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EAttribute getGeocache_Country()
   {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(12);
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -500,7 +578,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EAttribute getGeocache_State()
   {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(13);
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(10);
   }
 
   /**
@@ -508,9 +586,9 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getGeocache_Coord()
+  public EAttribute getGeocache_EnabledAttributes()
   {
-    return (EReference)geocacheEClass.getEStructuralFeatures().get(14);
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(11);
   }
 
   /**
@@ -518,19 +596,9 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGeocache_Url()
+  public EAttribute getGeocache_DisabledAttributes()
   {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(15);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getGeocache_Attributes()
-  {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(16);
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(12);
   }
 
   /**
@@ -540,7 +608,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EAttribute getGeocache_Hint()
   {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(17);
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(13);
   }
 
   /**
@@ -550,7 +618,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EReference getGeocache_ShortText()
   {
-    return (EReference)geocacheEClass.getEStructuralFeatures().get(18);
+    return (EReference)geocacheEClass.getEStructuralFeatures().get(14);
   }
 
   /**
@@ -560,7 +628,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EReference getGeocache_LongText()
   {
-    return (EReference)geocacheEClass.getEStructuralFeatures().get(19);
+    return (EReference)geocacheEClass.getEStructuralFeatures().get(15);
   }
 
   /**
@@ -570,7 +638,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EReference getGeocache_Logs()
   {
-    return (EReference)geocacheEClass.getEStructuralFeatures().get(20);
+    return (EReference)geocacheEClass.getEStructuralFeatures().get(16);
   }
 
   /**
@@ -580,17 +648,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EAttribute getGeocache_Source()
   {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(21);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getGeocache_LastUpdate()
-  {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(22);
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(17);
   }
 
   /**
@@ -600,7 +658,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    */
   public EAttribute getGeocache_Tags()
   {
-    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(23);
+    return (EAttribute)geocacheEClass.getEStructuralFeatures().get(18);
   }
 
   /**
@@ -733,11 +791,19 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     createEAttribute(userEClass, USER__USER_ID);
     createEAttribute(userEClass, USER__NAME);
 
+    waypointEClass = createEClass(WAYPOINT);
+    createEAttribute(waypointEClass, WAYPOINT__NAME);
+    createEAttribute(waypointEClass, WAYPOINT__TIME);
+    createEAttribute(waypointEClass, WAYPOINT__CMT);
+    createEAttribute(waypointEClass, WAYPOINT__TYPE0);
+    createEAttribute(waypointEClass, WAYPOINT__SYM);
+    createEAttribute(waypointEClass, WAYPOINT__URL);
+    createEAttribute(waypointEClass, WAYPOINT__URLNAME);
+    createEReference(waypointEClass, WAYPOINT__COORD);
+    createEAttribute(waypointEClass, WAYPOINT__LAST_UPDATE);
+
     geocacheEClass = createEClass(GEOCACHE);
     createEAttribute(geocacheEClass, GEOCACHE__CACHE_ID);
-    createEAttribute(geocacheEClass, GEOCACHE__CODE);
-    createEAttribute(geocacheEClass, GEOCACHE__TIME);
-    createEAttribute(geocacheEClass, GEOCACHE__NAME);
     createEAttribute(geocacheEClass, GEOCACHE__AVAILABLE);
     createEAttribute(geocacheEClass, GEOCACHE__ARCHIVED);
     createEAttribute(geocacheEClass, GEOCACHE__CONTAINER_TYPE);
@@ -748,15 +814,13 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     createEAttribute(geocacheEClass, GEOCACHE__TERRAIN);
     createEAttribute(geocacheEClass, GEOCACHE__COUNTRY);
     createEAttribute(geocacheEClass, GEOCACHE__STATE);
-    createEReference(geocacheEClass, GEOCACHE__COORD);
-    createEAttribute(geocacheEClass, GEOCACHE__URL);
-    createEAttribute(geocacheEClass, GEOCACHE__ATTRIBUTES);
+    createEAttribute(geocacheEClass, GEOCACHE__ENABLED_ATTRIBUTES);
+    createEAttribute(geocacheEClass, GEOCACHE__DISABLED_ATTRIBUTES);
     createEAttribute(geocacheEClass, GEOCACHE__HINT);
     createEReference(geocacheEClass, GEOCACHE__SHORT_TEXT);
     createEReference(geocacheEClass, GEOCACHE__LONG_TEXT);
     createEReference(geocacheEClass, GEOCACHE__LOGS);
     createEAttribute(geocacheEClass, GEOCACHE__SOURCE);
-    createEAttribute(geocacheEClass, GEOCACHE__LAST_UPDATE);
     createEAttribute(geocacheEClass, GEOCACHE__TAGS);
 
     // Create enums
@@ -804,6 +868,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    geocacheEClass.getESuperTypes().add(this.getWaypoint());
 
     // Initialize classes, features, and operations; add parameters
     initEClass(coordinateEClass, Coordinate.class, "Coordinate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -826,11 +891,19 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     initEAttribute(getUser_UserId(), theEcorePackage.getELong(), "userId", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getUser_Name(), theEcorePackage.getEString(), "name", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(waypointEClass, Waypoint.class, "Waypoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getWaypoint_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Waypoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getWaypoint_Time(), this.getDate(), "time", null, 0, 1, Waypoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getWaypoint_Cmt(), theEcorePackage.getEString(), "cmt", null, 0, 1, Waypoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getWaypoint_Type0(), theEcorePackage.getEString(), "type0", null, 0, 1, Waypoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getWaypoint_Sym(), theEcorePackage.getEString(), "sym", null, 0, 1, Waypoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getWaypoint_Url(), this.getURL(), "url", null, 0, 1, Waypoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getWaypoint_Urlname(), theEcorePackage.getEString(), "urlname", null, 0, 1, Waypoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getWaypoint_Coord(), this.getCoordinate(), null, "coord", null, 0, 1, Waypoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getWaypoint_LastUpdate(), this.getDate(), "lastUpdate", null, 0, 1, Waypoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(geocacheEClass, Geocache.class, "Geocache", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGeocache_CacheId(), theEcorePackage.getELong(), "cacheId", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGeocache_Code(), theEcorePackage.getEString(), "code", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGeocache_Time(), this.getDate(), "time", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGeocache_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_Available(), theEcorePackage.getEBoolean(), "available", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_Archived(), theEcorePackage.getEBoolean(), "archived", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_ContainerType(), this.getContainerType(), "containerType", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -841,15 +914,13 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     initEAttribute(getGeocache_Terrain(), theEcorePackage.getEDouble(), "terrain", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_Country(), theEcorePackage.getEString(), "country", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_State(), theEcorePackage.getEString(), "state", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGeocache_Coord(), this.getCoordinate(), null, "coord", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGeocache_Url(), this.getURL(), "url", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGeocache_Attributes(), this.getAttribute(), "attributes", null, 0, -1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGeocache_EnabledAttributes(), this.getAttribute(), "enabledAttributes", null, 0, -1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGeocache_DisabledAttributes(), this.getAttribute(), "disabledAttributes", null, 0, -1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_Hint(), theEcorePackage.getEString(), "hint", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGeocache_ShortText(), this.getDescription(), null, "shortText", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGeocache_LongText(), this.getDescription(), null, "longText", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGeocache_Logs(), this.getLog(), null, "logs", null, 0, -1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_Source(), this.getURI(), "source", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGeocache_LastUpdate(), this.getDate(), "lastUpdate", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_Tags(), theEcorePackage.getEString(), "tags", null, 0, -1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
@@ -869,15 +940,90 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     initEEnum(logTypeEEnum, LogType.class, "LogType");
     addEEnumLiteral(logTypeEEnum, LogType.FOUND_IT);
     addEEnumLiteral(logTypeEEnum, LogType.DID_NOT_FIND);
-    addEEnumLiteral(logTypeEEnum, LogType.NOTE);
+    addEEnumLiteral(logTypeEEnum, LogType.WRITE_NOTE);
+    addEEnumLiteral(logTypeEEnum, LogType.OWNER_MAINTENANCE);
+    addEEnumLiteral(logTypeEEnum, LogType.WILL_ATTEND);
+    addEEnumLiteral(logTypeEEnum, LogType.ATTENDED);
+    addEEnumLiteral(logTypeEEnum, LogType.ANNOUNCEMENT);
+    addEEnumLiteral(logTypeEEnum, LogType.PUBLISH_LISTING);
+    addEEnumLiteral(logTypeEEnum, LogType.ENABLE_LISTING);
+    addEEnumLiteral(logTypeEEnum, LogType.POST_REVIEWER_NOTE);
+    addEEnumLiteral(logTypeEEnum, LogType.UPDATE_COORDINATES);
+    addEEnumLiteral(logTypeEEnum, LogType.DISABLE);
+    addEEnumLiteral(logTypeEEnum, LogType.NEEDS_MAINTENANCE);
+    addEEnumLiteral(logTypeEEnum, LogType.ARCHIVE);
+    addEEnumLiteral(logTypeEEnum, LogType.NEEDS_ARCHIVED);
+    addEEnumLiteral(logTypeEEnum, LogType.UNARCHIVE);
+    addEEnumLiteral(logTypeEEnum, LogType.RETRACT_LISTING);
+    addEEnumLiteral(logTypeEEnum, LogType.WEBCAM_PHOTO_TAKEN);
 
     initEEnum(attributeEEnum, Attribute.class, "Attribute");
-    addEEnumLiteral(attributeEEnum, Attribute.RECOMMENDED_FOR_KIDS);
+    addEEnumLiteral(attributeEEnum, Attribute.DOGS);
+    addEEnumLiteral(attributeEEnum, Attribute.ACCESS_OR_PARKING_FEES);
+    addEEnumLiteral(attributeEEnum, Attribute.CLIMBING_GEAR);
+    addEEnumLiteral(attributeEEnum, Attribute.BOAT_REQUIRED);
+    addEEnumLiteral(attributeEEnum, Attribute.SCUBA_GEAR_REQUIRED);
+    addEEnumLiteral(attributeEEnum, Attribute.KID_FRIENDLY);
     addEEnumLiteral(attributeEEnum, Attribute.TAKES_LESS_THAN_AN_HOUR);
+    addEEnumLiteral(attributeEEnum, Attribute.SCENIC_VIEW);
+    addEEnumLiteral(attributeEEnum, Attribute.SIGNIFICANT_HIKE);
+    addEEnumLiteral(attributeEEnum, Attribute.DIFFICULT_CLIMBING);
+    addEEnumLiteral(attributeEEnum, Attribute.MAY_REQUIRE_WADING);
+    addEEnumLiteral(attributeEEnum, Attribute.MAY_REQUIRE_SWIMMING);
     addEEnumLiteral(attributeEEnum, Attribute.AVAILABLE_AT_ALL_TIMES);
     addEEnumLiteral(attributeEEnum, Attribute.RECOMMENDED_AT_NIGHT);
     addEEnumLiteral(attributeEEnum, Attribute.AVAILABLE_DURING_WINTER);
-    addEEnumLiteral(attributeEEnum, Attribute.BICYCLES);
+    addEEnumLiteral(attributeEEnum, Attribute.POISON_PLANTS);
+    addEEnumLiteral(attributeEEnum, Attribute.DANGEROUS_ANIMALS);
+    addEEnumLiteral(attributeEEnum, Attribute.TICKS);
+    addEEnumLiteral(attributeEEnum, Attribute.ABANDONED_MINE_NEARBY);
+    addEEnumLiteral(attributeEEnum, Attribute.CLIFFS_OR_FALLING_ROCKS_NEARBY);
+    addEEnumLiteral(attributeEEnum, Attribute.HUNTING_AREA);
+    addEEnumLiteral(attributeEEnum, Attribute.DANGEROUS_AREA);
+    addEEnumLiteral(attributeEEnum, Attribute.WHEELCHAIR_ACCESSIBLE);
+    addEEnumLiteral(attributeEEnum, Attribute.PARKING_AVAILABLE);
+    addEEnumLiteral(attributeEEnum, Attribute.PUBLIC_TRANSIT_AVAILABLE);
+    addEEnumLiteral(attributeEEnum, Attribute.DRINKING_WATER_NEARBY);
+    addEEnumLiteral(attributeEEnum, Attribute.RESTROOMS_AVAILABLE);
+    addEEnumLiteral(attributeEEnum, Attribute.TELEPHONE_NEARBY);
+    addEEnumLiteral(attributeEEnum, Attribute.PICNIC_TABLES_AVAILABLE);
+    addEEnumLiteral(attributeEEnum, Attribute.CAMPING_AVAILABLE);
+    addEEnumLiteral(attributeEEnum, Attribute.BIKES_ALLOWED);
+    addEEnumLiteral(attributeEEnum, Attribute.MOTORCYCLES_ALLOWED);
+    addEEnumLiteral(attributeEEnum, Attribute.QUADS_ALLOWED);
+    addEEnumLiteral(attributeEEnum, Attribute.OFF_ROAD_VEHICLES_ALLOWED);
+    addEEnumLiteral(attributeEEnum, Attribute.SNOWMOBILES_ALLOWED);
+    addEEnumLiteral(attributeEEnum, Attribute.HORSES_ALLOWED);
+    addEEnumLiteral(attributeEEnum, Attribute.CAMPFIRES_ALLOWED);
+    addEEnumLiteral(attributeEEnum, Attribute.THORNS);
+    addEEnumLiteral(attributeEEnum, Attribute.STEALTH_REQUIRED);
+    addEEnumLiteral(attributeEEnum, Attribute.STROLLER_ACCESSIBLE);
+    addEEnumLiteral(attributeEEnum, Attribute.NEEDS_MAINTENANCE);
+    addEEnumLiteral(attributeEEnum, Attribute.WATCH_FOR_LIVESTOCK);
+    addEEnumLiteral(attributeEEnum, Attribute.FLASHLIGHT_REQUIRED);
+    addEEnumLiteral(attributeEEnum, Attribute.LOST_AND_FOUND);
+    addEEnumLiteral(attributeEEnum, Attribute.TRUCK_DRIVER_OR_RV_ACCESSIBLE);
+    addEEnumLiteral(attributeEEnum, Attribute.IS_FIELD_PUZZLE);
+    addEEnumLiteral(attributeEEnum, Attribute.UV_LIGHT_REQUIRED);
+    addEEnumLiteral(attributeEEnum, Attribute.MAY_REQUIRE_SNOWSHOES);
+    addEEnumLiteral(attributeEEnum, Attribute.CROSS_COUNTRY_SKIS_REQUIRED);
+    addEEnumLiteral(attributeEEnum, Attribute.SPECIAL_TOOL_REQUIRED);
+    addEEnumLiteral(attributeEEnum, Attribute.NIGHT_CACHE);
+    addEEnumLiteral(attributeEEnum, Attribute.PARK_NGRAB);
+    addEEnumLiteral(attributeEEnum, Attribute.IN_ABANDONED_STRUCTURE);
+    addEEnumLiteral(attributeEEnum, Attribute.HIKE_SHORTER_THAN1KM);
+    addEEnumLiteral(attributeEEnum, Attribute.HIKE_BETWEEN1KM_AND10KM);
+    addEEnumLiteral(attributeEEnum, Attribute.HIKE_GREATER_THAN10KM);
+    addEEnumLiteral(attributeEEnum, Attribute.FUEL_NEARBY);
+    addEEnumLiteral(attributeEEnum, Attribute.FOOD_NEARBY);
+    addEEnumLiteral(attributeEEnum, Attribute.WIRELESS_BEACON_REQUIRED);
+    addEEnumLiteral(attributeEEnum, Attribute.IS_APARTNER_SHIP_CACHE);
+    addEEnumLiteral(attributeEEnum, Attribute.SEASONAL_ACCESS_ONLY);
+    addEEnumLiteral(attributeEEnum, Attribute.RECOMMENDED_FOR_TOURISTS);
+    addEEnumLiteral(attributeEEnum, Attribute.TREE_CLIMBING_REQUIRED);
+    addEEnumLiteral(attributeEEnum, Attribute.IN_FRONT_YARD_WITH_PERMISSION);
+    addEEnumLiteral(attributeEEnum, Attribute.TEAMWORK_REQUIRED);
+    addEEnumLiteral(attributeEEnum, Attribute.IS_PART_OF_AGEO_TOUR);
 
     initEEnum(containerTypeEEnum, ContainerType.class, "ContainerType");
     addEEnumLiteral(containerTypeEEnum, ContainerType.MICRO);
@@ -886,6 +1032,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     addEEnumLiteral(containerTypeEEnum, ContainerType.LARGE);
     addEEnumLiteral(containerTypeEEnum, ContainerType.OTHER);
     addEEnumLiteral(containerTypeEEnum, ContainerType.UNSPECIFIED);
+    addEEnumLiteral(containerTypeEEnum, ContainerType.VIRTUAL);
 
     // Initialize data types
     initEDataType(uriEDataType, org.eclipse.emf.common.util.URI.class, "URI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

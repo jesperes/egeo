@@ -95,6 +95,11 @@ public class EgeoAdapterFactory extends AdapterFactoryImpl
         return createUserAdapter();
       }
       @Override
+      public Adapter caseWaypoint(Waypoint object)
+      {
+        return createWaypointAdapter();
+      }
+      @Override
       public Adapter caseGeocache(Geocache object)
       {
         return createGeocacheAdapter();
@@ -177,6 +182,21 @@ public class EgeoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createUserAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link egeo.Waypoint <em>Waypoint</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see egeo.Waypoint
+   * @generated
+   */
+  public Adapter createWaypointAdapter()
   {
     return null;
   }

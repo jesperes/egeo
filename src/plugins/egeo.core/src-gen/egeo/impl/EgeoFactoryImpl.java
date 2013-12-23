@@ -77,6 +77,7 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory
       case EgeoPackage.DESCRIPTION: return createDescription();
       case EgeoPackage.LOG: return createLog();
       case EgeoPackage.USER: return createUser();
+      case EgeoPackage.WAYPOINT: return createWaypoint();
       case EgeoPackage.GEOCACHE: return createGeocache();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -187,6 +188,17 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory
   {
     UserImpl user = new UserImpl();
     return user;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Waypoint createWaypoint()
+  {
+    WaypointImpl waypoint = new WaypointImpl();
+    return waypoint;
   }
 
   /**

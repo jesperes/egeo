@@ -77,7 +77,17 @@ public enum ContainerType implements Enumerator
    * @generated
    * @ordered
    */
-  UNSPECIFIED(0, "Unspecified", "Unspecified");
+  UNSPECIFIED(0, "Unspecified", "Unspecified"),
+
+  /**
+   * The '<em><b>Virtual</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #VIRTUAL_VALUE
+   * @generated
+   * @ordered
+   */
+  VIRTUAL(0, "Virtual", "Virtual");
 
   /**
    * The '<em><b>Micro</b></em>' literal value.
@@ -170,6 +180,21 @@ public enum ContainerType implements Enumerator
   public static final int UNSPECIFIED_VALUE = 0;
 
   /**
+   * The '<em><b>Virtual</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Virtual</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #VIRTUAL
+   * @model name="Virtual"
+   * @generated
+   * @ordered
+   */
+  public static final int VIRTUAL_VALUE = 0;
+
+  /**
    * An array of all the '<em><b>Container Type</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -184,6 +209,7 @@ public enum ContainerType implements Enumerator
       LARGE,
       OTHER,
       UNSPECIFIED,
+      VIRTUAL,
     };
 
   /**

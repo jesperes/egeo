@@ -280,41 +280,14 @@ public interface EgeoPackage extends EPackage
   int USER_OPERATION_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link egeo.impl.GeocacheImpl <em>Geocache</em>}' class.
+   * The meta object id for the '{@link egeo.impl.WaypointImpl <em>Waypoint</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see egeo.impl.GeocacheImpl
-   * @see egeo.impl.EgeoPackageImpl#getGeocache()
+   * @see egeo.impl.WaypointImpl
+   * @see egeo.impl.EgeoPackageImpl#getWaypoint()
    * @generated
    */
-  int GEOCACHE = 4;
-
-  /**
-   * The feature id for the '<em><b>Cache Id</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__CACHE_ID = 0;
-
-  /**
-   * The feature id for the '<em><b>Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__CODE = 1;
-
-  /**
-   * The feature id for the '<em><b>Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__TIME = 2;
+  int WAYPOINT = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -323,106 +296,43 @@ public interface EgeoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GEOCACHE__NAME = 3;
+  int WAYPOINT__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Available</b></em>' attribute.
+   * The feature id for the '<em><b>Time</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GEOCACHE__AVAILABLE = 4;
+  int WAYPOINT__TIME = 1;
 
   /**
-   * The feature id for the '<em><b>Archived</b></em>' attribute.
+   * The feature id for the '<em><b>Cmt</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GEOCACHE__ARCHIVED = 5;
+  int WAYPOINT__CMT = 2;
 
   /**
-   * The feature id for the '<em><b>Container Type</b></em>' attribute.
+   * The feature id for the '<em><b>Type0</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GEOCACHE__CONTAINER_TYPE = 6;
+  int WAYPOINT__TYPE0 = 3;
 
   /**
-   * The feature id for the '<em><b>Owner</b></em>' containment reference.
+   * The feature id for the '<em><b>Sym</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GEOCACHE__OWNER = 7;
-
-  /**
-   * The feature id for the '<em><b>Placed By</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__PLACED_BY = 8;
-
-  /**
-   * The feature id for the '<em><b>Cache Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__CACHE_TYPE = 9;
-
-  /**
-   * The feature id for the '<em><b>Difficulty</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__DIFFICULTY = 10;
-
-  /**
-   * The feature id for the '<em><b>Terrain</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__TERRAIN = 11;
-
-  /**
-   * The feature id for the '<em><b>Country</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__COUNTRY = 12;
-
-  /**
-   * The feature id for the '<em><b>State</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__STATE = 13;
-
-  /**
-   * The feature id for the '<em><b>Coord</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__COORD = 14;
+  int WAYPOINT__SYM = 4;
 
   /**
    * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -431,61 +341,25 @@ public interface EgeoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GEOCACHE__URL = 15;
+  int WAYPOINT__URL = 5;
 
   /**
-   * The feature id for the '<em><b>Attributes</b></em>' attribute list.
+   * The feature id for the '<em><b>Urlname</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GEOCACHE__ATTRIBUTES = 16;
+  int WAYPOINT__URLNAME = 6;
 
   /**
-   * The feature id for the '<em><b>Hint</b></em>' attribute.
+   * The feature id for the '<em><b>Coord</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GEOCACHE__HINT = 17;
-
-  /**
-   * The feature id for the '<em><b>Short Text</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__SHORT_TEXT = 18;
-
-  /**
-   * The feature id for the '<em><b>Long Text</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__LONG_TEXT = 19;
-
-  /**
-   * The feature id for the '<em><b>Logs</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__LOGS = 20;
-
-  /**
-   * The feature id for the '<em><b>Source</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GEOCACHE__SOURCE = 21;
+  int WAYPOINT__COORD = 7;
 
   /**
    * The feature id for the '<em><b>Last Update</b></em>' attribute.
@@ -494,7 +368,278 @@ public interface EgeoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GEOCACHE__LAST_UPDATE = 22;
+  int WAYPOINT__LAST_UPDATE = 8;
+
+  /**
+   * The number of structural features of the '<em>Waypoint</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WAYPOINT_FEATURE_COUNT = 9;
+
+  /**
+   * The number of operations of the '<em>Waypoint</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WAYPOINT_OPERATION_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link egeo.impl.GeocacheImpl <em>Geocache</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see egeo.impl.GeocacheImpl
+   * @see egeo.impl.EgeoPackageImpl#getGeocache()
+   * @generated
+   */
+  int GEOCACHE = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__NAME = WAYPOINT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Time</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__TIME = WAYPOINT__TIME;
+
+  /**
+   * The feature id for the '<em><b>Cmt</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__CMT = WAYPOINT__CMT;
+
+  /**
+   * The feature id for the '<em><b>Type0</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__TYPE0 = WAYPOINT__TYPE0;
+
+  /**
+   * The feature id for the '<em><b>Sym</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__SYM = WAYPOINT__SYM;
+
+  /**
+   * The feature id for the '<em><b>Url</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__URL = WAYPOINT__URL;
+
+  /**
+   * The feature id for the '<em><b>Urlname</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__URLNAME = WAYPOINT__URLNAME;
+
+  /**
+   * The feature id for the '<em><b>Coord</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__COORD = WAYPOINT__COORD;
+
+  /**
+   * The feature id for the '<em><b>Last Update</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__LAST_UPDATE = WAYPOINT__LAST_UPDATE;
+
+  /**
+   * The feature id for the '<em><b>Cache Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__CACHE_ID = WAYPOINT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Available</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__AVAILABLE = WAYPOINT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Archived</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__ARCHIVED = WAYPOINT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Container Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__CONTAINER_TYPE = WAYPOINT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Owner</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__OWNER = WAYPOINT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Placed By</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__PLACED_BY = WAYPOINT_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Cache Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__CACHE_TYPE = WAYPOINT_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Difficulty</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__DIFFICULTY = WAYPOINT_FEATURE_COUNT + 7;
+
+  /**
+   * The feature id for the '<em><b>Terrain</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__TERRAIN = WAYPOINT_FEATURE_COUNT + 8;
+
+  /**
+   * The feature id for the '<em><b>Country</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__COUNTRY = WAYPOINT_FEATURE_COUNT + 9;
+
+  /**
+   * The feature id for the '<em><b>State</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__STATE = WAYPOINT_FEATURE_COUNT + 10;
+
+  /**
+   * The feature id for the '<em><b>Enabled Attributes</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__ENABLED_ATTRIBUTES = WAYPOINT_FEATURE_COUNT + 11;
+
+  /**
+   * The feature id for the '<em><b>Disabled Attributes</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__DISABLED_ATTRIBUTES = WAYPOINT_FEATURE_COUNT + 12;
+
+  /**
+   * The feature id for the '<em><b>Hint</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__HINT = WAYPOINT_FEATURE_COUNT + 13;
+
+  /**
+   * The feature id for the '<em><b>Short Text</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__SHORT_TEXT = WAYPOINT_FEATURE_COUNT + 14;
+
+  /**
+   * The feature id for the '<em><b>Long Text</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__LONG_TEXT = WAYPOINT_FEATURE_COUNT + 15;
+
+  /**
+   * The feature id for the '<em><b>Logs</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__LOGS = WAYPOINT_FEATURE_COUNT + 16;
+
+  /**
+   * The feature id for the '<em><b>Source</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GEOCACHE__SOURCE = WAYPOINT_FEATURE_COUNT + 17;
 
   /**
    * The feature id for the '<em><b>Tags</b></em>' attribute list.
@@ -503,7 +648,7 @@ public interface EgeoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GEOCACHE__TAGS = 23;
+  int GEOCACHE__TAGS = WAYPOINT_FEATURE_COUNT + 18;
 
   /**
    * The number of structural features of the '<em>Geocache</em>' class.
@@ -512,7 +657,7 @@ public interface EgeoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GEOCACHE_FEATURE_COUNT = 24;
+  int GEOCACHE_FEATURE_COUNT = WAYPOINT_FEATURE_COUNT + 19;
 
   /**
    * The number of operations of the '<em>Geocache</em>' class.
@@ -521,7 +666,7 @@ public interface EgeoPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GEOCACHE_OPERATION_COUNT = 0;
+  int GEOCACHE_OPERATION_COUNT = WAYPOINT_OPERATION_COUNT + 0;
 
   /**
    * The meta object id for the '{@link egeo.CacheType <em>Cache Type</em>}' enum.
@@ -531,7 +676,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getCacheType()
    * @generated
    */
-  int CACHE_TYPE = 5;
+  int CACHE_TYPE = 6;
 
   /**
    * The meta object id for the '{@link egeo.LogType <em>Log Type</em>}' enum.
@@ -541,7 +686,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getLogType()
    * @generated
    */
-  int LOG_TYPE = 6;
+  int LOG_TYPE = 7;
 
   /**
    * The meta object id for the '{@link egeo.Attribute <em>Attribute</em>}' enum.
@@ -551,7 +696,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getAttribute()
    * @generated
    */
-  int ATTRIBUTE = 7;
+  int ATTRIBUTE = 8;
 
   /**
    * The meta object id for the '{@link egeo.ContainerType <em>Container Type</em>}' enum.
@@ -561,7 +706,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getContainerType()
    * @generated
    */
-  int CONTAINER_TYPE = 8;
+  int CONTAINER_TYPE = 9;
 
   /**
    * The meta object id for the '<em>URI</em>' data type.
@@ -571,7 +716,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getURI()
    * @generated
    */
-  int URI = 9;
+  int URI = 10;
 
   /**
    * The meta object id for the '<em>URL</em>' data type.
@@ -581,7 +726,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getURL()
    * @generated
    */
-  int URL = 10;
+  int URL = 11;
 
   /**
    * The meta object id for the '<em>Date</em>' data type.
@@ -591,7 +736,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getDate()
    * @generated
    */
-  int DATE = 11;
+  int DATE = 12;
 
   /**
    * The meta object id for the '<em>Big Decimal</em>' data type.
@@ -601,7 +746,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getBigDecimal()
    * @generated
    */
-  int BIG_DECIMAL = 12;
+  int BIG_DECIMAL = 13;
 
 
   /**
@@ -777,6 +922,115 @@ public interface EgeoPackage extends EPackage
   EAttribute getUser_Name();
 
   /**
+   * Returns the meta object for class '{@link egeo.Waypoint <em>Waypoint</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Waypoint</em>'.
+   * @see egeo.Waypoint
+   * @generated
+   */
+  EClass getWaypoint();
+
+  /**
+   * Returns the meta object for the attribute '{@link egeo.Waypoint#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see egeo.Waypoint#getName()
+   * @see #getWaypoint()
+   * @generated
+   */
+  EAttribute getWaypoint_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link egeo.Waypoint#getTime <em>Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Time</em>'.
+   * @see egeo.Waypoint#getTime()
+   * @see #getWaypoint()
+   * @generated
+   */
+  EAttribute getWaypoint_Time();
+
+  /**
+   * Returns the meta object for the attribute '{@link egeo.Waypoint#getCmt <em>Cmt</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Cmt</em>'.
+   * @see egeo.Waypoint#getCmt()
+   * @see #getWaypoint()
+   * @generated
+   */
+  EAttribute getWaypoint_Cmt();
+
+  /**
+   * Returns the meta object for the attribute '{@link egeo.Waypoint#getType0 <em>Type0</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type0</em>'.
+   * @see egeo.Waypoint#getType0()
+   * @see #getWaypoint()
+   * @generated
+   */
+  EAttribute getWaypoint_Type0();
+
+  /**
+   * Returns the meta object for the attribute '{@link egeo.Waypoint#getSym <em>Sym</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Sym</em>'.
+   * @see egeo.Waypoint#getSym()
+   * @see #getWaypoint()
+   * @generated
+   */
+  EAttribute getWaypoint_Sym();
+
+  /**
+   * Returns the meta object for the attribute '{@link egeo.Waypoint#getUrl <em>Url</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Url</em>'.
+   * @see egeo.Waypoint#getUrl()
+   * @see #getWaypoint()
+   * @generated
+   */
+  EAttribute getWaypoint_Url();
+
+  /**
+   * Returns the meta object for the attribute '{@link egeo.Waypoint#getUrlname <em>Urlname</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Urlname</em>'.
+   * @see egeo.Waypoint#getUrlname()
+   * @see #getWaypoint()
+   * @generated
+   */
+  EAttribute getWaypoint_Urlname();
+
+  /**
+   * Returns the meta object for the containment reference '{@link egeo.Waypoint#getCoord <em>Coord</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Coord</em>'.
+   * @see egeo.Waypoint#getCoord()
+   * @see #getWaypoint()
+   * @generated
+   */
+  EReference getWaypoint_Coord();
+
+  /**
+   * Returns the meta object for the attribute '{@link egeo.Waypoint#getLastUpdate <em>Last Update</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Last Update</em>'.
+   * @see egeo.Waypoint#getLastUpdate()
+   * @see #getWaypoint()
+   * @generated
+   */
+  EAttribute getWaypoint_LastUpdate();
+
+  /**
    * Returns the meta object for class '{@link egeo.Geocache <em>Geocache</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -796,39 +1050,6 @@ public interface EgeoPackage extends EPackage
    * @generated
    */
   EAttribute getGeocache_CacheId();
-
-  /**
-   * Returns the meta object for the attribute '{@link egeo.Geocache#getCode <em>Code</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Code</em>'.
-   * @see egeo.Geocache#getCode()
-   * @see #getGeocache()
-   * @generated
-   */
-  EAttribute getGeocache_Code();
-
-  /**
-   * Returns the meta object for the attribute '{@link egeo.Geocache#getTime <em>Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Time</em>'.
-   * @see egeo.Geocache#getTime()
-   * @see #getGeocache()
-   * @generated
-   */
-  EAttribute getGeocache_Time();
-
-  /**
-   * Returns the meta object for the attribute '{@link egeo.Geocache#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see egeo.Geocache#getName()
-   * @see #getGeocache()
-   * @generated
-   */
-  EAttribute getGeocache_Name();
 
   /**
    * Returns the meta object for the attribute '{@link egeo.Geocache#isAvailable <em>Available</em>}'.
@@ -941,37 +1162,26 @@ public interface EgeoPackage extends EPackage
   EAttribute getGeocache_State();
 
   /**
-   * Returns the meta object for the containment reference '{@link egeo.Geocache#getCoord <em>Coord</em>}'.
+   * Returns the meta object for the attribute list '{@link egeo.Geocache#getEnabledAttributes <em>Enabled Attributes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Coord</em>'.
-   * @see egeo.Geocache#getCoord()
+   * @return the meta object for the attribute list '<em>Enabled Attributes</em>'.
+   * @see egeo.Geocache#getEnabledAttributes()
    * @see #getGeocache()
    * @generated
    */
-  EReference getGeocache_Coord();
+  EAttribute getGeocache_EnabledAttributes();
 
   /**
-   * Returns the meta object for the attribute '{@link egeo.Geocache#getUrl <em>Url</em>}'.
+   * Returns the meta object for the attribute list '{@link egeo.Geocache#getDisabledAttributes <em>Disabled Attributes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Url</em>'.
-   * @see egeo.Geocache#getUrl()
+   * @return the meta object for the attribute list '<em>Disabled Attributes</em>'.
+   * @see egeo.Geocache#getDisabledAttributes()
    * @see #getGeocache()
    * @generated
    */
-  EAttribute getGeocache_Url();
-
-  /**
-   * Returns the meta object for the attribute list '{@link egeo.Geocache#getAttributes <em>Attributes</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Attributes</em>'.
-   * @see egeo.Geocache#getAttributes()
-   * @see #getGeocache()
-   * @generated
-   */
-  EAttribute getGeocache_Attributes();
+  EAttribute getGeocache_DisabledAttributes();
 
   /**
    * Returns the meta object for the attribute '{@link egeo.Geocache#getHint <em>Hint</em>}'.
@@ -1027,17 +1237,6 @@ public interface EgeoPackage extends EPackage
    * @generated
    */
   EAttribute getGeocache_Source();
-
-  /**
-   * Returns the meta object for the attribute '{@link egeo.Geocache#getLastUpdate <em>Last Update</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Last Update</em>'.
-   * @see egeo.Geocache#getLastUpdate()
-   * @see #getGeocache()
-   * @generated
-   */
-  EAttribute getGeocache_LastUpdate();
 
   /**
    * Returns the meta object for the attribute list '{@link egeo.Geocache#getTags <em>Tags</em>}'.
@@ -1295,6 +1494,88 @@ public interface EgeoPackage extends EPackage
     EAttribute USER__NAME = eINSTANCE.getUser_Name();
 
     /**
+     * The meta object literal for the '{@link egeo.impl.WaypointImpl <em>Waypoint</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see egeo.impl.WaypointImpl
+     * @see egeo.impl.EgeoPackageImpl#getWaypoint()
+     * @generated
+     */
+    EClass WAYPOINT = eINSTANCE.getWaypoint();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WAYPOINT__NAME = eINSTANCE.getWaypoint_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WAYPOINT__TIME = eINSTANCE.getWaypoint_Time();
+
+    /**
+     * The meta object literal for the '<em><b>Cmt</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WAYPOINT__CMT = eINSTANCE.getWaypoint_Cmt();
+
+    /**
+     * The meta object literal for the '<em><b>Type0</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WAYPOINT__TYPE0 = eINSTANCE.getWaypoint_Type0();
+
+    /**
+     * The meta object literal for the '<em><b>Sym</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WAYPOINT__SYM = eINSTANCE.getWaypoint_Sym();
+
+    /**
+     * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WAYPOINT__URL = eINSTANCE.getWaypoint_Url();
+
+    /**
+     * The meta object literal for the '<em><b>Urlname</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WAYPOINT__URLNAME = eINSTANCE.getWaypoint_Urlname();
+
+    /**
+     * The meta object literal for the '<em><b>Coord</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference WAYPOINT__COORD = eINSTANCE.getWaypoint_Coord();
+
+    /**
+     * The meta object literal for the '<em><b>Last Update</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WAYPOINT__LAST_UPDATE = eINSTANCE.getWaypoint_LastUpdate();
+
+    /**
      * The meta object literal for the '{@link egeo.impl.GeocacheImpl <em>Geocache</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1311,30 +1592,6 @@ public interface EgeoPackage extends EPackage
      * @generated
      */
     EAttribute GEOCACHE__CACHE_ID = eINSTANCE.getGeocache_CacheId();
-
-    /**
-     * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GEOCACHE__CODE = eINSTANCE.getGeocache_Code();
-
-    /**
-     * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GEOCACHE__TIME = eINSTANCE.getGeocache_Time();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GEOCACHE__NAME = eINSTANCE.getGeocache_Name();
 
     /**
      * The meta object literal for the '<em><b>Available</b></em>' attribute feature.
@@ -1417,28 +1674,20 @@ public interface EgeoPackage extends EPackage
     EAttribute GEOCACHE__STATE = eINSTANCE.getGeocache_State();
 
     /**
-     * The meta object literal for the '<em><b>Coord</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Enabled Attributes</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference GEOCACHE__COORD = eINSTANCE.getGeocache_Coord();
+    EAttribute GEOCACHE__ENABLED_ATTRIBUTES = eINSTANCE.getGeocache_EnabledAttributes();
 
     /**
-     * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Disabled Attributes</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GEOCACHE__URL = eINSTANCE.getGeocache_Url();
-
-    /**
-     * The meta object literal for the '<em><b>Attributes</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GEOCACHE__ATTRIBUTES = eINSTANCE.getGeocache_Attributes();
+    EAttribute GEOCACHE__DISABLED_ATTRIBUTES = eINSTANCE.getGeocache_DisabledAttributes();
 
     /**
      * The meta object literal for the '<em><b>Hint</b></em>' attribute feature.
@@ -1479,14 +1728,6 @@ public interface EgeoPackage extends EPackage
      * @generated
      */
     EAttribute GEOCACHE__SOURCE = eINSTANCE.getGeocache_Source();
-
-    /**
-     * The meta object literal for the '<em><b>Last Update</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GEOCACHE__LAST_UPDATE = eINSTANCE.getGeocache_LastUpdate();
 
     /**
      * The meta object literal for the '<em><b>Tags</b></em>' attribute list feature.

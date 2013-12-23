@@ -40,14 +40,164 @@ public enum LogType implements Enumerator
   DID_NOT_FIND(0, "DidNotFind", "DidNotFind"),
 
   /**
-   * The '<em><b>Note</b></em>' literal object.
+   * The '<em><b>Write Note</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #NOTE_VALUE
+   * @see #WRITE_NOTE_VALUE
    * @generated
    * @ordered
    */
-  NOTE(0, "Note", "Note");
+  WRITE_NOTE(0, "WriteNote", "WriteNote"),
+
+  /**
+   * The '<em><b>Owner Maintenance</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #OWNER_MAINTENANCE_VALUE
+   * @generated
+   * @ordered
+   */
+  OWNER_MAINTENANCE(0, "OwnerMaintenance", "OwnerMaintenance"),
+
+  /**
+   * The '<em><b>Will Attend</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #WILL_ATTEND_VALUE
+   * @generated
+   * @ordered
+   */
+  WILL_ATTEND(0, "WillAttend", "WillAttend"),
+
+  /**
+   * The '<em><b>Attended</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ATTENDED_VALUE
+   * @generated
+   * @ordered
+   */
+  ATTENDED(0, "Attended", "Attended"),
+
+  /**
+   * The '<em><b>Announcement</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ANNOUNCEMENT_VALUE
+   * @generated
+   * @ordered
+   */
+  ANNOUNCEMENT(0, "Announcement", "Announcement"),
+
+  /**
+   * The '<em><b>Publish Listing</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #PUBLISH_LISTING_VALUE
+   * @generated
+   * @ordered
+   */
+  PUBLISH_LISTING(0, "PublishListing", "PublishListing"),
+
+  /**
+   * The '<em><b>Enable Listing</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ENABLE_LISTING_VALUE
+   * @generated
+   * @ordered
+   */
+  ENABLE_LISTING(0, "EnableListing", "EnableListing"),
+
+  /**
+   * The '<em><b>Post Reviewer Note</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #POST_REVIEWER_NOTE_VALUE
+   * @generated
+   * @ordered
+   */
+  POST_REVIEWER_NOTE(0, "PostReviewerNote", "PostReviewerNote"),
+
+  /**
+   * The '<em><b>Update Coordinates</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #UPDATE_COORDINATES_VALUE
+   * @generated
+   * @ordered
+   */
+  UPDATE_COORDINATES(0, "UpdateCoordinates", "UpdateCoordinates"),
+
+  /**
+   * The '<em><b>Disable</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #DISABLE_VALUE
+   * @generated
+   * @ordered
+   */
+  DISABLE(0, "Disable", "Disable"),
+
+  /**
+   * The '<em><b>Needs Maintenance</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #NEEDS_MAINTENANCE_VALUE
+   * @generated
+   * @ordered
+   */
+  NEEDS_MAINTENANCE(0, "NeedsMaintenance", "NeedsMaintenance"),
+
+  /**
+   * The '<em><b>Archive</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ARCHIVE_VALUE
+   * @generated
+   * @ordered
+   */
+  ARCHIVE(0, "Archive", "Archive"),
+
+  /**
+   * The '<em><b>Needs Archived</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #NEEDS_ARCHIVED_VALUE
+   * @generated
+   * @ordered
+   */
+  NEEDS_ARCHIVED(0, "NeedsArchived", "NeedsArchived"),
+
+  /**
+   * The '<em><b>Unarchive</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #UNARCHIVE_VALUE
+   * @generated
+   * @ordered
+   */
+  UNARCHIVE(0, "Unarchive", "Unarchive"),
+
+  /**
+   * The '<em><b>Retract Listing</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #RETRACT_LISTING_VALUE
+   * @generated
+   * @ordered
+   */
+  RETRACT_LISTING(0, "RetractListing", "RetractListing"),
+
+  /**
+   * The '<em><b>Webcam Photo Taken</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #WEBCAM_PHOTO_TAKEN_VALUE
+   * @generated
+   * @ordered
+   */
+  WEBCAM_PHOTO_TAKEN(0, "WebcamPhotoTaken", "WebcamPhotoTaken");
 
   /**
    * The '<em><b>Found It</b></em>' literal value.
@@ -80,19 +230,244 @@ public enum LogType implements Enumerator
   public static final int DID_NOT_FIND_VALUE = 0;
 
   /**
-   * The '<em><b>Note</b></em>' literal value.
+   * The '<em><b>Write Note</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Note</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Write Note</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #NOTE
-   * @model name="Note"
+   * @see #WRITE_NOTE
+   * @model name="WriteNote"
    * @generated
    * @ordered
    */
-  public static final int NOTE_VALUE = 0;
+  public static final int WRITE_NOTE_VALUE = 0;
+
+  /**
+   * The '<em><b>Owner Maintenance</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Owner Maintenance</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #OWNER_MAINTENANCE
+   * @model name="OwnerMaintenance"
+   * @generated
+   * @ordered
+   */
+  public static final int OWNER_MAINTENANCE_VALUE = 0;
+
+  /**
+   * The '<em><b>Will Attend</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Will Attend</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #WILL_ATTEND
+   * @model name="WillAttend"
+   * @generated
+   * @ordered
+   */
+  public static final int WILL_ATTEND_VALUE = 0;
+
+  /**
+   * The '<em><b>Attended</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Attended</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ATTENDED
+   * @model name="Attended"
+   * @generated
+   * @ordered
+   */
+  public static final int ATTENDED_VALUE = 0;
+
+  /**
+   * The '<em><b>Announcement</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Announcement</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ANNOUNCEMENT
+   * @model name="Announcement"
+   * @generated
+   * @ordered
+   */
+  public static final int ANNOUNCEMENT_VALUE = 0;
+
+  /**
+   * The '<em><b>Publish Listing</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Publish Listing</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #PUBLISH_LISTING
+   * @model name="PublishListing"
+   * @generated
+   * @ordered
+   */
+  public static final int PUBLISH_LISTING_VALUE = 0;
+
+  /**
+   * The '<em><b>Enable Listing</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Enable Listing</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ENABLE_LISTING
+   * @model name="EnableListing"
+   * @generated
+   * @ordered
+   */
+  public static final int ENABLE_LISTING_VALUE = 0;
+
+  /**
+   * The '<em><b>Post Reviewer Note</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Post Reviewer Note</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #POST_REVIEWER_NOTE
+   * @model name="PostReviewerNote"
+   * @generated
+   * @ordered
+   */
+  public static final int POST_REVIEWER_NOTE_VALUE = 0;
+
+  /**
+   * The '<em><b>Update Coordinates</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Update Coordinates</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #UPDATE_COORDINATES
+   * @model name="UpdateCoordinates"
+   * @generated
+   * @ordered
+   */
+  public static final int UPDATE_COORDINATES_VALUE = 0;
+
+  /**
+   * The '<em><b>Disable</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Disable</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #DISABLE
+   * @model name="Disable"
+   * @generated
+   * @ordered
+   */
+  public static final int DISABLE_VALUE = 0;
+
+  /**
+   * The '<em><b>Needs Maintenance</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Needs Maintenance</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #NEEDS_MAINTENANCE
+   * @model name="NeedsMaintenance"
+   * @generated
+   * @ordered
+   */
+  public static final int NEEDS_MAINTENANCE_VALUE = 0;
+
+  /**
+   * The '<em><b>Archive</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Archive</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ARCHIVE
+   * @model name="Archive"
+   * @generated
+   * @ordered
+   */
+  public static final int ARCHIVE_VALUE = 0;
+
+  /**
+   * The '<em><b>Needs Archived</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Needs Archived</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #NEEDS_ARCHIVED
+   * @model name="NeedsArchived"
+   * @generated
+   * @ordered
+   */
+  public static final int NEEDS_ARCHIVED_VALUE = 0;
+
+  /**
+   * The '<em><b>Unarchive</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Unarchive</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #UNARCHIVE
+   * @model name="Unarchive"
+   * @generated
+   * @ordered
+   */
+  public static final int UNARCHIVE_VALUE = 0;
+
+  /**
+   * The '<em><b>Retract Listing</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Retract Listing</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #RETRACT_LISTING
+   * @model name="RetractListing"
+   * @generated
+   * @ordered
+   */
+  public static final int RETRACT_LISTING_VALUE = 0;
+
+  /**
+   * The '<em><b>Webcam Photo Taken</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Webcam Photo Taken</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #WEBCAM_PHOTO_TAKEN
+   * @model name="WebcamPhotoTaken"
+   * @generated
+   * @ordered
+   */
+  public static final int WEBCAM_PHOTO_TAKEN_VALUE = 0;
 
   /**
    * An array of all the '<em><b>Log Type</b></em>' enumerators.
@@ -105,7 +480,22 @@ public enum LogType implements Enumerator
     {
       FOUND_IT,
       DID_NOT_FIND,
-      NOTE,
+      WRITE_NOTE,
+      OWNER_MAINTENANCE,
+      WILL_ATTEND,
+      ATTENDED,
+      ANNOUNCEMENT,
+      PUBLISH_LISTING,
+      ENABLE_LISTING,
+      POST_REVIEWER_NOTE,
+      UPDATE_COORDINATES,
+      DISABLE,
+      NEEDS_MAINTENANCE,
+      ARCHIVE,
+      NEEDS_ARCHIVED,
+      UNARCHIVE,
+      RETRACT_LISTING,
+      WEBCAM_PHOTO_TAKEN,
     };
 
   /**

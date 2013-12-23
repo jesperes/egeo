@@ -2,14 +2,8 @@
  */
 package egeo;
 
-import java.net.URL;
-
-import java.util.Date;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link egeo.Geocache#getCacheId <em>Cache Id</em>}</li>
- *   <li>{@link egeo.Geocache#getCode <em>Code</em>}</li>
- *   <li>{@link egeo.Geocache#getTime <em>Time</em>}</li>
- *   <li>{@link egeo.Geocache#getName <em>Name</em>}</li>
  *   <li>{@link egeo.Geocache#isAvailable <em>Available</em>}</li>
  *   <li>{@link egeo.Geocache#isArchived <em>Archived</em>}</li>
  *   <li>{@link egeo.Geocache#getContainerType <em>Container Type</em>}</li>
@@ -33,15 +24,13 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link egeo.Geocache#getTerrain <em>Terrain</em>}</li>
  *   <li>{@link egeo.Geocache#getCountry <em>Country</em>}</li>
  *   <li>{@link egeo.Geocache#getState <em>State</em>}</li>
- *   <li>{@link egeo.Geocache#getCoord <em>Coord</em>}</li>
- *   <li>{@link egeo.Geocache#getUrl <em>Url</em>}</li>
- *   <li>{@link egeo.Geocache#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link egeo.Geocache#getEnabledAttributes <em>Enabled Attributes</em>}</li>
+ *   <li>{@link egeo.Geocache#getDisabledAttributes <em>Disabled Attributes</em>}</li>
  *   <li>{@link egeo.Geocache#getHint <em>Hint</em>}</li>
  *   <li>{@link egeo.Geocache#getShortText <em>Short Text</em>}</li>
  *   <li>{@link egeo.Geocache#getLongText <em>Long Text</em>}</li>
  *   <li>{@link egeo.Geocache#getLogs <em>Logs</em>}</li>
  *   <li>{@link egeo.Geocache#getSource <em>Source</em>}</li>
- *   <li>{@link egeo.Geocache#getLastUpdate <em>Last Update</em>}</li>
  *   <li>{@link egeo.Geocache#getTags <em>Tags</em>}</li>
  * </ul>
  * </p>
@@ -50,7 +39,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Geocache extends EObject
+public interface Geocache extends Waypoint
 {
   /**
    * Returns the value of the '<em><b>Cache Id</b></em>' attribute.
@@ -77,84 +66,6 @@ public interface Geocache extends EObject
    * @generated
    */
   void setCacheId(long value);
-
-  /**
-   * Returns the value of the '<em><b>Code</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Code</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Code</em>' attribute.
-   * @see #setCode(String)
-   * @see egeo.EgeoPackage#getGeocache_Code()
-   * @model unique="false"
-   * @generated
-   */
-  String getCode();
-
-  /**
-   * Sets the value of the '{@link egeo.Geocache#getCode <em>Code</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Code</em>' attribute.
-   * @see #getCode()
-   * @generated
-   */
-  void setCode(String value);
-
-  /**
-   * Returns the value of the '<em><b>Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Time</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Time</em>' attribute.
-   * @see #setTime(Date)
-   * @see egeo.EgeoPackage#getGeocache_Time()
-   * @model unique="false" dataType="egeo.Date"
-   * @generated
-   */
-  Date getTime();
-
-  /**
-   * Sets the value of the '{@link egeo.Geocache#getTime <em>Time</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Time</em>' attribute.
-   * @see #getTime()
-   * @generated
-   */
-  void setTime(Date value);
-
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see egeo.EgeoPackage#getGeocache_Name()
-   * @model unique="false"
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link egeo.Geocache#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Available</b></em>' attribute.
@@ -423,74 +334,40 @@ public interface Geocache extends EObject
   void setState(String value);
 
   /**
-   * Returns the value of the '<em><b>Coord</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Coord</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Coord</em>' containment reference.
-   * @see #setCoord(Coordinate)
-   * @see egeo.EgeoPackage#getGeocache_Coord()
-   * @model containment="true"
-   * @generated
-   */
-  Coordinate getCoord();
-
-  /**
-   * Sets the value of the '{@link egeo.Geocache#getCoord <em>Coord</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Coord</em>' containment reference.
-   * @see #getCoord()
-   * @generated
-   */
-  void setCoord(Coordinate value);
-
-  /**
-   * Returns the value of the '<em><b>Url</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Url</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Url</em>' attribute.
-   * @see #setUrl(URL)
-   * @see egeo.EgeoPackage#getGeocache_Url()
-   * @model unique="false" dataType="egeo.URL"
-   * @generated
-   */
-  URL getUrl();
-
-  /**
-   * Sets the value of the '{@link egeo.Geocache#getUrl <em>Url</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Url</em>' attribute.
-   * @see #getUrl()
-   * @generated
-   */
-  void setUrl(URL value);
-
-  /**
-   * Returns the value of the '<em><b>Attributes</b></em>' attribute list.
+   * Returns the value of the '<em><b>Enabled Attributes</b></em>' attribute list.
    * The list contents are of type {@link egeo.Attribute}.
    * The literals are from the enumeration {@link egeo.Attribute}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Attributes</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Enabled Attributes</em>' attribute list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Attributes</em>' attribute list.
+   * @return the value of the '<em>Enabled Attributes</em>' attribute list.
    * @see egeo.Attribute
-   * @see egeo.EgeoPackage#getGeocache_Attributes()
+   * @see egeo.EgeoPackage#getGeocache_EnabledAttributes()
    * @model unique="false"
    * @generated
    */
-  EList<Attribute> getAttributes();
+  EList<Attribute> getEnabledAttributes();
+
+  /**
+   * Returns the value of the '<em><b>Disabled Attributes</b></em>' attribute list.
+   * The list contents are of type {@link egeo.Attribute}.
+   * The literals are from the enumeration {@link egeo.Attribute}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Disabled Attributes</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Disabled Attributes</em>' attribute list.
+   * @see egeo.Attribute
+   * @see egeo.EgeoPackage#getGeocache_DisabledAttributes()
+   * @model unique="false"
+   * @generated
+   */
+  EList<Attribute> getDisabledAttributes();
 
   /**
    * Returns the value of the '<em><b>Hint</b></em>' attribute.
@@ -611,32 +488,6 @@ public interface Geocache extends EObject
    * @generated
    */
   void setSource(URI value);
-
-  /**
-   * Returns the value of the '<em><b>Last Update</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Last Update</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Last Update</em>' attribute.
-   * @see #setLastUpdate(Date)
-   * @see egeo.EgeoPackage#getGeocache_LastUpdate()
-   * @model unique="false" dataType="egeo.Date"
-   * @generated
-   */
-  Date getLastUpdate();
-
-  /**
-   * Sets the value of the '{@link egeo.Geocache#getLastUpdate <em>Last Update</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Last Update</em>' attribute.
-   * @see #getLastUpdate()
-   * @generated
-   */
-  void setLastUpdate(Date value);
 
   /**
    * Returns the value of the '<em><b>Tags</b></em>' attribute list.
