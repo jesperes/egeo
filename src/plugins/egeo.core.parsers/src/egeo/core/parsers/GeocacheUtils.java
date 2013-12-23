@@ -1,6 +1,5 @@
 package egeo.core.parsers;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -37,17 +36,14 @@ public class GeocacheUtils {
 
 	public static Date parseDate(String str) {
 		// 2006-08-09T07:00:00Z
-		SimpleDateFormat format = new SimpleDateFormat(
-				"yyyy-MM-dd'T'HH:mm:ss'Z'");
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
 		try {
-			return format.parse(str);
+			// Ignore everything after the leading 'T'
+			String datestr = str.substring(0, str.indexOf('T'));
+			return format.parse(datestr);
 		} catch (java.text.ParseException e) {
-			format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-			try {
-				return format.parse(str);
-			} catch (ParseException e1) {
-				e1.printStackTrace();
-			}
+			e.printStackTrace();
 			return new Date();
 		}
 	}

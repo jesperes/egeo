@@ -1,5 +1,7 @@
 package egeo.gpx.tests;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.junit.Assert;
@@ -16,15 +18,9 @@ public class GeocacheUtilsTests {
 	}
 
 	@Test
-	public void testParseDate() {
-		Date d = new Date();
-		d.setYear(2013);
-		d.setMonth(11);
-		d.setDate(23);
-		d.setHours(14);
-		d.setMinutes(12);
-		d.setSeconds(26);
-		System.out.println(d);
+	public void testParseDate() throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Date d = sdf.parse("2013-12-23");
 		Assert.assertEquals(d,
 				GeocacheUtils.parseDate("2013-12-23T14:12:26.5488002Z"));
 	}
