@@ -149,26 +149,26 @@ public interface Geocache extends Waypoint
   void setContainerType(ContainerType value);
 
   /**
-   * Returns the value of the '<em><b>Owner</b></em>' containment reference.
+   * Returns the value of the '<em><b>Owner</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Owner</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Owner</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Owner</em>' containment reference.
+   * @return the value of the '<em>Owner</em>' reference.
    * @see #setOwner(User)
    * @see egeo.EgeoPackage#getGeocache_Owner()
-   * @model containment="true"
+   * @model
    * @generated
    */
   User getOwner();
 
   /**
-   * Sets the value of the '{@link egeo.Geocache#getOwner <em>Owner</em>}' containment reference.
+   * Sets the value of the '{@link egeo.Geocache#getOwner <em>Owner</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Owner</em>' containment reference.
+   * @param value the new value of the '<em>Owner</em>' reference.
    * @see #getOwner()
    * @generated
    */

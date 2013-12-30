@@ -137,26 +137,26 @@ public interface Log extends EObject
   void setText(String value);
 
   /**
-   * Returns the value of the '<em><b>Finder</b></em>' containment reference.
+   * Returns the value of the '<em><b>Finder</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Finder</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Finder</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Finder</em>' containment reference.
+   * @return the value of the '<em>Finder</em>' reference.
    * @see #setFinder(User)
    * @see egeo.EgeoPackage#getLog_Finder()
-   * @model containment="true"
+   * @model
    * @generated
    */
   User getFinder();
 
   /**
-   * Sets the value of the '{@link egeo.Log#getFinder <em>Finder</em>}' containment reference.
+   * Sets the value of the '{@link egeo.Log#getFinder <em>Finder</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Finder</em>' containment reference.
+   * @param value the new value of the '<em>Finder</em>' reference.
    * @see #getFinder()
    * @generated
    */

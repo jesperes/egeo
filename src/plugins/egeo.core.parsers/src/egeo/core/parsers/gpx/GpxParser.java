@@ -5,10 +5,8 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.regex.Pattern;
 
+import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.URI;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -16,6 +14,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import egeo.Attribute;
+import egeo.CacheDatabase;
 import egeo.CacheType;
 import egeo.ContainerType;
 import egeo.Coordinate;
@@ -32,50 +31,49 @@ import egeo.core.parsers.ParseException;
 
 public class GpxParser implements IParser {
 
-	Pattern datePattern = Pattern
-			.compile("(\\d+)-(\\d+)-(\\d+)T(\\d+):(\\d+):(\\d+)Z");
+	private static final Logger logger = Logger.getLogger(GpxParser.class);
 
 	@Override
-	public Collection<Waypoint> parse(URI input) throws ParseException {
-		throw new ParseException("URI parse not supported");
-	}
-
-	@Override
-	public Collection<Waypoint> parse(File input) throws ParseException {
+	public void parse(File input, CacheDatabase db) throws ParseException {
 		try {
-			System.out.println("Parsing " + input);
 			Document doc = Jsoup.parse(input, "UTF-8");
-
-			return parseDoc(doc, URI.createFileURI(input.toString()));
+			parseDoc(doc, URI.createFileURI(input.toString()), db);
 		} catch (IOException e) {
 			throw new ParseException(e);
 		}
 	}
 
-	private Collection<Waypoint> parseDoc(Document doc, URI from) {
-		Collection<Waypoint> list = new ArrayList<Waypoint>();
-
-		Element gpx = doc.select("gpx").first();
-		String gpxVersion = gpx.attr("version");
+	private void parseDoc(Document doc, URI from, CacheDatabase db) {
+		// Element gpx = doc.select("gpx").first();
+		// String gpxVersion = gpx.attr("version");
 
 		Elements waypoints = doc.select("wpt");
 		System.out.println("Waypoints: " + waypoints.size());
 		for (Element wpt : waypoints) {
 			try {
-				Waypoint w = parseWaypoint(wpt, from);
-				w.setLastUpdate(GeocacheUtils.parseDate(gpx
-						.getElementsByTag("time").first().text()));
-				list.add(w);
+				parseWaypoint(wpt, from, db);
 			} catch (Exception e) {
-				System.err.println("Could not parse waypoint: " + e);
-				// System.err.println(wpt);
+				logger.error("Could not parse waypoint: " + e);
 			}
 		}
-
-		return list;
 	}
 
-	private Waypoint parseWaypoint(Element element, URI from)
+	private User lookupUser(long id, String name, CacheDatabase db) {
+		for (User user : db.getUsers()) {
+			if (user.getUserId() == id)
+				return user;
+		}
+
+		User user = EgeoFactory.eINSTANCE.createUser();
+		user.setUserId(id);
+		user.setName(name);
+
+		logger.debug("Adding new user: " + user.getName());
+		db.getUsers().add(user);
+		return user;
+	}
+
+	private void parseWaypoint(Element element, URI from, CacheDatabase db)
 			throws MalformedURLException, ParseException {
 
 		Element gspk = element.getElementsByTag("groundspeak:cache").first();
@@ -85,6 +83,8 @@ public class GpxParser implements IParser {
 		} else {
 			wpt = EgeoFactory.eINSTANCE.createGeocache();
 		}
+
+		db.getWaypoints().add(wpt);
 
 		parseGpxWaypoint(wpt, element);
 
@@ -99,10 +99,10 @@ public class GpxParser implements IParser {
 			cache.setPlacedBy(gc.getElementsByTag("groundspeak:placed_by")
 					.text());
 
-			User owner = EgeoFactory.eINSTANCE.createUser();
-			owner.setName(gc.getElementsByTag("groundspeak:owner").text());
-			owner.setUserId(Integer.valueOf(gc.getElementsByTag(
-					"groundspeak:owner").attr("id")));
+			User owner = lookupUser(Integer.valueOf(gc.getElementsByTag(
+					"groundspeak:owner").attr("id")),
+					gc.getElementsByTag("groundspeak:owner").text(), db);
+
 			cache.setOwner(owner);
 
 			cache.setDifficulty(Double.parseDouble(gc.getElementsByTag(
@@ -112,7 +112,7 @@ public class GpxParser implements IParser {
 			Description shortDesc = EgeoFactory.eINSTANCE.createDescription();
 			Element elemShort = gc.getElementsByTag(
 					"groundspeak:short_description").first();
-			shortDesc.setText(elemShort.text());
+			// shortDesc.setText(elemShort.text());
 			shortDesc.setHtml(elemShort.attr("html").equals("True") ? true
 					: false);
 			cache.setShortText(shortDesc);
@@ -123,7 +123,7 @@ public class GpxParser implements IParser {
 			Description longDesc = EgeoFactory.eINSTANCE.createDescription();
 			Element elemLong = gc.getElementsByTag(
 					"groundspeak:long_description").first();
-			longDesc.setText(elemLong.text());
+			// longDesc.setText(elemLong.text());
 			longDesc.setHtml(elemLong.attr("html").equals("True") ? true
 					: false);
 			cache.setLongText(longDesc);
@@ -220,13 +220,11 @@ public class GpxParser implements IParser {
 				log.setDate(GeocacheUtils.parseDate(elem.getElementsByTag(
 						"groundspeak:date").text()));
 
-				User finder = EgeoFactory.eINSTANCE.createUser();
-				finder.setName(elem.getElementsByTag("groundspeak:finder")
-						.text());
-				finder.setUserId(Integer.valueOf(elem.getElementsByTag(
-						"groundspeak:finder").attr("id")));
-				log.setFinder(finder);
+				User finder = lookupUser(Integer.valueOf(elem.getElementsByTag(
+						"groundspeak:finder").attr("id")), elem
+						.getElementsByTag("groundspeak:finder").text(), db);
 
+				log.setFinder(finder);
 				log.setText(elem.getElementsByTag("groundspeak:text").text());
 
 				String logtype = elem.getElementsByTag("groundspeak:type")
@@ -287,14 +285,12 @@ public class GpxParser implements IParser {
 					log.setLogType(LogType.RETRACT_LISTING);
 					break;
 				default:
-					System.err.println("Unknown log type: " + logtype);
+					logger.error("Unknown log type: " + logtype);
 					continue;
 				}
 				cache.getLogs().add(log);
 			}
 		}
-
-		return wpt;
 	}
 
 	private void parseGpxWaypoint(Waypoint wpt, Element element)

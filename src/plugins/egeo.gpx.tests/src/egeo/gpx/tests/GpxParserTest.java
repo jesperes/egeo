@@ -1,13 +1,11 @@
 package egeo.gpx.tests;
 
 import java.io.File;
-import java.util.Collection;
 
 import org.junit.Test;
 
-import egeo.Waypoint;
-import egeo.core.parsers.GeocacheUtils;
-import egeo.core.parsers.IParser;
+import egeo.CacheDatabase;
+import egeo.EgeoFactory;
 import egeo.core.parsers.ParseException;
 import egeo.core.parsers.gpx.GpxParser;
 
@@ -18,12 +16,7 @@ public class GpxParserTest {
 
 	@Test
 	public void testMyFindsImport() throws ParseException {
-		IParser p = new GpxParser();
-		Collection<Waypoint> caches = p.parse(file);
-
-		System.out.println("Caches imported: " + caches.size());
-		for (Waypoint c : caches) {
-			GeocacheUtils.printCache(c);
-		}
+		CacheDatabase db = EgeoFactory.eINSTANCE.createCacheDatabase();
+		new GpxParser().parse(file, db);
 	}
 }

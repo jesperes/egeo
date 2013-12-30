@@ -3,6 +3,7 @@
 package egeo.impl;
 
 import egeo.Attribute;
+import egeo.CacheDatabase;
 import egeo.CacheType;
 import egeo.ContainerType;
 import egeo.Coordinate;
@@ -78,6 +79,13 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * @generated
    */
   private EClass geocacheEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cacheDatabaseEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -666,6 +674,36 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getCacheDatabase()
+  {
+    return cacheDatabaseEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCacheDatabase_Waypoints()
+  {
+    return (EReference)cacheDatabaseEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCacheDatabase_Users()
+  {
+    return (EReference)cacheDatabaseEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getCacheType()
   {
     return cacheTypeEEnum;
@@ -823,6 +861,10 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     createEAttribute(geocacheEClass, GEOCACHE__SOURCE);
     createEAttribute(geocacheEClass, GEOCACHE__TAGS);
 
+    cacheDatabaseEClass = createEClass(CACHE_DATABASE);
+    createEReference(cacheDatabaseEClass, CACHE_DATABASE__WAYPOINTS);
+    createEReference(cacheDatabaseEClass, CACHE_DATABASE__USERS);
+
     // Create enums
     cacheTypeEEnum = createEEnum(CACHE_TYPE);
     logTypeEEnum = createEEnum(LOG_TYPE);
@@ -884,7 +926,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     initEAttribute(getLog_Date(), this.getDate(), "date", null, 0, 1, Log.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLog_LogType(), this.getLogType(), "logType", null, 0, 1, Log.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLog_Text(), theEcorePackage.getEString(), "text", null, 0, 1, Log.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getLog_Finder(), this.getUser(), null, "finder", null, 0, 1, Log.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLog_Finder(), this.getUser(), null, "finder", null, 0, 1, Log.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLog_Encoded(), theEcorePackage.getEBoolean(), "encoded", null, 0, 1, Log.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(userEClass, User.class, "User", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -907,7 +949,7 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     initEAttribute(getGeocache_Available(), theEcorePackage.getEBoolean(), "available", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_Archived(), theEcorePackage.getEBoolean(), "archived", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_ContainerType(), this.getContainerType(), "containerType", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGeocache_Owner(), this.getUser(), null, "owner", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGeocache_Owner(), this.getUser(), null, "owner", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_PlacedBy(), theEcorePackage.getEString(), "placedBy", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_CacheType(), this.getCacheType(), "cacheType", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_Difficulty(), theEcorePackage.getEDouble(), "difficulty", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -922,6 +964,10 @@ public class EgeoPackageImpl extends EPackageImpl implements EgeoPackage
     initEReference(getGeocache_Logs(), this.getLog(), null, "logs", null, 0, -1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_Source(), this.getURI(), "source", null, 0, 1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGeocache_Tags(), theEcorePackage.getEString(), "tags", null, 0, -1, Geocache.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cacheDatabaseEClass, CacheDatabase.class, "CacheDatabase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCacheDatabase_Waypoints(), this.getWaypoint(), null, "waypoints", null, 0, -1, CacheDatabase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCacheDatabase_Users(), this.getUser(), null, "users", null, 0, -1, CacheDatabase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(cacheTypeEEnum, CacheType.class, "CacheType");

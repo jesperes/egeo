@@ -105,6 +105,11 @@ public class EgeoAdapterFactory extends AdapterFactoryImpl
         return createGeocacheAdapter();
       }
       @Override
+      public Adapter caseCacheDatabase(CacheDatabase object)
+      {
+        return createCacheDatabaseAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -212,6 +217,21 @@ public class EgeoAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createGeocacheAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link egeo.CacheDatabase <em>Cache Database</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see egeo.CacheDatabase
+   * @generated
+   */
+  public Adapter createCacheDatabaseAdapter()
   {
     return null;
   }

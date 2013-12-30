@@ -79,6 +79,7 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory
       case EgeoPackage.USER: return createUser();
       case EgeoPackage.WAYPOINT: return createWaypoint();
       case EgeoPackage.GEOCACHE: return createGeocache();
+      case EgeoPackage.CACHE_DATABASE: return createCacheDatabase();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -210,6 +211,17 @@ public class EgeoFactoryImpl extends EFactoryImpl implements EgeoFactory
   {
     GeocacheImpl geocache = new GeocacheImpl();
     return geocache;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CacheDatabase createCacheDatabase()
+  {
+    CacheDatabaseImpl cacheDatabase = new CacheDatabaseImpl();
+    return cacheDatabase;
   }
 
   /**

@@ -11,20 +11,25 @@ import egeo.Waypoint;
 
 public class GeocacheUtils {
 
-	private static String formatDDD_MM_MMM(double l) {
+	private static String formatDDD_MM_MMM(double l, int w) {
 		if (l < 0)
 			l = -l;
 
 		double ddd = Math.floor(l);
 		double mm = l - ddd;
 
-		return String.format(Locale.US, "%02d %.03f", (int) ddd, mm * 60);
+		if (w == 2)
+			return String.format(Locale.US, "%02d\u00B0 %06.03f", (int) ddd,
+					mm * 60);
+		else
+			return String.format(Locale.US, "%03d\u00B0 %06.03f", (int) ddd,
+					mm * 60);
 	}
 
 	public static String formatCoordinate(double lat, double lon) {
 		return String.format("%s%s %s%s", (lat < 0) ? "S" : "N",
-				formatDDD_MM_MMM(lat), (lon < 0) ? "W" : "E",
-				formatDDD_MM_MMM(lon));
+				formatDDD_MM_MMM(lat, 2), (lon < 0) ? "W" : "E",
+				formatDDD_MM_MMM(lon, 3));
 
 	}
 

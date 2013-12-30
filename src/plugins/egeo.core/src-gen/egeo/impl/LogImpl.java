@@ -10,7 +10,6 @@ import egeo.User;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -119,7 +118,7 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log
   protected String text = TEXT_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getFinder() <em>Finder</em>}' containment reference.
+   * The cached value of the '{@link #getFinder() <em>Finder</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getFinder()
@@ -268,6 +267,16 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log
    */
   public User getFinder()
   {
+    if (finder != null && finder.eIsProxy())
+    {
+      InternalEObject oldFinder = (InternalEObject)finder;
+      finder = (User)eResolveProxy(oldFinder);
+      if (finder != oldFinder)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EgeoPackage.LOG__FINDER, oldFinder, finder));
+      }
+    }
     return finder;
   }
 
@@ -276,16 +285,9 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetFinder(User newFinder, NotificationChain msgs)
+  public User basicGetFinder()
   {
-    User oldFinder = finder;
-    finder = newFinder;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EgeoPackage.LOG__FINDER, oldFinder, newFinder);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return finder;
   }
 
   /**
@@ -295,18 +297,10 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log
    */
   public void setFinder(User newFinder)
   {
-    if (newFinder != finder)
-    {
-      NotificationChain msgs = null;
-      if (finder != null)
-        msgs = ((InternalEObject)finder).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EgeoPackage.LOG__FINDER, null, msgs);
-      if (newFinder != null)
-        msgs = ((InternalEObject)newFinder).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EgeoPackage.LOG__FINDER, null, msgs);
-      msgs = basicSetFinder(newFinder, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EgeoPackage.LOG__FINDER, newFinder, newFinder));
+    User oldFinder = finder;
+    finder = newFinder;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EgeoPackage.LOG__FINDER, oldFinder, finder));
   }
 
   /**
@@ -338,22 +332,6 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log
    * @generated
    */
   @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case EgeoPackage.LOG__FINDER:
-        return basicSetFinder(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -367,7 +345,8 @@ public class LogImpl extends MinimalEObjectImpl.Container implements Log
       case EgeoPackage.LOG__TEXT:
         return getText();
       case EgeoPackage.LOG__FINDER:
-        return getFinder();
+        if (resolve) return getFinder();
+        return basicGetFinder();
       case EgeoPackage.LOG__ENCODED:
         return isEncoded();
     }

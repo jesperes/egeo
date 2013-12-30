@@ -142,7 +142,7 @@ public class GeocacheImpl extends WaypointImpl implements Geocache
   protected ContainerType containerType = CONTAINER_TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getOwner() <em>Owner</em>}' containment reference.
+   * The cached value of the '{@link #getOwner() <em>Owner</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getOwner()
@@ -491,6 +491,16 @@ public class GeocacheImpl extends WaypointImpl implements Geocache
    */
   public User getOwner()
   {
+    if (owner != null && owner.eIsProxy())
+    {
+      InternalEObject oldOwner = (InternalEObject)owner;
+      owner = (User)eResolveProxy(oldOwner);
+      if (owner != oldOwner)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EgeoPackage.GEOCACHE__OWNER, oldOwner, owner));
+      }
+    }
     return owner;
   }
 
@@ -499,16 +509,9 @@ public class GeocacheImpl extends WaypointImpl implements Geocache
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetOwner(User newOwner, NotificationChain msgs)
+  public User basicGetOwner()
   {
-    User oldOwner = owner;
-    owner = newOwner;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EgeoPackage.GEOCACHE__OWNER, oldOwner, newOwner);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return owner;
   }
 
   /**
@@ -518,18 +521,10 @@ public class GeocacheImpl extends WaypointImpl implements Geocache
    */
   public void setOwner(User newOwner)
   {
-    if (newOwner != owner)
-    {
-      NotificationChain msgs = null;
-      if (owner != null)
-        msgs = ((InternalEObject)owner).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EgeoPackage.GEOCACHE__OWNER, null, msgs);
-      if (newOwner != null)
-        msgs = ((InternalEObject)newOwner).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EgeoPackage.GEOCACHE__OWNER, null, msgs);
-      msgs = basicSetOwner(newOwner, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EgeoPackage.GEOCACHE__OWNER, newOwner, newOwner));
+    User oldOwner = owner;
+    owner = newOwner;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EgeoPackage.GEOCACHE__OWNER, oldOwner, owner));
   }
 
   /**
@@ -878,8 +873,6 @@ public class GeocacheImpl extends WaypointImpl implements Geocache
   {
     switch (featureID)
     {
-      case EgeoPackage.GEOCACHE__OWNER:
-        return basicSetOwner(null, msgs);
       case EgeoPackage.GEOCACHE__SHORT_TEXT:
         return basicSetShortText(null, msgs);
       case EgeoPackage.GEOCACHE__LONG_TEXT:
@@ -909,7 +902,8 @@ public class GeocacheImpl extends WaypointImpl implements Geocache
       case EgeoPackage.GEOCACHE__CONTAINER_TYPE:
         return getContainerType();
       case EgeoPackage.GEOCACHE__OWNER:
-        return getOwner();
+        if (resolve) return getOwner();
+        return basicGetOwner();
       case EgeoPackage.GEOCACHE__PLACED_BY:
         return getPlacedBy();
       case EgeoPackage.GEOCACHE__CACHE_TYPE:

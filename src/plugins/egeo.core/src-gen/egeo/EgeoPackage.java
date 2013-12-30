@@ -41,7 +41,7 @@ public interface EgeoPackage extends EPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  String eNS_URI = "egeo";
+  String eNS_URI = "http://eskilson.se/egeo";
 
   /**
    * The package namespace name.
@@ -198,7 +198,7 @@ public interface EgeoPackage extends EPackage
   int LOG__TEXT = 3;
 
   /**
-   * The feature id for the '<em><b>Finder</b></em>' containment reference.
+   * The feature id for the '<em><b>Finder</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -516,7 +516,7 @@ public interface EgeoPackage extends EPackage
   int GEOCACHE__CONTAINER_TYPE = WAYPOINT_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Owner</b></em>' containment reference.
+   * The feature id for the '<em><b>Owner</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -669,6 +669,52 @@ public interface EgeoPackage extends EPackage
   int GEOCACHE_OPERATION_COUNT = WAYPOINT_OPERATION_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link egeo.impl.CacheDatabaseImpl <em>Cache Database</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see egeo.impl.CacheDatabaseImpl
+   * @see egeo.impl.EgeoPackageImpl#getCacheDatabase()
+   * @generated
+   */
+  int CACHE_DATABASE = 6;
+
+  /**
+   * The feature id for the '<em><b>Waypoints</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CACHE_DATABASE__WAYPOINTS = 0;
+
+  /**
+   * The feature id for the '<em><b>Users</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CACHE_DATABASE__USERS = 1;
+
+  /**
+   * The number of structural features of the '<em>Cache Database</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CACHE_DATABASE_FEATURE_COUNT = 2;
+
+  /**
+   * The number of operations of the '<em>Cache Database</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CACHE_DATABASE_OPERATION_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link egeo.CacheType <em>Cache Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -676,7 +722,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getCacheType()
    * @generated
    */
-  int CACHE_TYPE = 6;
+  int CACHE_TYPE = 7;
 
   /**
    * The meta object id for the '{@link egeo.LogType <em>Log Type</em>}' enum.
@@ -686,7 +732,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getLogType()
    * @generated
    */
-  int LOG_TYPE = 7;
+  int LOG_TYPE = 8;
 
   /**
    * The meta object id for the '{@link egeo.Attribute <em>Attribute</em>}' enum.
@@ -696,7 +742,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getAttribute()
    * @generated
    */
-  int ATTRIBUTE = 8;
+  int ATTRIBUTE = 9;
 
   /**
    * The meta object id for the '{@link egeo.ContainerType <em>Container Type</em>}' enum.
@@ -706,7 +752,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getContainerType()
    * @generated
    */
-  int CONTAINER_TYPE = 9;
+  int CONTAINER_TYPE = 10;
 
   /**
    * The meta object id for the '<em>URI</em>' data type.
@@ -716,7 +762,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getURI()
    * @generated
    */
-  int URI = 10;
+  int URI = 11;
 
   /**
    * The meta object id for the '<em>URL</em>' data type.
@@ -726,7 +772,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getURL()
    * @generated
    */
-  int URL = 11;
+  int URL = 12;
 
   /**
    * The meta object id for the '<em>Date</em>' data type.
@@ -736,7 +782,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getDate()
    * @generated
    */
-  int DATE = 12;
+  int DATE = 13;
 
   /**
    * The meta object id for the '<em>Big Decimal</em>' data type.
@@ -746,7 +792,7 @@ public interface EgeoPackage extends EPackage
    * @see egeo.impl.EgeoPackageImpl#getBigDecimal()
    * @generated
    */
-  int BIG_DECIMAL = 13;
+  int BIG_DECIMAL = 14;
 
 
   /**
@@ -868,10 +914,10 @@ public interface EgeoPackage extends EPackage
   EAttribute getLog_Text();
 
   /**
-   * Returns the meta object for the containment reference '{@link egeo.Log#getFinder <em>Finder</em>}'.
+   * Returns the meta object for the reference '{@link egeo.Log#getFinder <em>Finder</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Finder</em>'.
+   * @return the meta object for the reference '<em>Finder</em>'.
    * @see egeo.Log#getFinder()
    * @see #getLog()
    * @generated
@@ -1085,10 +1131,10 @@ public interface EgeoPackage extends EPackage
   EAttribute getGeocache_ContainerType();
 
   /**
-   * Returns the meta object for the containment reference '{@link egeo.Geocache#getOwner <em>Owner</em>}'.
+   * Returns the meta object for the reference '{@link egeo.Geocache#getOwner <em>Owner</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Owner</em>'.
+   * @return the meta object for the reference '<em>Owner</em>'.
    * @see egeo.Geocache#getOwner()
    * @see #getGeocache()
    * @generated
@@ -1248,6 +1294,38 @@ public interface EgeoPackage extends EPackage
    * @generated
    */
   EAttribute getGeocache_Tags();
+
+  /**
+   * Returns the meta object for class '{@link egeo.CacheDatabase <em>Cache Database</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Cache Database</em>'.
+   * @see egeo.CacheDatabase
+   * @generated
+   */
+  EClass getCacheDatabase();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link egeo.CacheDatabase#getWaypoints <em>Waypoints</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Waypoints</em>'.
+   * @see egeo.CacheDatabase#getWaypoints()
+   * @see #getCacheDatabase()
+   * @generated
+   */
+  EReference getCacheDatabase_Waypoints();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link egeo.CacheDatabase#getUsers <em>Users</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Users</em>'.
+   * @see egeo.CacheDatabase#getUsers()
+   * @see #getCacheDatabase()
+   * @generated
+   */
+  EReference getCacheDatabase_Users();
 
   /**
    * Returns the meta object for enum '{@link egeo.CacheType <em>Cache Type</em>}'.
@@ -1452,7 +1530,7 @@ public interface EgeoPackage extends EPackage
     EAttribute LOG__TEXT = eINSTANCE.getLog_Text();
 
     /**
-     * The meta object literal for the '<em><b>Finder</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Finder</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1618,7 +1696,7 @@ public interface EgeoPackage extends EPackage
     EAttribute GEOCACHE__CONTAINER_TYPE = eINSTANCE.getGeocache_ContainerType();
 
     /**
-     * The meta object literal for the '<em><b>Owner</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Owner</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1736,6 +1814,32 @@ public interface EgeoPackage extends EPackage
      * @generated
      */
     EAttribute GEOCACHE__TAGS = eINSTANCE.getGeocache_Tags();
+
+    /**
+     * The meta object literal for the '{@link egeo.impl.CacheDatabaseImpl <em>Cache Database</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see egeo.impl.CacheDatabaseImpl
+     * @see egeo.impl.EgeoPackageImpl#getCacheDatabase()
+     * @generated
+     */
+    EClass CACHE_DATABASE = eINSTANCE.getCacheDatabase();
+
+    /**
+     * The meta object literal for the '<em><b>Waypoints</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CACHE_DATABASE__WAYPOINTS = eINSTANCE.getCacheDatabase_Waypoints();
+
+    /**
+     * The meta object literal for the '<em><b>Users</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CACHE_DATABASE__USERS = eINSTANCE.getCacheDatabase_Users();
 
     /**
      * The meta object literal for the '{@link egeo.CacheType <em>Cache Type</em>}' enum.

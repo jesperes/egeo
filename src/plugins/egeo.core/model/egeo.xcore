@@ -1,3 +1,4 @@
+@Ecore(nsURI='http://eskilson.se/egeo')
 package egeo
 
 import java.net.URL
@@ -136,7 +137,7 @@ class Log
 	Date date
 	LogType logType
 	String text
-	contains User finder
+	refers User finder
 	boolean encoded
 }
 
@@ -178,7 +179,7 @@ class Geocache extends Waypoint
 	boolean available // XML element: groundspeak:cache#available 
 	boolean archived // XML element: groundspeak:cache#archived
 	ContainerType containerType // XML element: groundspeak:container
-	contains User owner // XML element: groundspeak:owner 
+	refers User owner // XML element: groundspeak:owner 
 	String placedBy // XML element: groundspeak:placed_by
 	CacheType cacheType // XML element: groundspeak:type
 	double difficulty // XML element: difficulty
@@ -193,4 +194,10 @@ class Geocache extends Waypoint
 	contains Log [] logs
 	URI source // from where this cache was loaded
 	String [] tags
+}
+
+class CacheDatabase
+{
+	contains Waypoint[] waypoints
+	contains User[] users
 }
