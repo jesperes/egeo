@@ -1,4 +1,5 @@
 egeo
 ====
 
-Geocachine software.
+Geocaching software. Work in progress.
+
