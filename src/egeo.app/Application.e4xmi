@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_5uBPQFGiEeWQA8Y5ADjaaw" elementId="org.eclipse.e4.ide.application" bindingContexts="_5uBPSVGiEeWQA8Y5ADjaaw">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_5uBPQVGiEeWQA8Y5ADjaaw" label="EGeo" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_5uGu4lGiEeWQA8Y5ADjaaw">
+      <children xsi:type="advanced:Perspective" xmi:id="_5uGu41GiEeWQA8Y5ADjaaw">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_5uGu5FGiEeWQA8Y5ADjaaw">
+          <children xsi:type="basic:PartStack" xmi:id="_5uGu5VGiEeWQA8Y5ADjaaw">
+            <children xsi:type="basic:Part" xmi:id="_5uGu5lGiEeWQA8Y5ADjaaw" contributionURI="bundleclass://egeo.app/egeo.parts.SamplePart" label="Sample Part"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_5uGu21GiEeWQA8Y5ADjaaw" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_5uGu3FGiEeWQA8Y5ADjaaw" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_5uGu3VGiEeWQA8Y5ADjaaw" label="Open" iconURI="platform:/plugin/egeo.app/icons/sample.png" command="_5uGu0lGiEeWQA8Y5ADjaaw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_5uGu3lGiEeWQA8Y5ADjaaw" label="Save" iconURI="platform:/plugin/egeo.app/icons/save_edit.png" command="_5uGu1VGiEeWQA8Y5ADjaaw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_5uGu31GiEeWQA8Y5ADjaaw" label="Quit" command="_5uBPTFGiEeWQA8Y5ADjaaw"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_5uGu4FGiEeWQA8Y5ADjaaw" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_5uGu4VGiEeWQA8Y5ADjaaw" label="About" command="_5uGu2FGiEeWQA8Y5ADjaaw"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_5uGu51GiEeWQA8Y5ADjaaw">
+      <children xsi:type="menu:ToolBar" xmi:id="_5uGu6FGiEeWQA8Y5ADjaaw" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_5uGu6VGiEeWQA8Y5ADjaaw" iconURI="platform:/plugin/egeo.app/icons/sample.png" command="_5uGu0lGiEeWQA8Y5ADjaaw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_5uHV4FGiEeWQA8Y5ADjaaw" iconURI="platform:/plugin/egeo.app/icons/save_edit.png" command="_5uGu1VGiEeWQA8Y5ADjaaw"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_5uBPTVGiEeWQA8Y5ADjaaw" elementId="EGeo.handler.quitCommand" contributionURI="bundleclass://egeo.app/egeo.handlers.QuitHandler" command="_5uBPTFGiEeWQA8Y5ADjaaw"/>
+  <handlers xmi:id="_5uGu01GiEeWQA8Y5ADjaaw" elementId="EGeo.handler.openCommand" contributionURI="bundleclass://egeo.app/egeo.handlers.OpenHandler" command="_5uGu0lGiEeWQA8Y5ADjaaw"/>
+  <handlers xmi:id="_5uGu1lGiEeWQA8Y5ADjaaw" elementId="EGeo.handler.saveCommand" contributionURI="bundleclass://egeo.app/egeo.handlers.SaveHandler" command="_5uGu1VGiEeWQA8Y5ADjaaw"/>
+  <handlers xmi:id="_5uGu2VGiEeWQA8Y5ADjaaw" elementId="EGeo.handler.aboutCommand" contributionURI="bundleclass://egeo.app/egeo.handlers.AboutHandler" command="_5uGu2FGiEeWQA8Y5ADjaaw"/>
+  <bindingTables xmi:id="_5uGu0FGiEeWQA8Y5ADjaaw" bindingContext="_5uBPSVGiEeWQA8Y5ADjaaw">
+    <bindings xmi:id="_5uGu0VGiEeWQA8Y5ADjaaw" keySequence="M1+Q" command="_5uBPTFGiEeWQA8Y5ADjaaw"/>
+    <bindings xmi:id="_5uGu1FGiEeWQA8Y5ADjaaw" keySequence="M1+O" command="_5uGu0lGiEeWQA8Y5ADjaaw"/>
+    <bindings xmi:id="_5uGu11GiEeWQA8Y5ADjaaw" keySequence="M1+S" command="_5uGu1VGiEeWQA8Y5ADjaaw"/>
+    <bindings xmi:id="_5uGu2lGiEeWQA8Y5ADjaaw" keySequence="M1+A" command="_5uGu2FGiEeWQA8Y5ADjaaw"/>
+  </bindingTables>
+  <rootContext xmi:id="_5uBPSVGiEeWQA8Y5ADjaaw" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_5uBPSlGiEeWQA8Y5ADjaaw" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_5uBPS1GiEeWQA8Y5ADjaaw" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_5uBPTFGiEeWQA8Y5ADjaaw" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_5uGu0lGiEeWQA8Y5ADjaaw" elementId="EGeo.open" commandName="openCommand"/>
+  <commands xmi:id="_5uGu1VGiEeWQA8Y5ADjaaw" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_5uGu2FGiEeWQA8Y5ADjaaw" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_5uBPQlGiEeWQA8Y5ADjaaw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_5uBPQ1GiEeWQA8Y5ADjaaw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_5uBPRFGiEeWQA8Y5ADjaaw" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_5uBPRVGiEeWQA8Y5ADjaaw" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_5uBPRlGiEeWQA8Y5ADjaaw" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_5uBPR1GiEeWQA8Y5ADjaaw" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_5uBPSFGiEeWQA8Y5ADjaaw" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
